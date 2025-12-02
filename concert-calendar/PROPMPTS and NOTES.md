@@ -1,5 +1,50 @@
 
-# ACTION PLAN:
+# 2. Events to json
+
+Create a python script events_to_json.py tha analyses text file 'test-events.txt' and stores the information in json format. 
+The events are separated by "####" in the file.
+Use Gemini API for the language analyses. The API_KEY is set in the env. variable GEMINI_API_KEY
+Save the  output file as test-events.json
+
+Set the following context for Gemini:
+'''
+Analyse given musical event, that is mostly a concert, and return the information in json format:  
+
+{
+    "title": "",
+    "date": "",
+    "time": "",
+    "location": "",
+    "performers": "",
+    "program:" "",
+    "description": "",
+    "tickest": "",
+    "link": "",
+    "other_info": ""
+}
+
+For the date and time format use something that will be easy to convert MySQL date format later.
+
+The input is text in Estonian. Keep the language for the entries. 
+The information is presented mostly as follows:
+title:  first row
+date: second row
+location: third row
+The other fields can come in different order.
+info: is usually a link, preceded by 'Lisainfo:' in Estonian
+
+All fields must not be filled. If there is doubt, return string that starts with "PROBLEMS FOUND:\n", add the event and comments about problematic bits.
+
+'''
+
+send the info by event to event a function that deals with Gemini API. If call was successful, store the events in format:
+{
+    "events": []
+}
+
+if a problem was found (return string starts with 'PROBLEMS') append it to file 'problems.txt', separate events with '####'
+
+# 1. GET EVENTS:
 
 Aim: Gather data about all concerts/event on the pages:
 https://www.emic.ee/muusikasundmuste-kalender&year={year} 
