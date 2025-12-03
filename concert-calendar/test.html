@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMIC Sündmuste Andmebaas - TEST</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .filter-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .filter-section h2 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .filter-field {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .filter-field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .filter-field input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .date-filters {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #searchButton {
+            background-color: #3498db;
+            color: white;
+        }
+
+        #searchButton:hover {
+            background-color: #2980b9;
+        }
+
+        #clearButton {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        #clearButton:hover {
+            background-color: #7f8c8d;
+        }
+
+        .status {
+            background-color: #d5f4e6;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #27ae60;
+            display: none;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .expandable {
+            color: #3498db;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .expandable:hover {
+            color: #2980b9;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .modal-body {
+            margin: 20px 0;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .no-events {
+            text-align: center;
+            padding: 40px;
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EMIC Sündmuste Andmebaas - TEST</h1>
+
+        <div class="filter-section">
+            <h2>Filtreeri:</h2>
+            
+            <div class="filter-row">
+                <div class="filter-field">
+                    <label for="titleFilter">Pealkiri</label>
+                    <input type="text" id="titleFilter" placeholder="Sisesta pealkiri...">
+                </div>
+                <div class="filter-field">
+                    <label for="performerFilter">Esitaja(d)</label>
+                    <input type="text" id="performerFilter" placeholder="Sisesta esitaja nimi...">
+                </div>
+            </div>
+
+            <div class="filter-row">
+                <div class="filter-field">
+                    <label for="programFilter">Teos(ed) kavas:</label>
+                    <input type="text" id="programFilter" placeholder="Sisesta teose nimetus...">
+                </div>
+                <div class="filter-field">
+                    <label for="locationFilter">Koht:</label>
+                    <input type="text" id="locationFilter" placeholder="Sisesta koht...">
+                </div>
+            </div>
+
+            <div class="date-filters">
+                <div class="filter-field">
+                    <label for="dateFrom">Kuupäev: peale</label>
+                    <input type="date" id="dateFrom" min="2014-01-01" max="2025-12-31">
+                </div>
+                <div class="filter-field">
+                    <label for="dateUntil">enne</label>
+                    <input type="date" id="dateUntil" min="2014-01-01" max="2025-12-31">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="searchButton">Otsi</button>
+                <button id="clearButton">Tühjenda</button>
+            </div>
+        </div>
+
+        <div id="statusDiv" class="status"></div>
+
+        <div class="table-container">
+            <table id="eventsTable">
+                <thead>
+                    <tr>
+                        <th>Pealkiri</th>
+                        <th>Kuupäev</th>
+                        <th>Kellaaeg</th>
+                        <th>Koht</th>
+                        <th>Esitajad</th>
+                        <th>Kava</th>
+                        <th>Kirjeldus</th>
+                        <th>Piletiinfo</th>
+                        <th>Link</th>
+                        <th>Muu</th>
+                    </tr>
+                </thead>
+                <tbody id="eventsTableBody">
+                    <tr>
+                        <td colspan="10" class="no-events">Laadin andmeid...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal for full text -->
+    <div id="textModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <span id="modalTitle"></span>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const MAX_CONTENT_WIDTH = 80;
+        let allEvents = [];
+        let filteredEvents = [];
+
+        // Load events on page load
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadEvents();
+            initializeDateFilters();
+            displayEvents(allEvents);
+        });
+
+        // Load events from JSON file
+        async function loadEvents() {
+            try {
+                const response = await fetch('./test-events.json');
+                const data = await response.json();
+                allEvents = data.events || [];
+                filteredEvents = allEvents;
+            } catch (error) {
+                console.error('Error loading events:', error);
+                document.getElementById('eventsTableBody').innerHTML = 
+                    '<tr><td colspan="10" class="no-events">Viga andmete laadimisel</td></tr>';
+            }
+        }
+
+        // Initialize date filters with min and max dates
+        function initializeDateFilters() {
+            document.getElementById('dateFrom').value = '2014-01-01';
+            document.getElementById('dateUntil').value = '2025-12-31';
+        }
+
+        // Display events in table
+        function displayEvents(events) {
+            const tbody = document.getElementById('eventsTableBody');
+            
+            if (events.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="10" class="no-events">Sündmusi ei leitud</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = events.map((event, index) => `
+                <tr data-index="${index}">
+                    <td>${escapeHtml(event.title || '')}</td>
+                    <td>${escapeHtml(event.date || '')}</td>
+                    <td>${escapeHtml(event.time || '')}</td>
+                    <td>${escapeHtml(event.location || '')}</td>
+                    <td>${truncateField(event.performers || '', 'Esitajad', index)}</td>
+                    <td>${truncateField(event.program || '', 'Kava', index)}</td>
+                    <td>${truncateField(event.description || '', 'Kirjeldus', index)}</td>
+                    <td>${escapeHtml(event.tickets || '')}</td>
+                    <td>${formatLink(event.link || '')}</td>
+                    <td>${truncateField(event.other_info || '', 'Muu info', index)}</td>
+                </tr>
+            `).join('');
+
+            // Add event listeners for expandable links
+            document.querySelectorAll('.expandable').forEach(link => {
+                link.addEventListener('click', function() {
+                    const fieldName = this.getAttribute('data-field');
+                    const fullText = this.getAttribute('data-text');
+                    showFullText(fieldName, fullText);
+                });
+            });
+        }
+
+        // Truncate long text and add expandable link
+        function truncateField(text, fieldName, eventIndex) {
+            if (!text) return '';
+            
+            const escaped = escapeHtml(text);
+            
+            if (text.length <= MAX_CONTENT_WIDTH) {
+                return escaped;
+            }
+            
+            const truncated = escapeHtml(text.substring(0, MAX_CONTENT_WIDTH)) + '...';
+            const encodedText = escapeHtml(text);
+            return `${truncated} <span class="expandable" data-field="${fieldName}" data-text="${encodedText}">Näita rohkem</span>`;
+        }
+
+        // Show full text in modal
+        function showFullText(title, text) {
+            console.log("showFullText called with text:", text);
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalBody').textContent = text;
+            document.getElementById('textModal').style.display = 'block';
+        }
+
+        // Format link
+        function formatLink(link) {
+            if (!link) return '';
+            
+            // Check if link already contains URL in parentheses format
+            const match = link.match(/^(.*?)\s*\((https?:\/\/[^\)]+)\)$/);
+            if (match) {
+                return `<a href="${match[2]}" target="_blank">${escapeHtml(match[1])}</a>`;
+            }
+            
+            // If it's just a URL
+            if (link.startsWith('http://') || link.startsWith('https://')) {
+                return `<a href="${link}" target="_blank">${escapeHtml(link)}</a>`;
+            }
+            
+            return escapeHtml(link);
+        }
+
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Parse date in various formats to YYYY-MM-DD
+        function parseDate(dateStr) {
+            if (!dateStr) return null;
+            
+            // Try YYYY-MM-DD format first
+            if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+                return dateStr;
+            }
+            
+            // Try DD.MM.YYYY format
+            const match = dateStr.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+            if (match) {
+                const day = match[1].padStart(2, '0');
+                const month = match[2].padStart(2, '0');
+                const year = match[3];
+                return `${year}-${month}-${day}`;
+            }
+            
+            return null;
+        }
+
+        // Filter events
+        function filterEvents() {
+            const titleFilter = document.getElementById('titleFilter').value.toLowerCase();
+            const performerFilter = document.getElementById('performerFilter').value.toLowerCase();
+            const programFilter = document.getElementById('programFilter').value.toLowerCase();
+            const locationFilter = document.getElementById('locationFilter').value.toLowerCase();
+            const dateFrom = document.getElementById('dateFrom').value;
+            const dateUntil = document.getElementById('dateUntil').value;
+
+            filteredEvents = allEvents.filter(event => {
+                // Title filter
+                if (titleFilter && !event.title?.toLowerCase().includes(titleFilter)) {
+                    return false;
+                }
+
+                // Performer filter
+                if (performerFilter && !event.performers?.toLowerCase().includes(performerFilter)) {
+                    return false;
+                }
+
+                // Program filter
+                if (programFilter && !event.program?.toLowerCase().includes(programFilter)) {
+                    return false;
+                }
+
+                // Location filter
+                if (locationFilter && !event.location?.toLowerCase().includes(locationFilter)) {
+                    return false;
+                }
+
+                // Date filters
+                const eventDate = parseDate(event.date);
+                if (eventDate) {
+                    if (dateFrom && eventDate < dateFrom) {
+                        return false;
+                    }
+                    if (dateUntil && eventDate > dateUntil) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+
+            displayEvents(filteredEvents);
+            showStatus(filteredEvents.length);
+        }
+
+        // Show status message
+        function showStatus(count) {
+            const statusDiv = document.getElementById('statusDiv');
+            statusDiv.textContent = `Leitud ${count} sündmust`;
+            statusDiv.style.display = 'block';
+        }
+
+        // Clear filters
+        function clearFilters() {
+            document.getElementById('titleFilter').value = '';
+            document.getElementById('performerFilter').value = '';
+            document.getElementById('programFilter').value = '';
+            document.getElementById('locationFilter').value = '';
+            initializeDateFilters();
+            
+            filteredEvents = allEvents;
+            displayEvents(allEvents);
+            document.getElementById('statusDiv').style.display = 'none';
+        }
+
+        // Event listeners
+        document.getElementById('searchButton').addEventListener('click', filterEvents);
+        document.getElementById('clearButton').addEventListener('click', clearFilters);
+
+        // Allow Enter key to trigger search
+        document.querySelectorAll('.filter-field input').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    filterEvents();
+                }
+            });
+        });
+
+        // Modal close functionality
+        document.querySelector('.close').addEventListener('click', () => {
+            document.getElementById('textModal').style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            const modal = document.getElementById('textModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
