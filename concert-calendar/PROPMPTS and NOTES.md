@@ -1,4 +1,38 @@
 
+# 3. Test html view/search page
+
+Create a html page test.html that displays the events from test-events.json in a table and enables to filter them.
+
+Use a style similar to this page: https://live.uuu.ee/solaris/client/editor.html 
+
+Use Estonian language for all visible elements.
+
+## Page setup:
+- title/heading: "EMIC Sündmuste Andmebaas - TEST"
+- filter section:
+'Filtreeri:'
+'Pealkiri <text input>'
+'Estitaja(d) <text input>'
+'Teos(ed) kavas: <text input>'
+'Koht: <text input>'
+'Kuupäev: peale <date input> enne <date input>' (Set the limits for the date inputs: earliest: 1.01.2014, latest: 31.12.2025)
+Button (id="searchButton"): 'Otsi' ,  Button (id="clearButton") 'Tühjenda'
+- status/result div:
+<div> (visible when a search was done) 'Leitud {count} sündmust'  
+- Table with events:
+Colums (according to the json):
+Pealkiri | Kuupäev | Kellaeg | Koht | Esitajad | Kava | Kirjeldus | Piletiinfo | Link | Muu 
+
+
+
+## Javascript logic
+
+On load, display all events, clear the filter fields, set 'from' and 'until' datest to the minimum and maximum.
+For longer fields: Esitajad/performers, Kava/program, Kirjeldus/Description, Muu/other_info
+show only the first MAX_CONTENT_WIDTH=80 characters and if the field is longer,  create a link to open the full text of that field in a popup (or a div that acts like a dialog).
+When clicking on searchButton, find the events from ./test-evetns.json accodring to the filter and display them in the table.
+On clearButton.clicked clear the filter and show all events. 
+
 # 2. Events to json
 
 Create a python script events_to_json.py tha analyses text file 'test-events.txt' and stores the information in json format. 
