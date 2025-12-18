@@ -9,7 +9,14 @@ import google.generativeai as genai
 INPUT_FILE = "test-data.json"
 OUTPUT_FILE = "test-instrumentations.json"
 FAILED_FILE = "failed-instrumentations.json"
-DELAY_BETWEEN_REQUESTS = 1
+# Free tier limit is often 15 RPM (1.5 Flash) or 5 RPM (newer models). 
+# 15s delay = 4 RPM, which is safe for the 5 RPM limit.
+DELAY_BETWEEN_REQUESTS = 5 #15
+
+# Test mode: if True, only process first 10 items
+TEST_MODE = False
+TEST_LIMIT = 5
+START_FROM =  0
 
 # System prompt
 SYSTEM_PROMPT = """
@@ -140,6 +147,16 @@ JSON
 }
 """
 
+def save_intermediate(results, failed):
+    """Save results to file immediately."""
+    try:
+        with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+            json.dump(results, f, ensure_ascii=False, indent=2)
+        with open(FAILED_FILE, 'w', encoding='utf-8') as f:
+            json.dump(failed, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Warning: Could not save intermediate results: {e}")
+
 def extract_instrumentation(description):
     lines = [l.strip() for l in description.split('\n') if l.strip()]
     
@@ -222,25 +239,57 @@ def extract_instrumentation(description):
     for line in lines:
          if re.match(r'^(\d{4}|\d{4}-\d{4})$', line): continue
          if re.match(r'^\d+(\'?| min)$', line): continue
+         # Added "Tekst:" and "I " (movement markers) to skip check? No, movements shouldn't be skipped but might confuse logic.
          if any(line.startswith(p) for p in ["Libreto:", "Esiettekanne:", "Tellija:", "Kirjastaja:", "Tekst:", "CD", "Levitaja:", "Eestikeelne tõlge"]):
              break # Stop at first label
          filtered.append(line)
          
+    # Debug print
+    # print(f"DEBUG: {filtered}")
+
     if len(filtered) >= 2:
-        # Assuming 0 is Type, 1 is Instrumentation
-        # But filter check:
-        # "Ooper" -> Type
-        # "solistid, koor..." -> Instrumentation
+        # If we have [Type, Instrumentation], return Instrumentation.
+        # But for "Deux": ['flöödikontsert', 'I Un', 'II Deux', 'flööt, sopran...']
+        # The instrumentation is actually the last element of filtered?
+        # Or specifically standard logic: 
+        # Usually: Type -> (Movements?) -> Instrumentation
+        
+        # Heuristic: the line with instrumentation usually contains commas and instrument names.
+        # Let's verify candidates.
+        best_candidate = None
+        max_score = 0
+        
+        # Simple scoring
+        keywords = ["flööt", "klaver", "orkester", "viiul", "sopran", "koor", "keelpillid", "löökpillid"]
+        
+        for cand in filtered:
+            score = 0
+            # Does it have comma?
+            if ',' in cand: score += 1
+            # Does it have digits (shorthand 2222)?
+            if re.search(r'\d{4}', cand): score += 2
+            # Does it have keywords?
+            if any(k in cand.lower() for k in keywords): score += 3
+            
+            if score > max_score:
+                max_score = score
+                best_candidate = cand
+        
+        if best_candidate and max_score > 0:
+            return best_candidate
+            
+        # Fallback to index 1 if available
         return filtered[1]
+        
     elif len(filtered) == 1:
-        # Maybe Type is missing? Or Instrumentation is missing?
-        # If it looks like instrumentation (contains commas, numbers), use it.
-        # If it looks like a single word (Type), ignore.
         val = filtered[0]
-        if ' ' in val or ',' in val:
+        # Allow if it contains comma or spaces or known keywords, but exclude simple Type words
+        # "keelpilliorkester" is a single word but valid instrumentation.
+        keywords = ["orkester", "ansambel", "koor", "kvartett", "kvintett", "trio", "duo"]
+        if ' ' in val or ',' in val or any(k in val.lower() for k in keywords):
             return val
         else:
-            return None # Likely just a Type like "Sümfoonia"
+            return None 
             
     return None
 
@@ -251,9 +300,10 @@ def main():
         sys.exit(1)
         
     genai.configure(api_key=api_key, transport='rest')
-    # User requested Gemini 3, but current stable version is 1.5-flash (or 2.0-flash-exp). 
-    # Using 1.5-flash as a reliable default.
-    model = genai.GenerativeModel('gemini-flash-latest')
+    
+    # Using gemini-1.5-flash-latest as requested/found to be available
+    model = genai.GenerativeModel('gemini-2.5-flash-lite')
+
     
     try:
         with open(INPUT_FILE, 'r', encoding='utf-8') as f:
@@ -265,22 +315,44 @@ def main():
     results = []
     failed = []
     
+    # Load existing results if valid to resume?
+    # User didn't explicitly ask for resume, but "output was not saved" implies fresh start or overwrite.
+    # We will overwrite for now as per "Save the succeeded results".
+    
     total_works = sum(len(c.get('compositions', [])) for c in data)
     print(f"Total composers: {len(data)}")
-    # We iterate composers, ignore category grouping for total count, but iterate carefully
     
-    processed_count = 0
+    # We iterate composers, ignore category grouping for total count, but iterate carefully
+    processed_count = 0 
+    attempt_count = 0
     
     for composer_entry in data:
         composer_name = composer_entry.get('composer', 'Unknown')
         for cat_entry in composer_entry.get('compositions', []):
             category = cat_entry.get('category', '')
             for work in cat_entry.get('works', []):
-                processed_count += 1
+                
+                current_work_index = processed_count
+                processed_count += 1 # Increment for every work encountered
+                
+                # Check if we should skip this item based on START_FROM
+                if current_work_index < START_FROM:
+                    # print(f"  -> Skipping item {current_work_index} (START_FROM={START_FROM})")
+                    continue
+                
+                # Test mode check (limit relative to attempts made in this run)
+                if TEST_MODE and attempt_count >= TEST_LIMIT:
+                    print(f"\nTest limit ({TEST_LIMIT}) reached. Stopping.")
+                    save_intermediate(results, failed)
+                    sys.exit(0)
+                
+                # If we reach here, this item is being processed (or attempted)
+                attempt_count += 1
+                
                 title = work.get('title', 'Untitled')
                 description = work.get('description', '')
                 
-                print(f"Processing {processed_count}: {composer_name} - {title}")
+                print(f"Processing {current_work_index}: {composer_name} - {title}")
                 
                 instr_text = extract_instrumentation(description)
                 if not instr_text:
@@ -291,13 +363,30 @@ def main():
                         "description": description,
                         "error": "No instrumentation text extracted"
                     })
+                    # We save even on failure to keep track
+                    save_intermediate(results, failed)
                     continue
+                
+                # Increment attempt count only when we actually try to process (or have text to process)
+                attempt_count += 1
                 
                 print(f"  -> Extracted text: {instr_text[:50]}...")
                 
                 try:
                     prompt = f"{SYSTEM_PROMPT}\n\nInput: {instr_text}"
-                    response = model.generate_content(prompt)
+                    
+                    # Simple retry logic for 429
+                    max_retries = 3
+                    for attempt in range(max_retries):
+                        try:
+                            response = model.generate_content(prompt)
+                            break
+                        except Exception as e:
+                            if "429" in str(e) and attempt < max_retries - 1:
+                                print(f"  -> Rate limit hit. Waiting 60s before retry {attempt+1}...")
+                                time.sleep(60)
+                            else:
+                                raise e
                     
                     # Clean response
                     resp_text = response.text.strip()
@@ -317,6 +406,7 @@ def main():
                     }
                     results.append(result_entry)
                     print("  -> Success")
+                    save_intermediate(results, failed)
                     
                 except Exception as e:
                     print(f"  -> API/Parse Error: {e}")
@@ -326,6 +416,7 @@ def main():
                         "extracted_text": instr_text,
                         "error": str(e)
                     })
+                    save_intermediate(results, failed)
                 
                 time.sleep(DELAY_BETWEEN_REQUESTS)
 

@@ -77,6 +77,8 @@ Principle: see below (prompt for AI)
 
 ## 3. Create script: test-data -> Gemini -> structured data
 
+TODO: figure out Gemini rate limits, cost for billing.
+
 PROMPT:
 Create a python script that reads instrumentation descriptions from test-data.json and creates a chat with Gemini API chat with the following background and then feeds intrumentation desciriptions form test-data.json to that and returnes structured data. Mark problematic records. Save the succeeded results in 'test-instrumentations.json', failed fields in 'failed-instrumentations.json'.
 
