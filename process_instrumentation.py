@@ -14,9 +14,9 @@ FAILED_FILE = "failed-instrumentations.json"
 DELAY_BETWEEN_REQUESTS = 5 #15
 
 # Test mode: if True, only process first 10 items
-TEST_MODE = False
-TEST_LIMIT = 10
-START_FROM = 0
+TEST_MODE = True
+TEST_LIMIT = 5
+START_FROM = 65
 
 # System prompt
 SYSTEM_PROMPT = """
@@ -285,8 +285,24 @@ def extract_instrumentation(description):
         val = filtered[0]
         # Allow if it contains comma or spaces or known keywords, but exclude simple Type words
         # "keelpilliorkester" is a single word but valid instrumentation.
-        keywords = ["orkester", "ansambel", "koor", "kvartett", "kvintett", "trio", "duo"]
-        if ' ' in val or ',' in val or any(k in val.lower() for k in keywords):
+        # Expanded keywords list for single instruments
+        keywords = [
+            "orkester", "ansambel", "koor", "kvartett", "kvintett", "trio", "duo",
+            "klaver", "orel", "harf", "kannel", "kitarr", "lauto", "mandoliin",
+            "viiul", "vioola", "tšello", "kontrabass",
+            "flööt", "oboe", "klarnet", "fagott", "saksofon", "sarv", "trompet", "tromboon", "tuuba",
+            "löökpillid", "kellad", "vibrafon", "marimba",
+            "akordion", "bajaan", "karmoska",
+            "süntesaator", "elektroonika", "helilint", "fonogramm",
+            "hääled", "sopran", "alt", "tenor", "bass", "bariton",
+            "ukulele", "kamancheh", "bendir", "kanun", "kemençe" 
+        ]
+        
+        # Check if any keyword key is a substring or if the value is exactly the keyword (case insensitive)
+        val_lower = val.lower()
+        
+        # Relaxed check: if line contains any keyword OR comma OR digits
+        if ',' in val or re.search(r'\d', val) or any(k in val_lower for k in keywords):
             return val
         else:
             return None 
