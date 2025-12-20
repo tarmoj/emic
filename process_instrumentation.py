@@ -16,7 +16,7 @@ DELAY_BETWEEN_REQUESTS = 5 #15
 # Test mode: if True, only process first 10 items
 TEST_MODE = False
 TEST_LIMIT = 10
-START_FROM =  0
+START_FROM = 0
 
 # System prompt
 SYSTEM_PROMPT = """
@@ -379,7 +379,11 @@ def main():
                     max_retries = 3
                     for attempt in range(max_retries):
                         try:
-                            response = model.generate_content(prompt)
+                            # Added generation_config to force JSON
+                            response = model.generate_content(
+                                prompt, 
+                                generation_config={"response_mime_type": "application/json"}
+                            )
                             break
                         except Exception as e:
                             if "429" in str(e) and attempt < max_retries - 1:
@@ -388,11 +392,12 @@ def main():
                             else:
                                 raise e
                     
-                    # Clean response
+                    # Clean response - Robust handling
                     resp_text = response.text.strip()
+                    # Remove markdown fences if present
                     if resp_text.startswith("```"):
-                         resp_text = re.sub(r'^```(json)?\n', '', resp_text)
-                         resp_text = re.sub(r'\n```$', '', resp_text)
+                         resp_text = re.sub(r'^```(json)?\n?', '', resp_text) # Handle optional newline
+                         resp_text = re.sub(r'\n?```$', '', resp_text)
                     
                     parsed = json.loads(resp_text)
                     
