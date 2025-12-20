@@ -15,7 +15,7 @@ DELAY_BETWEEN_REQUESTS = 5 #15
 
 # Test mode: if True, only process first 10 items
 TEST_MODE = False
-TEST_LIMIT = 5
+TEST_LIMIT = 10
 START_FROM =  0
 
 # System prompt
@@ -401,7 +401,6 @@ def main():
                         "composer": composer_name,
                         "title": title,
                         "work_id": f"{composer_name}_{title}", # Simple ID
-                        "extracted_instrumentation": instr_text,
                         "analysis": parsed
                     }
                     results.append(result_entry)
