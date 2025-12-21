@@ -353,7 +353,7 @@
         async function loadData() {
             try {
                 // Fetching from parent directory as requested
-                const response = await fetch('../test-instrumentations-ok.json');
+                const response = await fetch('./test-instrumentations-ok.json');
                 allWorks = await response.json();
                 filteredWorks = allWorks;
             } catch (error) {
