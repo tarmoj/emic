@@ -221,3 +221,30 @@ JSON
 
 '''
 
+## 4. Create web based search prototype
+
+Prompt: 
+
+Create a web based search ptorotype test-rep.html similar to ../concert-calendar/test.html.
+
+User should be able to search by instrumentation for now. Search fields:
+- Category (solo, chamber, ensemble, orchestra, choir, vocal, open)
+- Total player count (1-6)
+- Has electronics
+- Has vocal
+- Ensembles (list of ensembles)
+- Parts (list of parts)
+- Free text search(any of the fields contains)
+
+Display the result as a table with the following columns:
+- Title
+- Composer
+- Category
+- Total player count
+- Has electronics
+- Has vocal
+- Ensembles
+- Parts
+
+
+

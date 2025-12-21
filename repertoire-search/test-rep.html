@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMIC Repertuaari Otsing - PROTOTÜÜP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .filter-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .filter-section h2 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .filter-field {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .filter-field input, .filter-field select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .filter-field input:focus, .filter-field select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #searchButton {
+            background-color: #3498db;
+            color: white;
+        }
+
+        #searchButton:hover {
+            background-color: #2980b9;
+        }
+
+        #clearButton {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        #clearButton:hover {
+            background-color: #7f8c8d;
+        }
+
+        .status {
+            background-color: #d5f4e6;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #27ae60;
+            display: none;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            min-width: 100px;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .expandable {
+            color: #3498db;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .expandable:hover {
+            color: #2980b9;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .modal-body {
+            margin: 20px 0;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .no-events {
+            text-align: center;
+            padding: 40px;
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 2px 6px;
+            background-color: #eee;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-right: 4px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EMIC Repertuaari Otsing - PROTOTÜÜP</h1>
+
+        <div class="filter-section">
+            <h2>Filtreeri:</h2>
+            
+            <div class="filter-row">
+                <div class="filter-field">
+                    <label for="categoryFilter">Kategooria</label>
+                    <select id="categoryFilter">
+                        <option value="">Kõik</option>
+                        <option value="solo">Solo</option>
+                        <option value="chamber">Chamber</option>
+                        <option value="ensemble">Ensemble</option>
+                        <option value="orchestra">Orchestra</option>
+                        <option value="choir">Choir</option>
+                        <option value="vocal">Vocal</option>
+                        <option value="open">Open</option>
+                    </select>
+                </div>
+                <div class="filter-field">
+                    <label for="playerCountFilter">Mängijate arv (max)</label>
+                    <input type="number" id="playerCountFilter" min="1" max="100" placeholder="Nt. 6">
+                </div>
+                <div class="filter-field">
+                    <label for="electronicsFilter">Elektroonika</label>
+                    <select id="electronicsFilter">
+                        <option value="">Kõik</option>
+                        <option value="yes">Jah</option>
+                        <option value="no">Ei</option>
+                    </select>
+                </div>
+                <div class="filter-field">
+                    <label for="vocalFilter">Vokaal</label>
+                    <select id="vocalFilter">
+                        <option value="">Kõik</option>
+                        <option value="yes">Jah</option>
+                        <option value="no">Ei</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-row">
+                <div class="filter-field">
+                    <label for="ensembleFilter">Ansamblid (tekst)</label>
+                    <input type="text" id="ensembleFilter" placeholder="Nt. keelpillikvartett...">
+                </div>
+                <div class="filter-field">
+                    <label for="partsFilter">Pillid/Osad (tekst)</label>
+                    <input type="text" id="partsFilter" placeholder="Nt. flööt, viiul...">
+                </div>
+                <div class="filter-field">
+                    <label for="freeTextFilter">Vaba tekst (pealkiri, helilooja jne)</label>
+                    <input type="text" id="freeTextFilter" placeholder="Otsi...">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="searchButton">Otsi</button>
+                <button id="clearButton">Tühjenda</button>
+            </div>
+        </div>
+
+        <div id="statusDiv" class="status"></div>
+
+        <div class="table-container">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Helilooja</th>
+                        <th>Pealkiri</th>
+                        <th>Kategooria</th>
+                        <th>Mängijaid</th>
+                        <th>Elektr.</th>
+                        <th>Vokaal</th>
+                        <th>Ansamblid</th>
+                        <th>Pillid/Osad</th>
+                        <th>Originaaltekst</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsTableBody">
+                    <tr>
+                        <td colspan="9" class="no-events">Laadin andmeid...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal for full text -->
+    <div id="textModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <span id="modalTitle"></span>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        const MAX_CONTENT_WIDTH = 50;
+        let allWorks = [];
+        let filteredWorks = [];
+
+        // Load data on page load
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadData();
+            displayWorks(allWorks);
+            showStatus(allWorks.length);
+        });
+
+        // Load works from JSON file
+        async function loadData() {
+            try {
+                // Fetching from parent directory as requested
+                const response = await fetch('../test-instrumentations-ok.json');
+                allWorks = await response.json();
+                filteredWorks = allWorks;
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('resultsTableBody').innerHTML = 
+                    '<tr><td colspan="9" class="no-events">Viga andmete laadimisel (veendu, et fail ../test-instrumentations-ok.json on olemas)</td></tr>';
+            }
+        }
+
+        // Display works in table
+        function displayWorks(works) {
+            const tbody = document.getElementById('resultsTableBody');
+            
+            if (works.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" class="no-events">Teoseid ei leitud</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = works.map((work, index) => {
+                const instr = work.analysis?.instrumentation || {};
+                const parts = instr.parts || [];
+                const partsStr = parts.map(p => p.name_et + (p.count > 1 ? ` (${p.count})` : '')).join(', ');
+                const ensemblesStr = (instr.ensembles || []).join(', ');
+                
+                return `
+                <tr data-index="${index}">
+                    <td>${escapeHtml(work.composer || '')}</td>
+                    <td>${escapeHtml(work.title || '')}</td>
+                    <td>${escapeHtml(instr.category || '-')}</td>
+                    <td>${instr.total_player_count !== null ? instr.total_player_count : '-'}</td>
+                    <td>${instr.has_electronics ? 'Jah' : 'Ei'}</td>
+                    <td>${instr.has_vocal ? 'Jah' : 'Ei'}</td>
+                    <td>${truncateField(ensemblesStr, 'Ansamblid', index)}</td>
+                    <td>${truncateField(partsStr, 'Pillid', index)}</td>
+                    <td>${truncateField(instr.original_text || '', 'Originaal', index)}</td>
+                </tr>
+            `}).join('');
+
+            // Add event listeners for expandable links
+            document.querySelectorAll('.expandable').forEach(link => {
+                link.addEventListener('click', function() {
+                    const fieldName = this.getAttribute('data-field');
+                    const fullText = this.getAttribute('data-text');
+                    showFullText(fieldName, fullText);
+                });
+            });
+        }
+
+        // Truncate long text and add expandable link
+        function truncateField(text, fieldName, eventIndex) {
+            if (!text) return '';
+            
+            const escaped = escapeHtml(text);
+            
+            if (text.length <= MAX_CONTENT_WIDTH) {
+                return escaped;
+            }
+            
+            const truncated = escapeHtml(text.substring(0, MAX_CONTENT_WIDTH)) + '...';
+            // We store the RAW text in data attribute, but for safety we should utilize the function logic carefully
+            // Actually simply encoding it is safe.
+            return `${truncated} <span class="expandable" data-field="${fieldName}" data-text="${escapeHtml(text)}">Näita</span>`;
+        }
+
+        // Show full text in modal
+        function showFullText(title, text) {
+            document.getElementById('modalTitle').textContent = title;
+            // Decode HTML entities if needed or just use textContent which is safer
+            // But we stored escaped text. Let's unescape for display? 
+            // Better: use innerHTML = text since text is already safely escaped by display logic?
+            // Actually, if we use textContent we see labels. 
+            // Let's create a temp div.
+            const temp = document.createElement('div');
+            temp.innerHTML = text; 
+            document.getElementById('modalBody').textContent = temp.textContent;
+            document.getElementById('textModal').style.display = 'block';
+        }
+
+        // Escape HTML to prevent XSS
+        function escapeHtml(text) {
+            if (text === null || text === undefined) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Filter works
+        function filterWorks() {
+            const category = document.getElementById('categoryFilter').value.toLowerCase();
+            const countMax = document.getElementById('playerCountFilter').value;
+            const electronics = document.getElementById('electronicsFilter').value;
+            const vocal = document.getElementById('vocalFilter').value;
+            
+            const ensembleText = document.getElementById('ensembleFilter').value.toLowerCase();
+            const partsText = document.getElementById('partsFilter').value.toLowerCase();
+            const freeText = document.getElementById('freeTextFilter').value.toLowerCase();
+
+            filteredWorks = allWorks.filter(work => {
+                const instr = work.analysis?.instrumentation || {};
+                
+                // Category
+                if (category && instr.category?.toLowerCase() !== category) {
+                    return false;
+                }
+
+                // Player Count (Max filter? Prompt said "Total player count (1-6)", assuming filtering FOR that range or EXACT match?
+                // Usually "1-6" means search for works with 1 to 6 players. 
+                // Let's implement as "Less than or equal to". 
+                // Or maybe the user enters "4" and wants exactly 4?
+                // "1-6" in prompt likely implies listing options or range. 
+                // Let's implement EXACT match if input is simple number, unless user wants range.
+                // Re-reading prompt: "Total player count (1-6)" - possibly just finding small works.
+                // Let's treat input as MAXIMUM count for now, as that's often useful.
+                if (countMax) {
+                    if (instr.total_player_count === null) {
+                        // If null (orchestra/choir), should we exclude?
+                        // If user searches for 6 players, orchestra (null) usually not relevant.
+                        return false;
+                    }
+                    if (instr.total_player_count > parseInt(countMax)) {
+                        return false;
+                    }
+                }
+
+                // Electronics
+                if (electronics) {
+                    const hasElec = instr.has_electronics === true;
+                    if (electronics === 'yes' && !hasElec) return false;
+                    if (electronics === 'no' && hasElec) return false;
+                }
+
+                // Vocal
+                if (vocal) {
+                    const hasVoc = instr.has_vocal === true;
+                    if (vocal === 'yes' && !hasVoc) return false;
+                    if (vocal === 'no' && hasVoc) return false;
+                }
+
+                // Ensemble Text (contains)
+                if (ensembleText) {
+                    const ensembles = (instr.ensembles || []).join(' ').toLowerCase();
+                    if (!ensembles.includes(ensembleText)) return false;
+                }
+
+                // Parts Text (contains in any part name)
+                if (partsText) {
+                    const parts = (instr.parts || []).map(p => p.name_et).join(' ').toLowerCase();
+                    if (!parts.includes(partsText)) return false;
+                }
+
+                // Free Text (Title, Composer, Original Text)
+                if (freeText) {
+                    const content = [
+                        work.title, 
+                        work.composer, 
+                        instr.original_text
+                    ].join(' ').toLowerCase();
+                    
+                    if (!content.includes(freeText)) return false;
+                }
+
+                return true;
+            });
+
+            displayWorks(filteredWorks);
+            showStatus(filteredWorks.length);
+        }
+
+        // Show status message
+        function showStatus(count) {
+            const statusDiv = document.getElementById('statusDiv');
+            statusDiv.textContent = `Leitud ${count} teost`;
+            statusDiv.style.display = 'block';
+        }
+
+        // Clear filters
+        function clearFilters() {
+            document.getElementById('categoryFilter').value = '';
+            document.getElementById('playerCountFilter').value = '';
+            document.getElementById('electronicsFilter').value = '';
+            document.getElementById('vocalFilter').value = '';
+            document.getElementById('ensembleFilter').value = '';
+            document.getElementById('partsFilter').value = '';
+            document.getElementById('freeTextFilter').value = '';
+            
+            filteredWorks = allWorks;
+            displayWorks(allWorks);
+            showStatus(allWorks.length);
+        }
+
+        // Event listeners
+        document.getElementById('searchButton').addEventListener('click', filterWorks);
+        document.getElementById('clearButton').addEventListener('click', clearFilters);
+
+        // Allow Enter key
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    filterWorks();
+                }
+            });
+        });
+
+        // Close modal
+        document.querySelector('.close').addEventListener('click', () => {
+            document.getElementById('textModal').style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            const modal = document.getElementById('textModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

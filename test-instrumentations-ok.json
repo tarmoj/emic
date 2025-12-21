@@ -1,0 +1,6565 @@
+[
+  {
+    "composer": "Toivo Tulev",
+    "title": "Beatrice",
+    "work_id": "Toivo Tulev_Beatrice",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "solistid, koor, orel, instrumentaalansambel",
+        "category": "ensemble",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "koor",
+          "instrumentaalansambel"
+        ],
+        "parts": [
+          {
+            "instrument_id": "org",
+            "name_et": "orel",
+            "name_en": "organ",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Cruz",
+    "work_id": "Toivo Tulev_Cruz",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester, helilint",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "brass": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "percussion_players": null,
+          "timpani": false,
+          "strings": false,
+          "other": [
+            "tape"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Q",
+    "work_id": "Toivo Tulev_Q",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "orkester: 1110, 1110, löökpillid (0+2), klaver, 1. ja 2. viiul, vioola, tšello, kontrabass",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "orkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "1. ja 2. viiul",
+            "name_en": "1st and 2nd violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "db",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "brass": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "percussion_players": 2,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Fireflies vanish, there is nothing more",
+    "work_id": "Toivo Tulev_Fireflies vanish, there is nothing more",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester: 3333, 4331, 4, harf, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "brass": [
+            4,
+            3,
+            3,
+            1
+          ],
+          "percussion_players": 4,
+          "timpani": false,
+          "strings": true,
+          "other": [
+            "harp"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Kolm sümfooniat",
+    "work_id": "Toivo Tulev_Kolm sümfooniat",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 0,
+          "timpani": false,
+          "strings": false,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Pöördub algusse",
+    "work_id": "Toivo Tulev_Pöördub algusse",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester: 2222, 2210, 3, ettevalmistatud klaver, keelpillid (8-6-5-4-2)",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "ettevalmistatud klaver",
+            "name_en": "prepared piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "brass": [
+            2,
+            2,
+            1,
+            0
+          ],
+          "percussion_players": 3,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Future Continuous",
+    "work_id": "Toivo Tulev_Future Continuous",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester: 3333, 3231, löökpillid (3 mängijat), klaver, harf, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "hp",
+            "name_et": "harf",
+            "name_en": "harp",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "brass": [
+            3,
+            2,
+            3,
+            1
+          ],
+          "percussion_players": 3,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Ambra",
+    "work_id": "Toivo Tulev_Ambra",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester: 2222, 4231, 1+2, süntesaator, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "brass": [
+            4,
+            2,
+            3,
+            1
+          ],
+          "percussion_players": 2,
+          "timpani": true,
+          "strings": true,
+          "other": [
+            "synthesizer"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Woo",
+    "work_id": "Toivo Tulev_Woo",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester: 3333, 3231, 3, klaver, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "brass": [
+            3,
+            2,
+            3,
+            1
+          ],
+          "percussion_players": 3,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Signum",
+    "work_id": "Toivo Tulev_Signum",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester: 3333, 4331, 1+5, tšelesta, harf, klaver, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "brass": [
+            4,
+            3,
+            3,
+            1
+          ],
+          "percussion_players": 5,
+          "timpani": true,
+          "strings": true,
+          "other": [
+            "glockenspiel",
+            "harp",
+            "piano"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Tuul",
+    "work_id": "Toivo Tulev_Tuul",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kammerorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Tühjus",
+    "work_id": "Toivo Tulev_Tühjus",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kammerorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": null,
+          "brass": null,
+          "percussion_players": null,
+          "timpani": false,
+          "strings": false,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Sümfoonia",
+    "work_id": "Toivo Tulev_Sümfoonia",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sümfooniaorkester: 2222, 2200, 1, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "brass": [
+            2,
+            2,
+            0,
+            0
+          ],
+          "percussion_players": 1,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Opus 21",
+    "work_id": "Toivo Tulev_Opus 21",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kammerorkester: flööt, klarnet, bassklarnet, löökpillid, harf, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "hp",
+            "name_et": "harf",
+            "name_en": "harp",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 1,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Cadenza II",
+    "work_id": "Toivo Tulev_Cadenza II",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "keelpilliorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "keelpilliorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 0,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Deux",
+    "work_id": "Toivo Tulev_Deux",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt, sopran, kammerorkester: 1212, 0000, 2, süntesaator, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": true,
+        "has_vocal": true,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            1,
+            2,
+            1,
+            2
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 2,
+          "timpani": false,
+          "strings": true,
+          "other": [
+            "synthesizer"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Flow",
+    "work_id": "Toivo Tulev_Flow",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "löökpillid, sinfoniett (14 mängijat): flööt/pikoloflööt/altflööt, oboe, klarnet, fagott, metsasarv, trompet, tromboon, klaver/süntesaator, löökpillid, 2 viiulit, vioola, tšello, kontrabass",
+        "category": "ensemble",
+        "total_player_count": 14,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [
+          "sinfoniett"
+        ],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt/pikoloflööt/altflööt",
+            "name_en": "flute/piccolo flute/alto flute",
+            "count": 1,
+            "doubles": [
+              "piccolo",
+              "alto flute"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "hn",
+            "name_et": "metsasarv",
+            "name_en": "horn",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "trpt",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tbn",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "pf/synth",
+            "name_et": "klaver/süntesaator",
+            "name_en": "piano/synthesizer",
+            "count": 1,
+            "doubles": [
+              "synthesizer"
+            ],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "db",
+            "name_et": "kontrabass",
+            "name_en": "contrabass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Viiulikontsert",
+    "work_id": "Toivo Tulev_Viiulikontsert",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "viiul, sümfooniaorkester: 3323, 3331, 4, klaver, harf, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "soloist",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "hp",
+            "name_et": "harf",
+            "name_en": "harp",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            3,
+            3,
+            2,
+            3
+          ],
+          "brass": [
+            3,
+            3,
+            3,
+            1
+          ],
+          "percussion_players": 4,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Before (Silmitsi)",
+    "work_id": "Toivo Tulev_Before (Silmitsi)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "soolotšello, kammerorkester (13 mängijat): flööt/piccolo/altflööt/marakad, oboe/inglissarv/rainstick/aisakellad, klarnet/bassklarnet, fagott/kontrafagott/triangel/suur trumm, trompet/aisakellad/suur trumm/triangel/tamtam med, tromboon/tamtam med/triangel, löökpillid (marimba, tai gongid, vibrafon, suur trumm, antiiktaldrikud, 3 taldrikut, linebells, tamtam gran), klaver/orel (süntesaator), 2 viiulit, vioola/aisakellad, tšello, kontrabass, fonogramm",
+        "category": "chamber",
+        "total_player_count": 13,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "vc",
+            "name_et": "soolotšello",
+            "name_en": "solo cello",
+            "count": 1,
+            "doubles": [],
+            "role": "soloist",
+            "family": "string"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [
+              "piccolo",
+              "alto flute",
+              "maracas"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [
+              "cor anglais",
+              "rainstick",
+              "cowbells"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [
+              "bass clarinet"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [
+              "contrabassoon",
+              "triangle",
+              "bass drum"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "tr",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 1,
+            "doubles": [
+              "cowbells",
+              "bass drum",
+              "triangle",
+              "tam-tam"
+            ],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "trb",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 1,
+            "doubles": [
+              "tam-tam",
+              "triangle"
+            ],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [
+              "marimba",
+              "thai gongs",
+              "vibraphone",
+              "bass drum",
+              "antique cymbals",
+              "3 cymbals",
+              "linebells",
+              "tam-tam"
+            ],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [
+              "organ",
+              "synthesizer"
+            ],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "va",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [
+              "cowbells"
+            ],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "tape",
+            "name_et": "fonogramm",
+            "name_en": "tape",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Hõljub, laskub...",
+    "work_id": "Toivo Tulev_Hõljub, laskub...",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "elektrikitarr, sümfooniaorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "egtr",
+            "name_et": "elektrikitarr",
+            "name_en": "electric guitar",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": null,
+          "brass": null,
+          "percussion_players": null,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "lost, lost",
+    "work_id": "Toivo Tulev_lost, lost",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "3 flööti, türgi nei, salpuri tantsija, sümfooniaorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 3,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "tn",
+            "name_et": "türgi nei",
+            "name_en": "turkish drum",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "sd",
+            "name_et": "salpuri tantsija",
+            "name_en": "slapstick",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            3,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 2,
+          "timpani": false,
+          "strings": false,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Black Mirror",
+    "work_id": "Toivo Tulev_Black Mirror",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "vokaalsolist, saksofon, türgi flööt kaval, sümfooniaorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "voc",
+            "name_et": "vokaalsolist",
+            "name_en": "vocal soloist",
+            "count": 1,
+            "doubles": [],
+            "role": "soloist",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "sax",
+            "name_et": "saksofon",
+            "name_en": "saxophone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "kaval",
+            "name_et": "türgi flööt kaval",
+            "name_en": "turkish flute kaval",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Descendit",
+    "work_id": "Toivo Tulev_Descendit",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "viiul, oboe, klaver, keelpilliorkester",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "keelpilliorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "str_orch",
+            "name_et": "keelpilliorkester",
+            "name_en": "string orchestra",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Moradas",
+    "work_id": "Toivo Tulev_Moradas",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "3 elektrikitarri, kammerorkester: flööt, klarnet, löökpillid, klaver, keelpillid",
+        "category": "ensemble",
+        "total_player_count": 7,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "gtr_elec",
+            "name_et": "elektrikitarri",
+            "name_en": "electric guitar",
+            "count": 3,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "str",
+            "name_et": "keelpillid",
+            "name_en": "strings",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Muusika kahele klaverile ja orkestrile",
+    "work_id": "Toivo Tulev_Muusika kahele klaverile ja orkestrile",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 klaverit, sümfooniaorkester: 3333, 3331, 1+3, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "brass": [
+            3,
+            3,
+            3,
+            1
+          ],
+          "percussion_players": 3,
+          "timpani": true,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Vahepeal lehtede hämarusest piilub olematus",
+    "work_id": "Toivo Tulev_Vahepeal lehtede hämarusest piilub olematus",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt/pikolo, klaver",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [
+              "pikolo"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "a way, away",
+    "work_id": "Toivo Tulev_a way, away",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "saksofon, orel",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "sax",
+            "name_et": "saksofon",
+            "name_en": "saxophone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "org",
+            "name_et": "orel",
+            "name_en": "organ",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Partial Burqa Ban, Total Burqa Ban (Osaline burkakeeld, täielik burkakeeld)",
+    "work_id": "Toivo Tulev_Partial Burqa Ban, Total Burqa Ban (Osaline burkakeeld, täielik burkakeeld)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "löökpillid (2 mängijat)",
+        "category": "ensemble",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Kaks kolmandata",
+    "work_id": "Toivo Tulev_Kaks kolmandata",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "altsaksofon, akordion",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "asax",
+            "name_et": "altsaksofon",
+            "name_en": "alto saxophone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "acc",
+            "name_et": "akordion",
+            "name_en": "accordion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "He Rejoices in This World and He Rejoices in the Next World",
+    "work_id": "Toivo Tulev_He Rejoices in This World and He Rejoices in the Next World",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "tšello, löökpillid",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Music for a While",
+    "work_id": "Toivo Tulev_Music for a While",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 klaverit",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Recollectio",
+    "work_id": "Toivo Tulev_Recollectio",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 klaverit",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Dé ta ché",
+    "work_id": "Toivo Tulev_Dé ta ché",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "3 mängijat: flööt, pikoloflööt, bassflööt, bassklarnet, klaver",
+        "category": "chamber",
+        "total_player_count": 3,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "pikoloflööt",
+            "name_en": "piccolo flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "bassflööt",
+            "name_en": "bass flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Amid",
+    "work_id": "Toivo Tulev_Amid",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "viiul, kitarr, vibrafon",
+        "category": "chamber",
+        "total_player_count": 3,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "gtr",
+            "name_et": "kitarr",
+            "name_en": "guitar",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vib",
+            "name_et": "vibrafon",
+            "name_en": "vibraphone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Du, ewig Du",
+    "work_id": "Toivo Tulev_Du, ewig Du",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt, tšello, klavessiin",
+        "category": "chamber",
+        "total_player_count": 3,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "hps",
+            "name_et": "klavessiin",
+            "name_en": "harpsichord",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Consummatum est",
+    "work_id": "Toivo Tulev_Consummatum est",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "klarnet, tšello, klaver",
+        "category": "chamber",
+        "total_player_count": 3,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Kolm väikest triot",
+    "work_id": "Toivo Tulev_Kolm väikest triot",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "klaver, löökpillid (2 mängijat)",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Fit brevis pausa silentii",
+    "work_id": "Toivo Tulev_Fit brevis pausa silentii",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "viiul, tšello, klaver",
+        "category": "chamber",
+        "total_player_count": 3,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "To ebb, to flow, perchance to dream",
+    "work_id": "Toivo Tulev_To ebb, to flow, perchance to dream",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "klarnet, bassklarnet, viiul, vioola",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Early Music",
+    "work_id": "Toivo Tulev_Early Music",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "klarnet, klaver, viiul, tšello",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Opus 18 (Hommage to the Setting Sun)",
+    "work_id": "Toivo Tulev_Opus 18 (Hommage to the Setting Sun)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "4 mängijat: flööt, altflööt, klarnet, bassklarnet, 2 klaverit",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [
+              "alto flute"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [
+              "bass clarinet"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Vahepeal õhk täitub tõotuste lõhnaga",
+    "work_id": "Toivo Tulev_Vahepeal õhk täitub tõotuste lõhnaga",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "keelpillikvartett",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "keelpillikvartett"
+        ],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Neither This nor the Further Shore",
+    "work_id": "Toivo Tulev_Neither This nor the Further Shore",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "keelpillikvartett (II versioon: keelpillikvartett, helilint)",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [
+          "keelpillikvartett"
+        ],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Keelpillikvartett nr. 1",
+    "work_id": "Toivo Tulev_Keelpillikvartett nr. 1",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "keelpillikvartett",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "keelpillikvartett"
+        ],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "And I Loved You Like a Branch Breaking Under the Snow",
+    "work_id": "Toivo Tulev_And I Loved You Like a Branch Breaking Under the Snow",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kamancheh(või toon alla häälestatud viiul), viiul, vioola, tšello, klaver",
+        "category": "chamber",
+        "total_player_count": 5,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "kam",
+            "name_et": "kamancheh",
+            "name_en": "kamancheh",
+            "count": 1,
+            "doubles": [
+              "violin (tuned down)"
+            ],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "To a Distant Friend",
+    "work_id": "Toivo Tulev_To a Distant Friend",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt, klarnet, viiul, tšello, klaver",
+        "category": "chamber",
+        "total_player_count": 5,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Nada",
+    "work_id": "Toivo Tulev_Nada",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "klaver, keelpillikvartett",
+        "category": "chamber",
+        "total_player_count": 5,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [
+          "keelpillikvartett"
+        ],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Seitse antifooni Pierre Boulezile",
+    "work_id": "Toivo Tulev_Seitse antifooni Pierre Boulezile",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "pikolo, klarnet, viiul, tšello, löökpillid, klaver",
+        "category": "chamber",
+        "total_player_count": 6,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "pic",
+            "name_et": "pikolo",
+            "name_en": "piccolo",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Swing Low",
+    "work_id": "Toivo Tulev_Swing Low",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt/pikoloflööt, klarnet in B/bassklarnet, viiul, tšello, löökpillid, klaver/süntesaator",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt/pikoloflööt",
+            "name_en": "flute/piccolo flute",
+            "count": 1,
+            "doubles": [
+              "piccolo"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet in B/bassklarnet",
+            "name_en": "clarinet in B/bass clarinet",
+            "count": 1,
+            "doubles": [
+              "bass clarinet"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver/süntesaator",
+            "name_en": "piano/synthesizer",
+            "count": 1,
+            "doubles": [
+              "synthesizer"
+            ],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Gare de l'Est",
+    "work_id": "Toivo Tulev_Gare de l'Est",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "6 mängijat: flööt, pikoloflööt, klarnet, bassklarnet, viiul, vioola, tšello, klaver",
+        "category": "chamber",
+        "total_player_count": 8,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "pikoloflööt",
+            "name_en": "piccolo flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "va",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "White House, Blue Shutters – Blue House, White Shutters",
+    "work_id": "Toivo Tulev_White House, Blue Shutters – Blue House, White Shutters",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 viiulit, vioola, tšello, kontrabass, klaver, löökpillid",
+        "category": "chamber",
+        "total_player_count": 6,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Isopo",
+    "work_id": "Toivo Tulev_Isopo",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "7 mängijat: flööt, pikoloflööt, klarnet, löökpillid, klaver, süntesaator, viiul, tšello, kontrabass",
+        "category": "chamber",
+        "total_player_count": 7,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "pikoloflööt",
+            "name_en": "piccolo flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "synth",
+            "name_et": "süntesaator",
+            "name_en": "synthesizer",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Now Comes Good Sailing",
+    "work_id": "Toivo Tulev_Now Comes Good Sailing",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt/bassflööt, klarnet/bassklarnet, trompet/flüügelhorn, löökpillid, klaver/orel, viiul, vioola, tšello",
+        "category": "chamber",
+        "total_player_count": 8,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [
+              "bass flute"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [
+              "bass clarinet"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "tr",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 1,
+            "doubles": [
+              "flugelhorn"
+            ],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [
+              "organ"
+            ],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "va",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Vexations/Consolations",
+    "work_id": "Toivo Tulev_Vexations/Consolations",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "3 flööti, klaver, vioola, tšello, kontrabass, löökpillid",
+        "category": "chamber",
+        "total_player_count": 7,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 3,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "va",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "contrabass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "In You, Void of Yourself",
+    "work_id": "Toivo Tulev_In You, Void of Yourself",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "oboe, duduk, duduk/plokkflööt, zheng, harf, löökpillid, erhu, tšello, kontrabass",
+        "category": "chamber",
+        "total_player_count": 9,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "dud",
+            "name_et": "duduk",
+            "name_en": "duduk",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "dud",
+            "name_et": "duduk",
+            "name_en": "duduk",
+            "count": 1,
+            "doubles": [
+              "recorder"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "zheng",
+            "name_et": "zheng",
+            "name_en": "zheng",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "hp",
+            "name_et": "harf",
+            "name_en": "harp",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "erhu",
+            "name_et": "erhu",
+            "name_en": "erhu",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "contrabass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Veel ärgates ma olen Sinu juures",
+    "work_id": "Toivo Tulev_Veel ärgates ma olen Sinu juures",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "16 mängijat: flööt, pikoloflööt, oboe, klarnet, bassklarnet, fagott, 2 metsasarve, trompet, tromboon, löökpillid, 2 klaverit, 2 süntesaatorit, 2 viiulit, vioola, tšello, kontrabass",
+        "category": "ensemble",
+        "total_player_count": 16,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "pikoloflööt",
+            "name_en": "piccolo flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "hn",
+            "name_et": "metsasarv",
+            "name_en": "french horn",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tr",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tb",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "synth",
+            "name_et": "süntesaator",
+            "name_en": "synthesizer",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Be Lost in the Call",
+    "work_id": "Toivo Tulev_Be Lost in the Call",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "14 mängijat: flööt, pikoloflööt, oboe, klarner, bassklarnet, fagott, metsasarv, trompet, tromboon, löökpillid (1 mängija), klaver, süntesaator, 2 viiulit, vioola tšello, kontrabass, helilint",
+        "category": "ensemble",
+        "total_player_count": 14,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "pikoloflööt",
+            "name_en": "piccolo flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarner",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "hn",
+            "name_et": "metsasarv",
+            "name_en": "horn",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tp",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tbn",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "synth",
+            "name_et": "süntesaator",
+            "name_en": "synthesizer",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "tape",
+            "name_et": "helilint",
+            "name_en": "tape",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Don't Call Him Too Early",
+    "work_id": "Toivo Tulev_Don't Call Him Too Early",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "12 mängijat: altflööt, pikoloflööt, oboe, klarnet, bassklarnet, löökpillid (1 mängija), klaver, mandoliin, kitarr, harf, viiul, vioola, tšello, kontrabass",
+        "category": "ensemble",
+        "total_player_count": 12,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "afl",
+            "name_et": "altflööt",
+            "name_en": "alto flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pic",
+            "name_et": "pikoloflööt",
+            "name_en": "piccolo flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "mnd",
+            "name_et": "mandoliin",
+            "name_en": "mandolin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "gtr",
+            "name_et": "kitarr",
+            "name_en": "guitar",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "hp",
+            "name_et": "harf",
+            "name_en": "harp",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Quella sera",
+    "work_id": "Toivo Tulev_Quella sera",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "12 mängijat: flööt, altflööt, oboe, klarnet, bassklarnet, fagott, metsasarv, 2 viiulit, vioola, tšello, kontrabass, klaver, löökpillid",
+        "category": "ensemble",
+        "total_player_count": 12,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "afl",
+            "name_et": "altflööt",
+            "name_en": "alto flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "hn",
+            "name_et": "metsasarv",
+            "name_en": "horn",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Thou Art",
+    "work_id": "Toivo Tulev_Thou Art",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt, 2 klarnetit, löökpillid (2 mängijat), klaver, 2 viiulit, vioola, 3 tšellot, kontrabass",
+        "category": "chamber",
+        "total_player_count": 11,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 3,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "db",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Amictus nube",
+    "work_id": "Toivo Tulev_Amictus nube",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 klarnetit, löökpillid (2 mängijat), klaver, 2 viiulit, vioola, tšello, kontrabass",
+        "category": "chamber",
+        "total_player_count": 8,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Legatissimo",
+    "work_id": "Toivo Tulev_Legatissimo",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "löökpillid (1 mängija): 2 tam-tami, 4 taldrikut, suur trumm, marimba, vibrafon, Tai gongid",
+        "category": "chamber",
+        "total_player_count": 1,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [
+              "tam-tam",
+              "taldrikud",
+              "suur trumm",
+              "marimba",
+              "vibrafon",
+              "Tai gongid"
+            ],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Cadenza",
+    "work_id": "Toivo Tulev_Cadenza",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "klaver",
+        "category": "solo",
+        "total_player_count": 1,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Gladius (feria sexta)",
+    "work_id": "Toivo Tulev_Gladius (feria sexta)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "1995/2003",
+        "category": "open",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Dawn, Almost Dawn",
+    "work_id": "Toivo Tulev_Dawn, Almost Dawn",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "mansur nei",
+        "category": "solo",
+        "total_player_count": 1,
+        "has_electronics": false,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "mn",
+            "name_et": "mansur",
+            "name_en": "mansur",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "unknown"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Der Herr ist mein getreuer Hirt II",
+    "work_id": "Toivo Tulev_Der Herr ist mein getreuer Hirt II",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kontratenor (+koor) (a-f1), viiul, klaver, keelpilliorkester",
+        "category": "ensemble",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "keelpilliorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "ct",
+            "name_et": "kontratenor",
+            "name_en": "countertenor",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 0,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "So Shall He Descend",
+    "work_id": "Toivo Tulev_So Shall He Descend",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, metsosopran, tenor, bass, segakoor, sümfooniaorkester",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor",
+          "sümfooniaorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "msop",
+            "name_et": "metsosopran",
+            "name_en": "mezzo-soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "ten",
+            "name_et": "tenor",
+            "name_en": "tenor",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "bass",
+            "name_et": "bass",
+            "name_en": "bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Magnificat",
+    "work_id": "Toivo Tulev_Magnificat",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 sopranit, segakoor, 2 löökpillimängijat, keelpilliorkester",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor",
+          "keelpilliorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 2,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Lamentatsioonid",
+    "work_id": "Toivo Tulev_Lamentatsioonid",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "5 solisti (sopran, metsosopran, tenor, bariton, kontratenor/sopran/alt), 2 segakoori, kammeorkester: 1111, 0000, 0, harf, keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor",
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "soloist",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "mets",
+            "name_et": "metsosopran",
+            "name_en": "mezzo-soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "soloist",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "ten",
+            "name_et": "tenor",
+            "name_en": "tenor",
+            "count": 1,
+            "doubles": [],
+            "role": "soloist",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "bar",
+            "name_et": "bariton",
+            "name_en": "baritone",
+            "count": 1,
+            "doubles": [],
+            "role": "soloist",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "ctn",
+            "name_et": "kontratenor",
+            "name_en": "counter-tenor",
+            "count": 1,
+            "doubles": [
+              "sopran",
+              "alt"
+            ],
+            "role": "soloist",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 0,
+          "timpani": false,
+          "strings": true,
+          "other": [
+            "harp"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Sans mesure",
+    "work_id": "Toivo Tulev_Sans mesure",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor, kammerorkester: löökpillid (2 mängijat), keelpillid",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor",
+          "kammerorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 2,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Cecilia",
+    "work_id": "Toivo Tulev_Cecilia",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 naiskoori, sopran, kammerorkester: 1111, 0200, löökpillid, orel, keelpillid",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "naiskoor",
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "brass": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "percussion_players": 1,
+          "timpani": false,
+          "strings": true,
+          "other": [
+            "organ"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "The Beauty of Warfare (Sõjapidamise ilu)",
+    "work_id": "Toivo Tulev_The Beauty of Warfare (Sõjapidamise ilu)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "meeskoor, puhkpilliorkester",
+        "category": "ensemble",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "meeskoor",
+          "puhkpilliorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "I Heard the Voices of Children",
+    "work_id": "Toivo Tulev_I Heard the Voices of Children",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor, solistid, instrumentaalansambel",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor",
+          "instrumentaalansambel"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Ah, ne güzelsin! (Vaata, sa oled ilus!)",
+    "work_id": "Toivo Tulev_Ah, ne güzelsin! (Vaata, sa oled ilus!)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 tenorit, kemençe, kanun, 2 bendirit, kammerkoor (versioon ka 2 tenorile, kemençele, kanunile ja kammerkoorile)",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "kammerkoor"
+        ],
+        "parts": [
+          {
+            "instrument_id": "tenor",
+            "name_et": "tenor",
+            "name_en": "tenor",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "kemençe",
+            "name_et": "kemençe",
+            "name_en": "kemençe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "kanun",
+            "name_et": "kanun",
+            "name_en": "kanun",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "bendir",
+            "name_et": "bendir",
+            "name_en": "bendir",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Farewell, Good-bye",
+    "work_id": "Toivo Tulev_Farewell, Good-bye",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor, orel",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [
+          {
+            "instrument_id": "org",
+            "name_et": "orel",
+            "name_en": "organ",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Songs",
+    "work_id": "Toivo Tulev_Songs",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, alt, metsosopran, kontratenor, tenor, bariton + 3 vokaalgruppi: 3 sopranit (coro lontano); segakoor (coro I); segakoor (coro II) + 3 instrumentaalgruppi: flööt/pikoloflööt/dolce/duduk, oboe/duduk, fagott, orel, löökpillid; flööt/altflööt, oboe/inglissarv, fagott/kontrafagott, orel, löökpillid; 2 viiulit, vioola, 2 tšellot, kontrabass",
+        "category": "ensemble",
+        "total_player_count": 17,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "coro lontano",
+          "segakoor",
+          "segakoor"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "alt",
+            "name_et": "alt",
+            "name_en": "alto",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "msop",
+            "name_et": "metsosopran",
+            "name_en": "mezzo-soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "ctnr",
+            "name_et": "kontratenor",
+            "name_en": "countertenor",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "ten",
+            "name_et": "tenor",
+            "name_en": "tenor",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "bar",
+            "name_et": "bariton",
+            "name_en": "baritone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran (coro lontano)",
+            "name_en": "soprano (coro lontano)",
+            "count": 3,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "choir",
+            "name_et": "segakoor (coro I)",
+            "name_en": "mixed choir (coro I)",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "choir",
+            "name_et": "segakoor (coro II)",
+            "name_en": "mixed choir (coro II)",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt/pikoloflööt/dolce/duduk",
+            "name_en": "flute/piccolo flute/dolce/duduk",
+            "count": 1,
+            "doubles": [
+              "piccolo flute",
+              "dolce",
+              "duduk"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe/duduk",
+            "name_en": "oboe/duduk",
+            "count": 1,
+            "doubles": [
+              "duduk"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "org",
+            "name_et": "orel",
+            "name_en": "organ",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt/altflööt",
+            "name_en": "flute/alto flute",
+            "count": 1,
+            "doubles": [
+              "alto flute"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe/inglissarv",
+            "name_en": "oboe/english horn",
+            "count": 1,
+            "doubles": [
+              "english horn"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott/kontrafagott",
+            "name_en": "bassoon/contrabassoon",
+            "count": 1,
+            "doubles": [
+              "contrabassoon"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "org",
+            "name_et": "orel",
+            "name_en": "organ",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "O, Oriens",
+    "work_id": "Toivo Tulev_O, Oriens",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kontratenor (või alt), 2 meeskoori, 3 instrumentaalansamblit: 2 trompetit, tromboon; 2 oboed, inglissarv, fagott; 2 trombooni, kontrafagott",
+        "category": "ensemble",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "meeskoor",
+          "instrumentaalansambel"
+        ],
+        "parts": [
+          {
+            "instrument_id": "cten",
+            "name_et": "kontratenor",
+            "name_en": "countertenor",
+            "count": 1,
+            "doubles": [
+              "alto"
+            ],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "mch",
+            "name_et": "meeskoor",
+            "name_en": "male choir",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "trp",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tbn",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "eng",
+            "name_et": "inglissarv",
+            "name_en": "english horn",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bsn",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "tbn",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "cbsn",
+            "name_et": "kontrafagott",
+            "name_en": "contrabassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "En purpura tendido",
+    "work_id": "Toivo Tulev_En purpura tendido",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "naishääled, keelpilliorkester",
+        "category": "orchestra",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "keelpilliorkester"
+        ],
+        "parts": [],
+        "orchestral_layout": {
+          "woodwinds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 0,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "I said, Who are You? - He said, You",
+    "work_id": "Toivo Tulev_I said, Who are You? - He said, You",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kontratenor, altsaksofon, orel, keelpilliorkester",
+        "category": "ensemble",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "keelpilliorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "ct",
+            "name_et": "kontratenor",
+            "name_en": "countertenor",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "saxa",
+            "name_et": "altsaksofon",
+            "name_en": "alto saxophone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "org",
+            "name_et": "orel",
+            "name_en": "organ",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "brass": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "percussion_players": 0,
+          "timpani": false,
+          "strings": true,
+          "other": []
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Tunc venit",
+    "work_id": "Toivo Tulev_Tunc venit",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, kammerorkester: 1111, 0210, 2, harf, klaver, keelpillid",
+        "category": "ensemble",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": {
+          "woodwinds": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "brass": [
+            0,
+            2,
+            1,
+            0
+          ],
+          "percussion_players": 2,
+          "timpani": false,
+          "strings": true,
+          "other": [
+            "harp",
+            "piano"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Beloved, beloved",
+    "work_id": "Toivo Tulev_Beloved, beloved",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, flööt, kammerorkester",
+        "category": "chamber",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "kammerorkester"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Beloved",
+    "work_id": "Toivo Tulev_Beloved",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, pikoloflööt, klaver, löökpillid, 2 viiulit, vioola, tšello, kontrabass",
+        "category": "chamber",
+        "total_player_count": 8,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "pikoloflööt",
+            "name_en": "piccolo flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Fana",
+    "work_id": "Toivo Tulev_Fana",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "metsosopran, vioola",
+        "category": "solo",
+        "total_player_count": 2,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "ms",
+            "name_et": "metsosopran",
+            "name_en": "mezzo-soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "va",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "nani mo nashi – there is nothing more",
+    "work_id": "Toivo Tulev_nani mo nashi – there is nothing more",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kontratenor, vaskpillikvintett (2 trompetit, tromboon, metsasarv, tuuba), elektroonika",
+        "category": "ensemble",
+        "total_player_count": 6,
+        "has_electronics": true,
+        "has_vocal": true,
+        "ensembles": [
+          "vaskpillikvintett"
+        ],
+        "parts": [
+          {
+            "instrument_id": "ct",
+            "name_et": "kontratenor",
+            "name_en": "countertenor",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "tr",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tbn",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "hn",
+            "name_et": "metsasarv",
+            "name_en": "horn",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tu",
+            "name_et": "tuuba",
+            "name_en": "tuba",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "elec",
+            "name_et": "elektroonika",
+            "name_en": "electronics",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Six Last Words of Henry David Thoreau (Henry David Thoreau’ kuus viimast sõna)",
+    "work_id": "Toivo Tulev_Six Last Words of Henry David Thoreau (Henry David Thoreau’ kuus viimast sõna)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, klarnet, keelpillikvintett (2 viiulit, vioola, tšello, kontrabass)",
+        "category": "chamber",
+        "total_player_count": 7,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "keelpillikvintett"
+        ],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vla",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Miks?",
+    "work_id": "Toivo Tulev_Miks?",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "hääl, kannel, flööt, tšello",
+        "category": "chamber",
+        "total_player_count": 4,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "voc",
+            "name_et": "hääl",
+            "name_en": "voice",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "knd",
+            "name_et": "kannel",
+            "name_en": "kantele",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Flow I, II, III, IV",
+    "work_id": "Toivo Tulev_Flow I, II, III, IV",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "kontratenor, lauto, gambakonsort",
+        "category": "chamber",
+        "total_player_count": 3,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "ctn",
+            "name_et": "kontratenor",
+            "name_en": "countertenor",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "laut",
+            "name_et": "lauto",
+            "name_en": "lute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "gbk",
+            "name_et": "gambakonsort",
+            "name_en": "viol consort",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Leave, Alas, This Tormenting",
+    "work_id": "Toivo Tulev_Leave, Alas, This Tormenting",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, löökpillid (3 mängijat), helilint",
+        "category": "ensemble",
+        "total_player_count": 4,
+        "has_electronics": true,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 3,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "elec",
+            "name_et": "helilint",
+            "name_en": "tape/electronics",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Adiós (Śri Rāma in Memoriam)",
+    "work_id": "Toivo Tulev_Adiós (Śri Rāma in Memoriam)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "2 kontratenorit (või sopranit), koor, flööt, oboe, fagott, aisakellad, orel, süntesaator, 2 viiulit, vioola, tšello, kontrabass",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": true,
+        "has_vocal": true,
+        "ensembles": [
+          "koor"
+        ],
+        "parts": [
+          {
+            "instrument_id": "ctr",
+            "name_et": "kontratenor",
+            "name_en": "countertenor",
+            "count": 2,
+            "doubles": [
+              "soprano"
+            ],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "choir",
+            "name_et": "koor",
+            "name_en": "choir",
+            "count": null,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "fg",
+            "name_et": "fagott",
+            "name_en": "bassoon",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "aisakellad",
+            "name_en": "glockenspiel",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "org",
+            "name_et": "orel",
+            "name_en": "organ",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "synth",
+            "name_et": "süntesaator",
+            "name_en": "synthesizer",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "va",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Leaving the Deep Lane",
+    "work_id": "Toivo Tulev_Leaving the Deep Lane",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, flööt/altflööt, tšello, harf, klaver",
+        "category": "chamber",
+        "total_player_count": 5,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [
+              "alto flute"
+            ],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "hp",
+            "name_et": "harf",
+            "name_en": "harp",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "El Silbo",
+    "work_id": "Toivo Tulev_El Silbo",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "metsosopran, klarnet, bassklarnet, tuuba, löökpillid",
+        "category": "chamber",
+        "total_player_count": 5,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "ms",
+            "name_et": "metsosopran",
+            "name_en": "mezzo-soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "tuba",
+            "name_et": "tuuba",
+            "name_en": "tuba",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Sin otra luz…",
+    "work_id": "Toivo Tulev_Sin otra luz…",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "metsosopran, viiul, tšello, klaver, löökpillid",
+        "category": "chamber",
+        "total_player_count": 5,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "ms",
+            "name_et": "metsosopran",
+            "name_en": "mezzo-soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Du",
+    "work_id": "Toivo Tulev_Du",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, oboe, klarnet, bassklarnet, vioola, tšello, kontrabass, löökpillid (2 mängijat), klaver",
+        "category": "chamber",
+        "total_player_count": 9,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "ob",
+            "name_et": "oboe",
+            "name_en": "oboe",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "bcl",
+            "name_et": "bassklarnet",
+            "name_en": "bass clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "va",
+            "name_et": "vioola",
+            "name_en": "viola",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "cb",
+            "name_et": "kontrabass",
+            "name_en": "double bass",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Der Herr ist mein getreuer Hirt I",
+    "work_id": "Toivo Tulev_Der Herr ist mein getreuer Hirt I",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "sopran, viiul, klaver",
+        "category": "solo",
+        "total_player_count": 3,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "sop",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Ek het jou lief",
+    "work_id": "Toivo Tulev_Ek het jou lief",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "A Child Said, What Is the Grass?",
+    "work_id": "Toivo Tulev_A Child Said, What Is the Grass?",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Car j'ai vécu de vous attendre",
+    "work_id": "Toivo Tulev_Car j'ai vécu de vous attendre",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor (16-häälne kammerkoor)",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor",
+          "kammerkoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Tanto gentile (Nii õrnalt)",
+    "work_id": "Toivo Tulev_Tanto gentile (Nii õrnalt)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Valgus, mu valgus",
+    "work_id": "Toivo Tulev_Valgus, mu valgus",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Sonetid",
+    "work_id": "Toivo Tulev_Sonetid",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Rejoice, Rejoice, Rejoice!",
+    "work_id": "Toivo Tulev_Rejoice, Rejoice, Rejoice!",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Jusquez au printemps (Kuni kevad saabub)",
+    "work_id": "Toivo Tulev_Jusquez au printemps (Kuni kevad saabub)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Upstream, Upstream",
+    "work_id": "Toivo Tulev_Upstream, Upstream",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Miserere (Psalm 51)",
+    "work_id": "Toivo Tulev_Miserere (Psalm 51)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "segakoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "segakoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Hõõgvel",
+    "work_id": "Toivo Tulev_Hõõgvel",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "meeskoor",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "meeskoor"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Õhtulaul, kesksuvi",
+    "work_id": "Toivo Tulev_Õhtulaul, kesksuvi",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "8 häält (SATB)",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "voice",
+            "name_et": "hääled",
+            "name_en": "voices",
+            "count": 8,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Õhtulaul, kevad",
+    "work_id": "Toivo Tulev_Õhtulaul, kevad",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "8 häält (SATB)",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "voice",
+            "name_et": "hääled",
+            "name_en": "voices",
+            "count": 8,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Õhtulaul, suvi",
+    "work_id": "Toivo Tulev_Õhtulaul, suvi",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "8 häält (SATB)",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "voice_soprano",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "voice_alto",
+            "name_et": "alt",
+            "name_en": "alto",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "voice_tenor",
+            "name_et": "tenor",
+            "name_en": "tenor",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "voice_bass",
+            "name_et": "bass",
+            "name_en": "bass",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Õhtulaul, talv",
+    "work_id": "Toivo Tulev_Õhtulaul, talv",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "8 häält (SATB)",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "vocal_s",
+            "name_et": "sopran",
+            "name_en": "soprano",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "vocal_a",
+            "name_et": "alt",
+            "name_en": "alto",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "vocal_t",
+            "name_et": "tenor",
+            "name_en": "tenor",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          },
+          {
+            "instrument_id": "vocal_b",
+            "name_et": "bass",
+            "name_en": "bass",
+            "count": 2,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Aufstieg",
+    "work_id": "Toivo Tulev_Aufstieg",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "8 naishäält",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "S",
+            "name_et": "naishääl",
+            "name_en": "female voice",
+            "count": 8,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Flow, My Tears (Voolake, mu pisarad)",
+    "work_id": "Toivo Tulev_Flow, My Tears (Voolake, mu pisarad)",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "vokaalansambel (12 häält)",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "vokaalansambel"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Missa Fons bonitatis",
+    "work_id": "Toivo Tulev_Missa Fons bonitatis",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "vokaalansambel",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [
+          "vokaalansambel"
+        ],
+        "parts": [],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Suvine vihm",
+    "work_id": "Toivo Tulev_Suvine vihm",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "8 häält",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "voice",
+            "name_et": "hääl",
+            "name_en": "voice",
+            "count": 8,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Siis oled vaikusen mu ligi üksi Sina",
+    "work_id": "Toivo Tulev_Siis oled vaikusen mu ligi üksi Sina",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "12 häält",
+        "category": "choir",
+        "total_player_count": null,
+        "has_electronics": false,
+        "has_vocal": true,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "voc",
+            "name_et": "hääled",
+            "name_en": "voices",
+            "count": 12,
+            "doubles": [],
+            "role": "normal",
+            "family": "voice"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Above",
+    "work_id": "Toivo Tulev_Above",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt, klarnet, viiul, tšello, löökpillid, klaver, fonogramm",
+        "category": "chamber",
+        "total_player_count": 7,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "vln",
+            "name_et": "viiul",
+            "name_en": "violin",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "elec",
+            "name_et": "fonogramm",
+            "name_en": "phonogram",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "velum, aftertouch",
+    "work_id": "Toivo Tulev_velum, aftertouch",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt, midi-löökpillid, fonogramm, video",
+        "category": "chamber",
+        "total_player_count": 2,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "midi-löökpillid",
+            "name_en": "midi percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  },
+  {
+    "composer": "Toivo Tulev",
+    "title": "Teine kallas, vaikuses hommikune vihm",
+    "work_id": "Toivo Tulev_Teine kallas, vaikuses hommikune vihm",
+    "analysis": {
+      "instrumentation": {
+        "original_text": "flööt, klarnet, trompet, tromboon, tšello, klaver, löökpillid, helilint, video",
+        "category": "chamber",
+        "total_player_count": 8,
+        "has_electronics": true,
+        "has_vocal": false,
+        "ensembles": [],
+        "parts": [
+          {
+            "instrument_id": "fl",
+            "name_et": "flööt",
+            "name_en": "flute",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "cl",
+            "name_et": "klarnet",
+            "name_en": "clarinet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "woodwind"
+          },
+          {
+            "instrument_id": "trpt",
+            "name_et": "trompet",
+            "name_en": "trumpet",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "tbn",
+            "name_et": "tromboon",
+            "name_en": "trombone",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "brass"
+          },
+          {
+            "instrument_id": "vc",
+            "name_et": "tšello",
+            "name_en": "cello",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "string"
+          },
+          {
+            "instrument_id": "pf",
+            "name_et": "klaver",
+            "name_en": "piano",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "keyboard"
+          },
+          {
+            "instrument_id": "perc",
+            "name_et": "löökpillid",
+            "name_en": "percussion",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "percussion"
+          },
+          {
+            "instrument_id": "elec",
+            "name_et": "helilint",
+            "name_en": "tape/electronics",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          },
+          {
+            "instrument_id": "vid",
+            "name_et": "video",
+            "name_en": "video",
+            "count": 1,
+            "doubles": [],
+            "role": "normal",
+            "family": "electronic"
+          }
+        ],
+        "orchestral_layout": null
+      }
+    }
+  }
+]
