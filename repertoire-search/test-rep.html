@@ -441,6 +441,8 @@
         }
 
         // Filter works
+        // TODO: finding by instumentation (like 'flööt, klarnet' doew not work)
+        // rather create text -> labels (fl, cl, pf) that match the abbreviations
         function filterWorks() {
             const category = document.getElementById('categoryFilter').value.toLowerCase();
             const countMax = document.getElementById('playerCountFilter').value;
