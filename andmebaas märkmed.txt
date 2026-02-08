@@ -1,0 +1,185 @@
+
+
+// CLI
+mariadb -u emic -p
+tobias
+port 3306
+db: emic
+
+// erista andmed:
+
+sed -n -e '/CREATE TABLE `heliloojad`/,/UNLOCK TABLES/p' emic_all.sql > heliloojad.sql
+sed -n -e '/CREATE TABLE `heliloojad_teosed`/,/UNLOCK TABLES/p' emic_all.sql > heliloojad_teosed.sql
+sed -n -e '/CREATE TABLE `teosed`/,/UNLOCK TABLES/p' emic_all.sql > teosed.sql
+sed -n -e '/CREATE TABLE `teosed_zanrid`/,/UNLOCK TABLES/p' emic_all.sql > teosed_zanrid.sql
+
+vt ka `tooted_kategooriad` `tooted_kategooriad_tolge`
+
+
+'koosseis' tabelis: teosed_tekstid
+
+
+
+// importimisel pidi:
+SET SESSION SQL_LOG_BIN=0;
+SET SESSION SQL_LOG_BIN=0;
+SET @@SESSION.character_set_client='utf8mb4';
+SOURCE <fail>.sql;
+
+
+
+// tabelid:
+CREATE TABLE `adm_menyyasukoht` (
+CREATE TABLE `admin_login` (
+CREATE TABLE `alumine_menyy` (
+CREATE TABLE `archive` (
+CREATE TABLE `arved` (
+CREATE TABLE `arved_everypay_maksed` (
+CREATE TABLE `arved_everypay_maksed_errors` (
+CREATE TABLE `arved_everypay_maksed_responses` (
+CREATE TABLE `arved_read` (
+CREATE TABLE `arved_seaded` (
+CREATE TABLE `bannerid` (
+CREATE TABLE `bannerid2` (
+CREATE TABLE `box_tekstid` (
+CREATE TABLE `box_uudised` (
+CREATE TABLE `boxi_lubatud_asjad` (
+CREATE TABLE `boxi_sisu` (
+CREATE TABLE `boxid` (
+CREATE TABLE `cma_currencys` (
+CREATE TABLE `countries` (
+CREATE TABLE `emails` (
+CREATE TABLE `esileht` (
+CREATE TABLE `estcardmaksed` (
+CREATE TABLE `extranet_login` (
+CREATE TABLE `extranet_users` (
+CREATE TABLE `extranet_users_loginkeys` (
+CREATE TABLE `foorum_esileht` (
+CREATE TABLE `foorum_sisu` (
+CREATE TABLE `foorum_teemad` (
+CREATE TABLE `galerii` (
+CREATE TABLE `galerii_esileht` (
+CREATE TABLE `guestbook` (
+CREATE TABLE `guestbook_banned` (
+CREATE TABLE `heliloojad` (
+CREATE TABLE `heliloojad_artiklid` (
+CREATE TABLE `heliloojad_pildid` (
+CREATE TABLE `heliloojad_tekstid` (
+CREATE TABLE `heliloojad_teosed` (
+CREATE TABLE `interpreedid` (
+CREATE TABLE `interpreedid_artiklid` (
+CREATE TABLE `interpreedid_pildid` (
+CREATE TABLE `interpreedid_tekstid` (
+CREATE TABLE `interpreedid_teosed` (
+CREATE TABLE `kasikirjad` (
+CREATE TABLE `kasikirjad_asukohad` (
+CREATE TABLE `kasikirjad_asukohad_tolge` (
+CREATE TABLE `kasikirjad_asukohad_valitud` (
+CREATE TABLE `kasikirjad_digiPartituurid` (
+CREATE TABLE `kasikirjad_digiPartituurid_tolge` (
+CREATE TABLE `kasikirjad_digiPartituurid_valitud` (
+CREATE TABLE `kasikirjad_digiarhiivid` (
+CREATE TABLE `kasikirjad_digiarhiivid_tolge` (
+CREATE TABLE `kasikirjad_digiarhiivid_valitud` (
+CREATE TABLE `kasikirjad_digikoopiad` (
+CREATE TABLE `kasikirjad_digikoopiad_tolge` (
+CREATE TABLE `kasikirjad_digikoopiad_valitud` (
+CREATE TABLE `kasikirjad_failid` (
+CREATE TABLE `kasikirjad_kirjastajad` (
+CREATE TABLE `kasikirjad_liigid` (
+CREATE TABLE `kasikirjad_liigid_tolge` (
+CREATE TABLE `kasikirjad_tekstid` (
+CREATE TABLE `kasikirjad_teosed` (
+CREATE TABLE `keeled` (
+CREATE TABLE `kirjastajad` (
+CREATE TABLE `kirjastajad_tekstid` (
+CREATE TABLE `kkk` (
+CREATE TABLE `kysitlus` (
+CREATE TABLE `kysitlus_tulemused` (
+CREATE TABLE `kysitlus_vastused` (
+CREATE TABLE `lists` (
+CREATE TABLE `lm_cdata` (
+CREATE TABLE `lm_cfields` (
+CREATE TABLE `lm_confirmation` (
+CREATE TABLE `lm_groups` (
+CREATE TABLE `lm_messages` (
+CREATE TABLE `lm_preferences` (
+CREATE TABLE `lm_queue` (
+CREATE TABLE `lm_sending` (
+CREATE TABLE `lm_sessions` (
+CREATE TABLE `lm_templates` (
+CREATE TABLE `lm_user_updates` (
+CREATE TABLE `lm_users` (
+CREATE TABLE `lubatud_asjad` (
+CREATE TABLE `menyy` (
+CREATE TABLE `muusikateadlased` (
+CREATE TABLE `muusikateadlased_artiklid` (
+CREATE TABLE `muusikateadlased_pildid` (
+CREATE TABLE `muusikateadlased_tekstid` (
+CREATE TABLE `muusikateadlased_teosed` (
+CREATE TABLE `ostukorv_makseviisid` (
+CREATE TABLE `ostukorv_makseviisid_cache` (
+CREATE TABLE `ostukorvid` (
+CREATE TABLE `ostukorvid_c` (
+CREATE TABLE `ostukorvid_c_mails` (
+CREATE TABLE `ostukorvid_c_omniva` (
+CREATE TABLE `ostukorvid_c_omniva_request` (
+CREATE TABLE `ostukorvid_c_pakihaldus_messages` (
+CREATE TABLE `ostukorvid_c_tooted` (
+CREATE TABLE `ostukorvid_c_tooted_pdf` (
+CREATE TABLE `ostukorvid_c_tooted_pdf_download` (
+CREATE TABLE `ostukorvid_c_tooted_pdf_download_temp` (
+CREATE TABLE `ostukorvid_everypaymaksed` (
+CREATE TABLE `ostukorvid_everypaymaksed_responses` (
+CREATE TABLE `ostukorvid_tooted` (
+CREATE TABLE `paketid` (
+CREATE TABLE `paketid_seaded` (
+CREATE TABLE `people` (
+CREATE TABLE `referents` (
+CREATE TABLE `referents_pildid` (
+CREATE TABLE `referents_seaded` (
+CREATE TABLE `seaded` (
+CREATE TABLE `seaded_keelemuutujad` (
+CREATE TABLE `seaded_tellimistingimused` (
+CREATE TABLE `shipment_types` (
+CREATE TABLE `syndmused` (
+CREATE TABLE `syndmused_ajad` (
+CREATE TABLE `syndmused_user` (
+CREATE TABLE `system_gen_pictures` (
+CREATE TABLE `system_gen_pictures2` (
+CREATE TABLE `tags` (
+CREATE TABLE `tegevusalad` (
+CREATE TABLE `tekstid` (
+CREATE TABLE `tellimused_koodid` (
+CREATE TABLE `tellimused_seaded` (
+CREATE TABLE `teosed` (
+CREATE TABLE `teosed_plaatidel` (
+CREATE TABLE `teosed_tekstid` (
+CREATE TABLE `teosed_zanrid` (
+CREATE TABLE `tooted` (
+CREATE TABLE `tooted_brandid` (
+CREATE TABLE `tooted_istandused` (
+CREATE TABLE `tooted_istandused_pildid` (
+CREATE TABLE `tooted_istandused_tolge` (
+CREATE TABLE `tooted_kategooriad` (
+CREATE TABLE `tooted_kategooriad_tolge` (
+CREATE TABLE `tooted_parameetrid` (
+CREATE TABLE `tooted_parameetrid_pricerange` (
+CREATE TABLE `tooted_parameetrid_tolge` (
+CREATE TABLE `tooted_pildid` (
+CREATE TABLE `tooted_seotud` (
+CREATE TABLE `tooted_tekstid` (
+CREATE TABLE `tooted_tolge` (
+CREATE TABLE `tooted_vaadatud` (
+CREATE TABLE `tooted_variatsioonid` (
+CREATE TABLE `tooted_variatsioonid_tolge` (
+CREATE TABLE `tooted_varvid` (
+CREATE TABLE `transport` (
+CREATE TABLE `transport_types` (
+CREATE TABLE `urlrewrite` (
+CREATE TABLE `users` (
+CREATE TABLE `users_loginkeys` (
+CREATE TABLE `users_menu` (
+CREATE TABLE `uudised` (
+CREATE TABLE `uudised_seaded` (
+CREATE TABLE `uudised_tags` (
