@@ -1,0 +1,704 @@
+[
+  {
+    "abbreviation": "A",
+    "name": "alto voice",
+    "name_est": "alt (hääl)",
+    "other_names": []
+  },
+  {
+    "abbreviation": "accord",
+    "name": "accordion",
+    "name_est": "akordion",
+    "other_names": []
+  },
+  {
+    "abbreviation": "acl",
+    "name": "alto clarinet",
+    "name_est": "altklarnet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "afl",
+    "name": "alto flute",
+    "name_est": "altflööt",
+    "other_names": ["flute in G"]
+  },
+  {
+    "abbreviation": "almglock",
+    "name": "Almglocken",
+    "name_est": "lehmakellad",
+    "other_names": ["herdbells"]
+  },
+  {
+    "abbreviation": "alto tbn",
+    "name": "alto trombone",
+    "name_est": "alttromboon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "asx",
+    "name": "alto saxophone",
+    "name_est": "altsaksofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "atp",
+    "name": "contralto trumpet",
+    "name_est": "kontralttrompet",
+    "other_names": ["tromba contralta"]
+  },
+  {
+    "abbreviation": "b sxhn",
+    "name": "bass saxhorn",
+    "name_est": "bass-sakshorn",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Bagpipes",
+    "name": "bagpipes",
+    "name_est": "torupill",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Bar",
+    "name": "baritone voice",
+    "name_est": "bariton (hääl)",
+    "other_names": []
+  },
+  {
+    "abbreviation": "bar hn",
+    "name": "baritone horn",
+    "name_est": "baritonhorn",
+    "other_names": []
+  },
+  {
+    "abbreviation": "basset hn",
+    "name": "basset horn",
+    "name_est": "bassethorn",
+    "other_names": []
+  },
+  {
+    "abbreviation": "bcl",
+    "name": "bass clarinet",
+    "name_est": "bassklarnet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "bd",
+    "name": "bass drum",
+    "name_est": "suur trumm",
+    "other_names": []
+  },
+  {
+    "abbreviation": "bfl",
+    "name": "bass flute",
+    "name_est": "bassflööt",
+    "other_names": []
+  },
+  {
+    "abbreviation": "bgtr",
+    "name": "bass guitar",
+    "name_est": "basskitarr",
+    "other_names": []
+  },
+  {
+    "abbreviation": "bn",
+    "name": "bassoon",
+    "name_est": "fagott",
+    "other_names": []
+  },
+  {
+    "abbreviation": "brake dr",
+    "name": "brake drum",
+    "name_est": "piduritrummel",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Bs",
+    "name": "bass voice",
+    "name_est": "bass (hääl)",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Bs-Bar",
+    "name": "bass-baritone voice",
+    "name_est": "bassbariton",
+    "other_names": []
+  },
+  {
+    "abbreviation": "bsx",
+    "name": "baritone saxophone",
+    "name_est": "baritonsaksofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "btbn",
+    "name": "bass trombone",
+    "name_est": "basstromboon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "btp",
+    "name": "bass trumpet",
+    "name_est": "basstrompet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "C-cl",
+    "name": "C clarinet",
+    "name_est": "C-klarnet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Ca",
+    "name": "contralto",
+    "name_est": "kontraalt",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cast",
+    "name": "castanets",
+    "name_est": "kastanjetid",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cb sxhn",
+    "name": "contrabass saxhorn",
+    "name_est": "kontrabass-sakshorn",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cb tbn",
+    "name": "contrabass trombone",
+    "name_est": "kontrabasstromboon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cbcl",
+    "name": "contrabass clarinet",
+    "name_est": "kontrabassklarnet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cbn",
+    "name": "contrabassoon",
+    "name_est": "kontrafagott",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cel",
+    "name": "celesta",
+    "name_est": "tšelesta",
+    "other_names": []
+  },
+  {
+    "abbreviation": "chimes",
+    "name": "chimes",
+    "name_est": "torukellad",
+    "other_names": ["tubular bells", "cloches", "campane"]
+  },
+  {
+    "abbreviation": "Chinescym",
+    "name": "Chinese cymbal",
+    "name_est": "hiina taldrik",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cimb",
+    "name": "cimbalom",
+    "name_est": "tsimbel",
+    "other_names": ["dulcimer"]
+  },
+  {
+    "abbreviation": "cimbasso",
+    "name": "cimbasso",
+    "name_est": "cimbasso",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cl",
+    "name": "clarinet",
+    "name_est": "klarnet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "crot",
+    "name": "crotales",
+    "name_est": "krotaalid",
+    "other_names": ["antique cymbals"]
+  },
+  {
+    "abbreviation": "crt",
+    "name": "cornet",
+    "name_est": "kornet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "CT",
+    "name": "countertenor",
+    "name_est": "kontratenor",
+    "other_names": []
+  },
+  {
+    "abbreviation": "cym",
+    "name": "cymbals",
+    "name_est": "taldrikud",
+    "other_names": []
+  },
+  {
+    "abbreviation": "D-cl",
+    "name": "D clarinet",
+    "name_est": "D-klarnet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "db",
+    "name": "double bass",
+    "name_est": "kontrabass",
+    "other_names": ["contrabass"]
+  },
+  {
+    "abbreviation": "didg",
+    "name": "didgeridoo",
+    "name_est": "didžeriduu",
+    "other_names": []
+  },
+  {
+    "abbreviation": "dr",
+    "name": "drum",
+    "name_est": "trumm",
+    "other_names": []
+  },
+  {
+    "abbreviation": "duduk",
+    "name": "duduk",
+    "name_est": "duduk",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Ebcl",
+    "name": "E-flat clarinet",
+    "name_est": "Es-klarnet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Eh",
+    "name": "English horn",
+    "name_est": "inglissarv",
+    "other_names": ["cor anglais"]
+  },
+  {
+    "abbreviation": "euph",
+    "name": "euphonium",
+    "name_est": "evfoonium",
+    "other_names": []
+  },
+  {
+    "abbreviation": "field dr",
+    "name": "field drum",
+    "name_est": "marsitrumm",
+    "other_names": ["military drum"]
+  },
+  {
+    "abbreviation": "fl",
+    "name": "flute",
+    "name_est": "flööt",
+    "other_names": []
+  },
+  {
+    "abbreviation": "flag",
+    "name": "flageolet",
+    "name_est": "flažolettflööt",
+    "other_names": []
+  },
+  {
+    "abbreviation": "flug",
+    "name": "flugelhorn",
+    "name_est": "flüügelhorn",
+    "other_names": []
+  },
+  {
+    "abbreviation": "glock",
+    "name": "glockenspiel",
+    "name_est": "kellamäng",
+    "other_names": ["orchestra bells", "carillon"]
+  },
+  {
+    "abbreviation": "gtr",
+    "name": "guitar",
+    "name_est": "kitarr",
+    "other_names": []
+  },
+  {
+    "abbreviation": "harm",
+    "name": "harmonium",
+    "name_est": "harmoonium",
+    "other_names": []
+  },
+  {
+    "abbreviation": "harmica",
+    "name": "harmonica",
+    "name_est": "suupill",
+    "other_names": []
+  },
+  {
+    "abbreviation": "heckl",
+    "name": "heckelphone",
+    "name_est": "hekkelfon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "helicon",
+    "name": "helicon",
+    "name_est": "helikon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "hi-hat",
+    "name": "high-hat cymbal",
+    "name_est": "hi-hat",
+    "other_names": []
+  },
+  {
+    "abbreviation": "hn",
+    "name": "horn",
+    "name_est": "metsasarv",
+    "other_names": []
+  },
+  {
+    "abbreviation": "hp",
+    "name": "harp",
+    "name_est": "harf",
+    "other_names": []
+  },
+  {
+    "abbreviation": "hpsd",
+    "name": "harpsichord",
+    "name_est": "klavessiin",
+    "other_names": []
+  },
+  {
+    "abbreviation": "mand",
+    "name": "mandolin",
+    "name_est": "mandoliin",
+    "other_names": []
+  },
+  {
+    "abbreviation": "marac",
+    "name": "maracas",
+    "name_est": "marakad",
+    "other_names": []
+  },
+  {
+    "abbreviation": "marim",
+    "name": "marimba",
+    "name_est": "marimba",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Ms",
+    "name": "mezzo-soprano voice",
+    "name_est": "metsosopran",
+    "other_names": []
+  },
+  {
+    "abbreviation": "narr",
+    "name": "narrator",
+    "name_est": "lugeja",
+    "other_names": ["speaker"]
+  },
+  {
+    "abbreviation": "ob",
+    "name": "oboe",
+    "name_est": "oboe",
+    "other_names": []
+  },
+  {
+    "abbreviation": "ob d'am",
+    "name": "oboe d'amore",
+    "name_est": "oboe d'amore",
+    "other_names": []
+  },
+  {
+    "abbreviation": "ob da cacc",
+    "name": "oboe da caccia",
+    "name_est": "oboe da caccia",
+    "other_names": []
+  },
+  {
+    "abbreviation": "ondes",
+    "name": "ondes martenot",
+    "name_est": "ondes martenot",
+    "other_names": []
+  },
+  {
+    "abbreviation": "oph",
+    "name": "ophicleide",
+    "name_est": "ofikleid",
+    "other_names": []
+  },
+  {
+    "abbreviation": "org",
+    "name": "organ",
+    "name_est": "orel",
+    "other_names": []
+  },
+  {
+    "abbreviation": "pf",
+    "name": "piano",
+    "name_est": "klaver",
+    "other_names": []
+  },
+  {
+    "abbreviation": "pic",
+    "name": "piccolo",
+    "name_est": "pikkoloflööt",
+    "other_names": []
+  },
+  {
+    "abbreviation": "pic tp",
+    "name": "piccolo trumpet",
+    "name_est": "pikkolotrompet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "posthn",
+    "name": "posthorn",
+    "name_est": "postisarv",
+    "other_names": []
+  },
+  {
+    "abbreviation": "ratch",
+    "name": "ratchet",
+    "name_est": "käristi",
+    "other_names": []
+  },
+  {
+    "abbreviation": "rec",
+    "name": "recorder",
+    "name_est": "plokkflööt",
+    "other_names": []
+  },
+  {
+    "abbreviation": "S",
+    "name": "soprano voice",
+    "name_est": "sopran",
+    "other_names": []
+  },
+  {
+    "abbreviation": "sandblks",
+    "name": "sandpaper blocks",
+    "name_est": "liivapaberiklotsid",
+    "other_names": []
+  },
+  {
+    "abbreviation": "sarr",
+    "name": "sarrusophone",
+    "name_est": "sarrusofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "sd",
+    "name": "snare drum",
+    "name_est": "väike trumm",
+    "other_names": ["side drum"]
+  },
+  {
+    "abbreviation": "serp",
+    "name": "serpent",
+    "name_est": "serpent",
+    "other_names": []
+  },
+  {
+    "abbreviation": "set",
+    "name": "drum set",
+    "name_est": "trummikomplekt",
+    "other_names": ["trap set"]
+  },
+  {
+    "abbreviation": "slgh-bells",
+    "name": "sleighbells",
+    "name_est": "aisakellad",
+    "other_names": []
+  },
+  {
+    "abbreviation": "snsx",
+    "name": "sopranino saxophone",
+    "name_est": "sopraniinosaksofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "ssx",
+    "name": "soprano saxophone",
+    "name_est": "sopransaksofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "stlpan",
+    "name": "steelpan",
+    "name_est": "terastrumm",
+    "other_names": []
+  },
+  {
+    "abbreviation": "sus cym",
+    "name": "suspended cymbal",
+    "name_est": "pulkadega mängitav taldrik",
+    "other_names": []
+  },
+  {
+    "abbreviation": "sx",
+    "name": "saxophone",
+    "name_est": "saksofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "synth",
+    "name": "synthesizer",
+    "name_est": "süntesaator",
+    "other_names": []
+  },
+  {
+    "abbreviation": "szl cym",
+    "name": "sizzle cymbal",
+    "name_est": "särisev taldrik",
+    "other_names": []
+  },
+  {
+    "abbreviation": "T",
+    "name": "tenor voice",
+    "name_est": "tenor (hääl)",
+    "other_names": []
+  },
+  {
+    "abbreviation": "tambn",
+    "name": "tambourine",
+    "name_est": "tamburiin",
+    "other_names": []
+  },
+  {
+    "abbreviation": "tbn",
+    "name": "trombone",
+    "name_est": "tromboon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "td",
+    "name": "tenor drum",
+    "name_est": "tenortrumm",
+    "other_names": []
+  },
+  {
+    "abbreviation": "templeblks",
+    "name": "temple blocks",
+    "name_est": "templiplokid",
+    "other_names": []
+  },
+  {
+    "abbreviation": "tmp",
+    "name": "timpani",
+    "name_est": "timpanid",
+    "other_names": []
+  },
+  {
+    "abbreviation": "tp",
+    "name": "trumpet",
+    "name_est": "trompet",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Treb",
+    "name": "treble voice",
+    "name_est": "poiss-sopran",
+    "other_names": ["child soprano"]
+  },
+  {
+    "abbreviation": "tri",
+    "name": "triangle",
+    "name_est": "triangel",
+    "other_names": []
+  },
+  {
+    "abbreviation": "tsx",
+    "name": "tenor saxophone",
+    "name_est": "tenorsaksofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "tuba",
+    "name": "tuba",
+    "name_est": "tuuba",
+    "other_names": []
+  },
+  {
+    "abbreviation": "va",
+    "name": "viola",
+    "name_est": "vioola",
+    "other_names": []
+  },
+  {
+    "abbreviation": "vc",
+    "name": "violoncello",
+    "name_est": "tšello",
+    "other_names": ["cello"]
+  },
+  {
+    "abbreviation": "vib",
+    "name": "vibraphone",
+    "name_est": "vibrafon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "vibrslp",
+    "name": "vibraslap",
+    "name_est": "vibraslap",
+    "other_names": []
+  },
+  {
+    "abbreviation": "vn",
+    "name": "violin",
+    "name_est": "viiul",
+    "other_names": []
+  },
+  {
+    "abbreviation": "vn pic",
+    "name": "violino piccolo",
+    "name_est": "pikkoloviiul",
+    "other_names": []
+  },
+  {
+    "abbreviation": "Wag tb",
+    "name": "Wagner tuba",
+    "name_est": "Wagneri tuuba",
+    "other_names": []
+  },
+  {
+    "abbreviation": "whip",
+    "name": "whip",
+    "name_est": "piits",
+    "other_names": ["slapstick"]
+  },
+  {
+    "abbreviation": "wnd mach",
+    "name": "wind machine",
+    "name_est": "tuulemasin",
+    "other_names": []
+  },
+  {
+    "abbreviation": "woodblk",
+    "name": "woodblock",
+    "name_est": "puuplokk",
+    "other_names": []
+  },
+  {
+    "abbreviation": "xyl",
+    "name": "xylophone",
+    "name_est": "ksülofon",
+    "other_names": []
+  },
+  {
+    "abbreviation": "zurna",
+    "name": "zurna",
+    "name_est": "surna",
+    "other_names": []
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "ensemble_id": "voice_and_accompaniment",
+    "name": "voice and accompaniment",
+    "name_est": "hääl ja saade"
+  },
+  {
+    "ensemble_id": "vocal_ensemble",
+    "name": "vocal ensemble",
+    "name_est": "vokaalansambel"
+  },
+  {
+    "ensemble_id": "female_ensemble",
+    "name": "female ensemble",
+    "name_est": "naisansambel"
+  },
+  {
+    "ensemble_id": "male_ensemble",
+    "name": "male ensemble",
+    "name_est": "meesansambel"
+  },
+  {
+    "ensemble_id": "mixed_choir",
+    "name": "mixed choir",
+    "name_est": "segakoor"
+  },
+  {
+    "ensemble_id": "male_choir",
+    "name": "male choir",
+    "name_est": "meeskoor"
+  },
+  {
+    "ensemble_id": "female_choir",
+    "name": "female choir",
+    "name_est": "naiskoor"
+  },
+  {
+    "ensemble_id": "children_choir",
+    "name": "children's choir",
+    "name_est": "lastekoor"
+  },
+  {
+    "ensemble_id": "boys_choir",
+    "name": "boys' choir",
+    "name_est": "poistekoor"
+  },
+  {
+    "ensemble_id": "youth_choir",
+    "name": "youth choir",
+    "name_est": "noortekoor"
+  },
+  {
+    "ensemble_id": "joint_choir",
+    "name": "joint choir",
+    "name_est": "ühendkoor"
+  },
+  {
+    "ensemble_id": "instrumental_ensemble",
+    "name": "instrumental ensemble",
+    "name_est": "instrumentaalansambel"
+  },
+  {
+    "ensemble_id": "chamber_ensemble",
+    "name": "chamber ensemble",
+    "name_est": "kammeransambel"
+  },
+  {
+    "ensemble_id": "string_quartet",
+    "name": "string quartet",
+    "name_est": "keelpillikvartett"
+  },
+  {
+    "ensemble_id": "saxophone_quartet",
+    "name": "saxophone quartet",
+    "name_est": "saksofonikvartett"
+  },
+  {
+    "ensemble_id": "wind_quintet",
+    "name": "wind quintet",
+    "name_est": "puhkpillikvintett"
+  },
+  {
+    "ensemble_id": "chamber_orchestra",
+    "name": "chamber orchestra",
+    "name_est": "kammerorkester"
+  },
+  {
+    "ensemble_id": "string_orchestra",
+    "name": "string orchestra",
+    "name_est": "keelpilliorkester"
+  },
+  {
+    "ensemble_id": "symphony_orchestra",
+    "name": "symphony orchestra",
+    "name_est": "sümfooniaorkester"
+  },
+  {
+    "ensemble_id": "wind_orchestra",
+    "name": "wind orchestra",
+    "name_est": "puhkpilliorkester"
+  },
+  {
+    "ensemble_id": "light_music_orchestra",
+    "name": "light music orchestra",
+    "name_est": "estraadiorkester"
+  },
+  {
+    "ensemble_id": "variety_orchestra",
+    "name": "variety orchestra",
+    "name_est": "varieteeorkester"
+  },
+  {
+    "ensemble_id": "folk_music_orchestra",
+    "name": "folk music orchestra",
+    "name_est": "rahvapilliorkester"
+  },
+  {
+    "ensemble_id": "early_music_ensemble",
+    "name": "early music ensemble",
+    "name_est": "varajase muusika ansambel"
+  },
+  {
+    "ensemble_id": "rock_ensemble",
+    "name": "rock ensemble",
+    "name_est": "rockansambel"
+  },
+  {
+    "ensemble_id": "jazz_ensemble",
+    "name": "jazz ensemble",
+    "name_est": "jazzansambel"
+  },
+  {
+    "ensemble_id": "country_band",
+    "name": "country band",
+    "name_est": "kantrimuusika ansambel"
+  },
+  {
+    "ensemble_id": "electronics_ensemble",
+    "name": "electronics / fixed media",
+    "name_est": "elektroonika / fikseeritud heli"
+  }
+]
