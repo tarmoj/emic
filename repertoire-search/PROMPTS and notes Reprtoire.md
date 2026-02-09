@@ -1,6 +1,176 @@
 # Repertoire search by instrumentation on emic.ee
 
 
+1. tööta välja instrumentatsiooni sturktuur
+- kogu testkijed ? kas vaja katergooria või see tabelitest?
+- lase läbi Gemini skripti
+2. olemasolev andmebaas struktuurikirjetesse
+3. Otsingu leht
+4. Toimetamise leht (json in textarea)
+5. Uue sisestuse süsteem
+
+
+## 1. Instrumentatsiooni struktuur
+
+1) olemasolevate tabelite uurimine
+
+SQL, et kuvada helilooja, pealkiri, koosseis, zanr vastavalt teose ID-le:
+
+SELECT 
+    teosed_tekstid.pealkiri, 
+    teosed_tekstid.koosseis, 
+    tooted_kategooriad.nimi,
+    heliloojad.nimi AS helilooja_nimi
+FROM 
+    teosed_tekstid
+JOIN 
+    teosed ON teosed_tekstid.teosed_id = teosed.id
+JOIN 
+    tooted_kategooriad ON teosed.zanr = tooted_kategooriad.id
+JOIN 
+    heliloojad_teosed ON teosed.id = heliloojad_teosed.teosed_id
+JOIN 
+    heliloojad ON heliloojad_teosed.heliloojad_id = heliloojad.id
+WHERE 
+    teosed_tekstid.keel = 'est' 
+        RAND()
+LIMIT 100;
+
+ Salvestatud faili test_data2.json
+ 
+ Puhast test_data2.json
+ PROMPT: open test_data2_raw.json and clean fields from html tags, white space marking (like \t\n\r), keep only the inner text. Save the result to test_data2.json
+ TODO: sarnane puhastus tabelis teosed_tekstid.koosseid ja ka .esiettekanne .cd, .lisainfo, 
+
+-- Rainile: teosed_tekstid väga paljud teksitilised sisestused html tagidena, nt <p>viiul, kitarr</p>
+vt skript clean_database_field.py
+
+
+#### Vaja tabelit/jsoni 'instrumendid': id, lyhend, nimi_est, nimi_eng
+
+
+
+#### töö struktuuriga:
+
+variant 1
+
+"instrumentation": {
+    "original_text": "String",
+    "category": "String (options: solo, chamber, ensemble, orchestra, choir, vocal, open)",
+    "total_player_count": "Integer (or null for infinite/variable groups like orchestras/choirs)",
+    "has_electronics": "Boolean",
+    "has_vocal": "Boolean",
+    "ensembles": ["String (e.g., 'keelpillikvartett', 'vaskpillikvintett')"],
+    "parts": [
+      {
+        "instrument_id": "String (standard abbr, e.g., 'fl', 'vln', 'pf')",
+        "name_et": "String (Estonian name)",
+        "name_en": "String (English name)",
+        "count": "Integer",
+        "doubles": ["String (instruments played by same player)"],
+        "role": "String (options: 'normal', 'soloist', 'obbligato')",
+        "family": "String (woodwind, brass, percussion, keyboard, string, voice, electronic)"
+      }
+    ],
+    "orchestral_layout": {
+      "woodwinds": "[Array of 4 Ints: Fl, Ob, Cl, Bn]",
+      "brass": "[Array of 4 Ints: Hn, Trp, Tbn, Tba]",
+      "percussion_players": "Integer (count of players, not instruments)",
+      "timpani": "Boolean",
+      "strings": "Boolean",
+      "other": ["String (list of aux instruments)"]
+    }
+    "note": "String: anything that needs to be added"
+  }
+  
+Improvement 2:
+
+// TODO: hiljem, sisestamisvormis on vaja tekitada kategooriate, pillide jm vajaliku lisamise võimalus
+
+  {
+  "instrumentation": {
+    "total_player_count": 0, // keep 0 if orchestra or choir or other otherwise unknown
+    "electronics": {
+      "type": "phonogram|live|fixed_media|electronics",
+      "details": "optional description"
+    }
+    "has_vocal": false,
+    "ensembles": [
+      {
+        "ensemble_id": "string_orchestra", // TODO: tabel ansamblitest!
+        "player_count": 0,
+        "standard": true
+        "note": "",
+        "note_est": ""
+      }
+    ]   
+    "parts": [
+      {
+        "instrument_id": "vln",
+        "alternative_instruments": [], // e.g. "for flute or oboe or violin"
+        "doubles": [], // eg. for flute, piccolo, alto flute, one player
+        "count": 1,
+        "role": "soloist|obligato|normal|..."
+      }
+    ],
+    // optional, only if for orchestra
+    "orchestral_layout": {
+      "woodwinds": [2, 2, 2, 2],
+      "brass": [4, 2, 3, 1],
+      "percussion": {
+        "timpani": true,
+        "other_players": 2,
+        "extra": [
+          { "instrument_id": "tamtam", "count": 1 },
+          { "instrument_id": "piatti", "count": 1 }
+        ]
+      }
+      "strings": true,
+      "other": [
+        { "instrument_id": "pno", "count": 1 },
+        { "instrument_id": "beatbox", "count": 1 }
+      ]
+    },
+    // optional, only when voices/choir
+    "vocal_details": {
+       "is_choir": true,
+       "choir_type": "mixed|male|female|children|toddlers|boys|other|none", 
+       "voices": 3,  
+       "voice_distribution": ["S", "S", "A"],
+       "soloists": [],
+       "other": ""
+    },
+    "note": "Anything that can needs to be added",
+    "note_est": "Ükskõik, mida vaja lisada"
+    "scoring_variants": [
+      {
+        "label": "mixed choir",
+        "instrumentation": { ... }
+      },
+      {
+        "label": "male choir",
+        "instrumentation": { ... }
+      }
+    ]
+  }
+}  
+
+VAJA: tabelid -  ansamblid ()
+
+#### lisa uus tabel teosed_koosseisud
+struktuuriga
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| teoseId | int(11) | NO   | MUL | NULL    |       |
+| koosseis| JSON    | NO   |     | NULL    |       |
++---------+---------+------+-----+---------+-------+
+
+
+----------------------------
+ 
+ FOR PROTOTYPE
+
 ## General task and planning
 Task: Add search option for EMIC repertoire search according to instrumentation:
 
