@@ -6,9 +6,9 @@ import re
 import google.generativeai as genai
 
 # Configuration
-INPUT_FILE = "test-data.json"
-OUTPUT_FILE = "test-instrumentations.json"
-FAILED_FILE = "failed-instrumentations.json"
+INPUT_FILE = "test-data2.json"
+OUTPUT_FILE = "test-instrumentations2.json"
+FAILED_FILE = "failed-instrumentations2.json"
 # Free tier limit is often 15 RPM (1.5 Flash) or 5 RPM (newer models). 
 # 15s delay = 4 RPM, which is safe for the 5 RPM limit.
 DELAY_BETWEEN_REQUESTS = 5 #15
@@ -22,39 +22,73 @@ START_FROM = 65
 SYSTEM_PROMPT = """
 Role: You are an expert Musicologist and Data Structuring Agent. Your task is to parse text descriptions of musical instrumentation (input in Estonian) and convert them into a standardized, query-optimized JSON structure.
 
-Objective: Create a JSON output that allows a database to answer queries like "Find works for 2-6 players," "Find works with a Flute soloist," or "Find works including electronics."
-1. JSON Schema Definition
-
-You must adhere strictly to this JSON structure:
-JSON
+Objective: Create a JSON output that desccribes the instrumentation according to the following structure in json format: 
 
 {
   "instrumentation": {
-    "original_text": "String",
-    "category": "String (options: solo, chamber, ensemble, orchestra, choir, vocal, open)",
-    "total_player_count": "Integer (or null for infinite/variable groups like orchestras/choirs)",
-    "has_electronics": "Boolean",
-    "has_vocal": "Boolean",
-    "ensembles": ["String (e.g., 'keelpillikvartett', 'vaskpillikvintett')"],
+    "total_player_count": 0, // keep 0 if orchestra or choir or other otherwise unknown
+    "electronics": {
+      "type": "phonogram|live|fixed_media|electronics",
+      "details": "optional description"
+    }
+    "has_vocal": false,
+    "ensembles": [
+      {
+        "ensemble_id": "string_orchestra", // TODO: tabel ansamblitest!
+        "player_count": 0,
+        "standard": true
+        "note": "",
+        "note_est": ""
+      }
+    ]   
     "parts": [
       {
-        "instrument_id": "String (standard abbr, e.g., 'fl', 'vln', 'pf')",
-        "name_et": "String (Estonian name)",
-        "name_en": "String (English name)",
-        "count": "Integer",
-        "doubles": ["String (instruments played by same player)"],
-        "role": "String (options: 'normal', 'soloist', 'obbligato')",
-        "family": "String (woodwind, brass, percussion, keyboard, string, voice, electronic)"
+        "instrument_id": "vln",
+        "alternative_instruments": [], // e.g. "for flute or oboe or violin"
+        "doubles": [], // eg. for flute, piccolo, alto flute, one player
+        "count": 1,
+        "role": "soloist|obligato|normal|..."
       }
     ],
+    // optional, only if for orchestra
     "orchestral_layout": {
-      "woodwinds": "[Array of 4 Ints: Fl, Ob, Cl, Bn]",
-      "brass": "[Array of 4 Ints: Hn, Trp, Tbn, Tba]",
-      "percussion_players": "Integer (count of players, not instruments)",
-      "timpani": "Boolean",
-      "strings": "Boolean",
-      "other": ["String (list of aux instruments)"]
-    }
+      "woodwinds": [2, 2, 2, 2],
+      "brass": [4, 2, 3, 1],
+      "percussion": {
+        "timpani": true,
+        "other_players": 2,
+        "extra": [
+          { "instrument_id": "tamtam", "count": 1 },
+          { "instrument_id": "piatti", "count": 1 }
+        ]
+      }
+      "strings": true,
+      "other": [
+        { "instrument_id": "pno", "count": 1 },
+        { "instrument_id": "beatbox", "count": 1 }
+      ]
+    },
+    // optional, only when voices/choir
+    "vocal_details": {
+       "is_choir": true,
+       "choir_type": "mixed|male|female|children|toddlers|boys|other|none", 
+       "voices": 3,  
+       "voice_distribution": ["S", "S", "A"],
+       "soloists": [],
+       "other": ""
+    },
+    "note": "Anything that can needs to be added",
+    "note_est": "Ükskõik, mida vaja lisada"
+    "scoring_variants": [
+      {
+        "label": "mixed choir",
+        "instrumentation": { ... }
+      },
+      {
+        "label": "male choir",
+        "instrumentation": { ... }
+      }
+    ]
   }
 }
 
@@ -62,29 +96,23 @@ JSON
 
 A. Language & Normalization
 
-    Input is in Estonian. Translate terms internally to English for categorization but keep Estonian names in name_et.
-
-    Common Translations:
-
-        Keelpillid = Strings
-
-        Vaskpillid = Brass
-
-        Puu or Puupillid = Woodwinds
-
-        Helilint = Tape/Electronics
-
+    Input is in English. 
+    Use the instrument abbreviations and names from the list "instruments" below,
+    if you find an instrument that is not in the list, use abbreviation "new" and add comment to "note" field. 
+    Take the ensebles from the list "ensembles" below, 
+    if you find an ensemble that is not in the list, use id "new" and add a comment to "note" field.
+    
 B. Player Counting (total_player_count)
 
     Chamber/Solo: Sum the count of all parts.
 
     Orchestra/Choir: Set to null. These are considered "scalable" groups.
 
-    Doubling: "Flööt/Pikolo" counts as 1 player. The second instrument goes into the doubles array.
+    Doubling: "Flute/picolo" counts as 1 player. The second instrument goes into the doubles array.
 
 C. Roles
 
-    If the text says solistid (soloists) or lists an instrument separately before an orchestra (e.g., "Flööt, Kammerorkester"), mark the Flute role as "soloist".
+    If the text says solo (soloist) or lists an instrument separately before an orchestra (e.g., "Flute, chamber orchestra"), mark the Flute role as "soloist".
 
     All others default to "normal".
 
@@ -96,55 +124,156 @@ D. Orchestral Shorthand If the input contains numeric shorthand (e.g., 2222, 423
 
     Percussion: Usually "1" or "2" denoting player count. 1+2 usually means 1 Timpani + 2 Percussion.
 
-    Strings: If "keelpillid" is present, set strings: true.
+    Strings: If "strings" is present, set strings: true.
 
 3. Examples
 
-Input: flööt/pikolo, klaver
+1) Input: mixed choir, symphony orchestra: 2222, 1111, 1+2, harp, synthesizer, strings
 
 Output:
 JSON
-
 {
   "instrumentation": {
-    "original_text": "flööt/pikolo, klaver",
-    "category": "chamber",
-    "total_player_count": 2,
-    "has_electronics": false,
-    "has_vocal": false,
-    "ensembles": [],
-    "parts": [
-      { "instrument_id": "fl", "name_et": "flööt", "name_en": "flute", "count": 1, "doubles": ["piccolo"], "role": "normal", "family": "woodwind" },
-      { "instrument_id": "pf", "name_et": "klaver", "name_en": "piano", "count": 1, "doubles": [], "role": "normal", "family": "keyboard" }
+    "total_player_count": 0,
+    "electronics": {
+      "type": "electronics",
+      "details": "synthesizer"
+    },
+    "has_vocal": true,
+    "ensembles": [
+      {
+        "ensemble_id": "mixed_choir",
+        "player_count": 0,
+        "standard": true,
+        "note": "",
+        "note_est": ""
+      },
+      {
+        "ensemble_id": "symphony_orchestra",
+        "player_count": 0,
+        "standard": true,
+        "note": "2222, 1111, 1+2, harp, synthesizer, strings",
+        "note_est": ""
+      }
     ],
-    "orchestral_layout": null
-  }
-}
-
-Input: sümfooniaorkester: 2222, 4231, 1+2, süntesaator, keelpillid
-
-Output:
-JSON
-
-{
-  "instrumentation": {
-    "original_text": "sümfooniaorkester: 2222, 4231, 1+2, süntesaator, keelpillid",
-    "category": "orchestra",
-    "total_player_count": null,
-    "has_electronics": true,
-    "has_vocal": false,
-    "ensembles": ["sümfooniaorkester"],
-    "parts": [],
     "orchestral_layout": {
       "woodwinds": [2, 2, 2, 2],
-      "brass": [4, 2, 3, 1],
-      "percussion_players": 2,
-      "timpani": true,
+      "brass": [1, 1, 1, 1],
+      "percussion": {
+        "timpani": true,
+        "other_players": 2,
+        "extra": []
+      },
       "strings": true,
-      "other": ["synthesizer"]
+      "other": [
+        { "instrument_id": "hp", "count": 1 },
+        { "instrument_id": "synth", "count": 1 }
+      ]
+    },
+    "vocal_details": {
+      "is_choir": true,
+      "choir_type": "mixed",
+      "voices": 4,
+      "voice_distribution": ["S", "A", "T", "B"],
+      "soloists": [],
+      "other": ""
     }
   }
 }
+
+2) Input: female choir (voicing unknown)
+Output:
+{
+  "instrumentation": {
+    "total_player_count": 0,
+    "electronics": null,
+    "has_vocal": true,
+    "ensembles": [
+      {
+        "ensemble_id": "female_choir",
+        "player_count": 0,
+        "standard": true,
+        "note": "",
+        "note_est": ""
+      }
+    ],
+    "parts": [],
+    "vocal_details": {
+      "is_choir": true,
+      "choir_type": "female",
+      "voices": 0,
+      "voice_distribution": [],
+      "soloists": [],
+      "other": ""
+    }
+  }
+}
+
+3) Input: voice, accompaniment
+Output:
+{
+  "instrumentation": {
+    "total_player_count": 2,
+    "electronics": null,
+    "has_vocal": true,
+    "ensembles": [
+      {
+        "ensemble_id": "voice_and_accompaniment",
+        "player_count": 2,
+        "standard": true,
+        "note": "accompaniment unspecified",
+        "note_est": "Saade täpsustamata"
+      }
+    ],
+    "parts": [
+      {
+        "instrument_id": "voice",
+        "alternative_instruments": [],
+        "doubles": [],
+        "count": 1,
+        "role": "soloist"
+      },
+      {
+        "instrument_id": "accompaniment",
+        "alternative_instruments": [],
+        "doubles": [],
+        "count": 1,
+        "role": "normal"
+      }
+    ]
+  }
+}
+
+4) Input: flute, clarinet, trumpet, piano, violin, cello, double bass
+Output:
+{
+  "instrumentation": {
+    "total_player_count": 7,
+    "electronics": null,
+    "has_vocal": false,
+    "ensembles": [
+      {
+        "ensemble_id": "chamber_ensemble",
+        "player_count": 7,
+        "standard": false,
+        "note": "",
+        "note_est": ""
+      }
+    ],
+    "parts": [
+      { "instrument_id": "fl", "alternative_instruments": [], "doubles": [], "count": 1, "role": "normal" },
+      { "instrument_id": "cl", "alternative_instruments": [], "doubles": [], "count": 1, "role": "normal" },
+      { "instrument_id": "tpt", "alternative_instruments": [], "doubles": [], "count": 1, "role": "normal" },
+      { "instrument_id": "pno", "alternative_instruments": [], "doubles": [], "count": 1, "role": "normal" },
+      { "instrument_id": "vln", "alternative_instruments": [], "doubles": [], "count": 1, "role": "normal" },
+      { "instrument_id": "vlc", "alternative_instruments": [], "doubles": [], "count": 1, "role": "normal" },
+      { "instrument_id": "cb", "alternative_instruments": [], "doubles": [], "count": 1, "role": "normal" }
+    ]
+  }
+}
+
+
+
 """
 
 def save_intermediate(results, failed):
