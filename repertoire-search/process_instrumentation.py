@@ -25,8 +25,8 @@ DB_TABLE = "teosed_koosseisud"
 DELAY_BETWEEN_REQUESTS = 0.5 #15
 
 # Test mode: if True, only process first 10 items
-TEST_MODE = True
-TEST_LIMIT = 2
+TEST_MODE = False # True
+TEST_LIMIT = 10
 START_FROM = 1
 
 # System prompt
@@ -42,7 +42,30 @@ def save_intermediate(results, failed):
     except Exception as e:
         print(f"Warning: Could not save intermediate results: {e}")
 
+def extract_json(text):
+    # 1. Clean up Markdown backticks if present
+    text = text.strip()
+    if text.startswith("```"):
+        text = re.sub(r'^```(?:json)?\n?', '', text)
+        text = re.sub(r'\n?```$', '', text)
+    
+    text = text.strip()
+    
+    # 2. Use raw_decode to grab ONLY the first valid JSON object
+    try:
+        decoder = json.JSONDecoder()
+        # This returns (dict, index_where_it_ended)
+        obj, _ = decoder.raw_decode(text)
+        return obj
+    except json.JSONDecodeError:
+        # Fallback: Try to find anything between the first { and last }
+        match = re.search(r'(\{.*\})', text, re.DOTALL)
+        if match:
+            return json.loads(match.group(1))
+        raise
+
 def main():
+    start_time = time.perf_counter()
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("GEMINI_API_KEY not found.")
@@ -103,6 +126,8 @@ def main():
             print(f"\nTest limit ({TEST_LIMIT}) reached. Stopping.")
             save_intermediate(results, failed)
             finalize_db()
+            elapsed = time.perf_counter() - start_time
+            print(f"Total runtime: {elapsed:.2f}s")
             sys.exit(0)
 
         attempt_count += 1
@@ -143,13 +168,16 @@ def main():
                     else:
                         raise e
 
-            resp_text = response.text.strip()
-            if resp_text.startswith("```"):
-                resp_text = re.sub(r'^```(json)?\n?', '', resp_text)
-                resp_text = re.sub(r'\n?```$', '', resp_text)
+            
+            
+            resp_text = response.text
+    
+            try:
+                parsed = extract_json(resp_text)
+            except Exception as parse_err:
+                raise ValueError(f"Failed to extract JSON. Raw response: {resp_text[:100]}...") from parse_err
 
-            parsed = json.loads(resp_text)
-
+            # Prepare entry
             result_entry = {
                 "id": work_id,
                 "title": title,
@@ -204,7 +232,9 @@ def main():
 
     finalize_db()
         
+    elapsed = time.perf_counter() - start_time
     print(f"\nDone. Saved {len(results)} successes to {OUTPUT_FILE} and {len(failed)} failures to {FAILED_FILE}.")
+    print(f"Total runtime: {elapsed:.2f}s")
 
 if __name__ == "__main__":
     main()
