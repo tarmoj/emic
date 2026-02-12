@@ -80,6 +80,9 @@ A. Language & Normalization
     Take the ensebles from the list "ensembles" below, 
     if you find an ensemble that is not in the list, use id "new" and add a comment to "note" field.
     
+    Translate:
+    - "prepared piano" as "prepareeritud klaver"
+
 B. Player Counting (total_player_count)
 
     Chamber/Solo: Sum the count of all parts.
@@ -87,6 +90,9 @@ B. Player Counting (total_player_count)
     Orchestra/Choir: Set to null. These are considered "scalable" groups.
 
     Doubling: "Flute/picolo" counts as 1 player. The second instrument goes into the doubles array.
+
+    In case of "Piano for 4 hands" it means 2 players, "Piano for 20 hands" means 10 players.
+
 
 C. Roles
 
@@ -103,6 +109,8 @@ D. Orchestral Shorthand If the input contains numeric shorthand (e.g., 2222, 423
     Percussion: Usually "1" or "2" denoting player count. 1+2 usually means 1 Timpani + 2 Percussion.
 
     Strings: If "strings" is present, set strings: true.
+
+
 
 3. Examples
 
