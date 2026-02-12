@@ -3,20 +3,30 @@ import sys
 import json
 import time
 import re
+import random
 from pathlib import Path
 import google.generativeai as genai
+import mysql.connector
 
 # Configuration
 INPUT_FILE = "test_data2.json"
 OUTPUT_FILE = "test-instrumentations2.json"
 FAILED_FILE = "failed-instrumentations2.json"
+# Database configuration
+DB_CONFIG = {
+    "host": "localhost",
+    "user": "emic",
+    "password": "tobias",
+    "database": "emic"
+}
+DB_TABLE = "teosed_koosseisud"
 # Free tier limit is often 15 RPM (1.5 Flash) or 5 RPM (newer models). 
 # 15s delay = 4 RPM, which is safe for the 5 RPM limit.
 DELAY_BETWEEN_REQUESTS = 0.5 #15
 
 # Test mode: if True, only process first 10 items
 TEST_MODE = True
-TEST_LIMIT = 5
+TEST_LIMIT = 2
 START_FROM = 1
 
 # System prompt
@@ -56,6 +66,21 @@ def main():
         
     results = []
     failed = []
+
+    try:
+        db_conn = mysql.connector.connect(**DB_CONFIG)
+        db_cursor = db_conn.cursor()
+    except mysql.connector.Error as e:
+        print(f"Database connection error: {e}")
+        sys.exit(1)
+
+    def finalize_db():
+        try:
+            db_conn.commit()
+            db_cursor.close()
+            db_conn.close()
+        except mysql.connector.Error as e:
+            print(f"Database commit/close error: {e}")
     
     # Load existing results if valid to resume?
     # User didn't explicitly ask for resume, but "output was not saved" implies fresh start or overwrite.
@@ -77,6 +102,7 @@ def main():
         if TEST_MODE and attempt_count >= TEST_LIMIT:
             print(f"\nTest limit ({TEST_LIMIT}) reached. Stopping.")
             save_intermediate(results, failed)
+            finalize_db()
             sys.exit(0)
 
         attempt_count += 1
@@ -131,6 +157,29 @@ def main():
                 "instrumentation": parsed
             }
             results.append(result_entry)
+
+            try:
+                insert_query = (
+                    f"INSERT INTO {DB_TABLE} (id, title, original_text, instrumentation) "
+                    "VALUES (%s, %s, %s, %s) "
+                    "ON DUPLICATE KEY UPDATE "
+                    "title = VALUES(title), "
+                    "original_text = VALUES(original_text), "
+                    "instrumentation = VALUES(instrumentation)"
+                )
+                db_cursor.execute(
+                    insert_query,
+                    (work_id, title, instr_text, json.dumps(parsed, ensure_ascii=False))
+                )
+            except mysql.connector.Error as e:
+                print(f"  -> Database insert error: {e}")
+                failed.append({
+                    "id": work_id,
+                    "title": title,
+                    "original_text": instr_text,
+                    "error": f"Database insert error: {e}"
+                })
+                save_intermediate(results, failed)
             print("  -> Success")
             save_intermediate(results, failed)
 
@@ -152,6 +201,8 @@ def main():
         
     with open(FAILED_FILE, 'w', encoding='utf-8') as f:
         json.dump(failed, f, ensure_ascii=False, indent=2)
+
+    finalize_db()
         
     print(f"\nDone. Saved {len(results)} successes to {OUTPUT_FILE} and {len(failed)} failures to {FAILED_FILE}.")
 
