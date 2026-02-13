@@ -2,3 +2,4 @@ concert-calendar/api-key.sh
 concert-calendar/emic-events-2014-2025.txt
 failed-instrumentations-copy.json
 test-instrumentations-copy.json
+repertoire-search/process_instruments.log
