@@ -52,38 +52,6 @@ vt skript clean_database_field.py
 
 #### töö struktuuriga:
 
-variant 1
-
-"instrumentation": {
-    "original_text": "String",
-    "category": "String (options: solo, chamber, ensemble, orchestra, choir, vocal, open)",
-    "total_player_count": "Integer (or null for infinite/variable groups like orchestras/choirs)",
-    "has_electronics": "Boolean",
-    "has_vocal": "Boolean",
-    "ensembles": ["String (e.g., 'keelpillikvartett', 'vaskpillikvintett')"],
-    "parts": [
-      {
-        "instrument_id": "String (standard abbr, e.g., 'fl', 'vln', 'pf')",
-        "name_et": "String (Estonian name)",
-        "name_en": "String (English name)",
-        "count": "Integer",
-        "doubles": ["String (instruments played by same player)"],
-        "role": "String (options: 'normal', 'soloist', 'obbligato')",
-        "family": "String (woodwind, brass, percussion, keyboard, string, voice, electronic)"
-      }
-    ],
-    "orchestral_layout": {
-      "woodwinds": "[Array of 4 Ints: Fl, Ob, Cl, Bn]",
-      "brass": "[Array of 4 Ints: Hn, Trp, Tbn, Tba]",
-      "percussion_players": "Integer (count of players, not instruments)",
-      "timpani": "Boolean",
-      "strings": "Boolean",
-      "other": ["String (list of aux instruments)"]
-    }
-    "note": "String: anything that needs to be added"
-  }
-  
-Improvement 2:
 
 // TODO: hiljem, sisestamisvormis on vaja tekitada kategooriate, pillide jm vajaliku lisamise võimalus
 
@@ -165,6 +133,34 @@ struktuuriga
 | teoseId | int(11) | NO   | MUL | NULL    |       |
 | koosseis| JSON    | NO   |     | NULL    |       |
 +---------+---------+------+-----+---------+-------+
+
+
+### Gemini API
+Payed Tier 1 -  päevane limiit 1500 päringut päevas - u 21 päeva
+Tier 2 - limiit 
+
+
+
+
+
+## Otsingud:
+
+Otsi, kas pill on:
+
+SELECT title  FROM teosed_koosseisud  WHERE JSON_OVERLAPS(     instrumentation->'$.parts[*].instrument_id',      CAST('["vn"]' AS JSON) );
+
+VÕI (töötab ka mariadb-s):
+SELECT title 
+FROM teosed_koosseisud 
+WHERE JSON_SEARCH(instrumentation, 'all', 'vn', NULL, '$.parts[*].instrument_id') IS NOT NULL;
+
+Veel näiteid (boolean):
+SELECT title, JSON_VALUE(instrumentation, "$.total_player_count") AS Players
+FROM teosed_koosseisud where !JSON_VALUE(instrumentation, "$.has_vocal");
+
+
+
+
 
 
 ----------------------------

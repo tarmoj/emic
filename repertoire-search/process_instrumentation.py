@@ -167,8 +167,7 @@ def main():
                         time.sleep(wait_time)
                     else:
                         raise e
-
-            
+   
             
             resp_text = response.text
     
