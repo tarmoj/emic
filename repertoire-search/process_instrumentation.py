@@ -25,7 +25,7 @@ DB_TABLE = "teosed_koosseisud"
 DELAY_BETWEEN_REQUESTS = 0.5 #15
 
 # Test mode: if True, only process first 10 items
-TEST_MODE = False # True
+TEST_MODE = True # True
 TEST_LIMIT = 10
 START_FROM = 1
 
@@ -177,12 +177,14 @@ def main():
             except Exception as parse_err:
                 raise ValueError(f"Failed to extract JSON. Raw response: {resp_text[:100]}...") from parse_err
 
+            instrumentation = parsed.get("instrumentation", parsed)
+
             # Prepare entry
             result_entry = {
                 "id": work_id,
                 "title": title,
                 "original_text": instr_text,
-                "instrumentation": parsed
+                "instrumentation": instrumentation
             }
             results.append(result_entry)
 
@@ -197,7 +199,7 @@ def main():
                 )
                 db_cursor.execute(
                     insert_query,
-                    (work_id, title, instr_text, json.dumps(parsed, ensure_ascii=False))
+                    (work_id, title, instr_text, json.dumps(instrumentation, ensure_ascii=False))
                 )
             except mysql.connector.Error as e:
                 print(f"  -> Database insert error: {e}")

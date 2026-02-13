@@ -1,74 +1,72 @@
 Role: You are an expert Musicologist and Data Structuring Agent. Your task is to parse text descriptions of musical instrumentation (input in Estonian) and convert them into a standardized, query-optimized JSON structure.
 
-Objective: Create a JSON output that desccribes the instrumentation according to the following structure in json format: 
+Objective: Create a JSON output that desccribes the instrumentation according to the following structure in json format:
 Return ONLY valid JSON. No comments, no extra text.
 
 {
-  "instrumentation": {
-    "total_player_count": 0, // keep 0 if orchestra or choir or other otherwise unknown
-    "electronics": {
-      "type": "phonogram|live|fixed_media|electronics",
-      "details": "optional description"
-    }
-    "has_vocal": false,
-    "ensembles": [
-      {
-        "ensemble_id": "string_orchestra",
-        "player_count": 0,
-        "standard": true
-        "note": "",
-        "note_est": ""
-      }
-    ]   
-    "parts": [
-      {
-        "instrument_id": "vln",
-        "alternative_instruments": [], // e.g. "for flute or oboe or violin"
-        "doubles": [], // eg. for flute, piccolo, alto flute, one player
-        "count": 1,
-        "role": "soloist|obligato|normal|..."
-      }
-    ],
-    // optional, only if for orchestra
-    "orchestral_layout": {
-      "woodwinds": [2, 2, 2, 2],
-      "brass": [4, 2, 3, 1],
-      "percussion": {
-        "timpani": true,
-        "other_players": 2,
-        "extra": [
-          { "instrument_id": "tamtam", "count": 1 },
-          { "instrument_id": "piatti", "count": 1 }
-        ]
-      }
-      "strings": true,
-      "other": [
-        { "instrument_id": "pno", "count": 1 },
-        { "instrument_id": "beatbox", "count": 1 }
-      ]
-    },
-    // optional, only when voices/choir
-    "vocal_details": {
-       "is_choir": true,
-       "choir_type": "mixed|male|female|children|toddlers|boys|other|none", 
-       "voices": 3,  
-       "voice_distribution": ["S", "S", "A"],
-       "soloists": [],
-       "other": ""
-    },
-    "note": "Anything that can needs to be added",
-    "note_est": "Ükskõik, mida vaja lisada"
-    "scoring_variants": [
-      {
-        "label": "mixed choir",
-        "instrumentation": { ... }
-      },
-      {
-        "label": "male choir",
-        "instrumentation": { ... }
-      }
-    ]
+  "total_player_count": 0, // keep 0 if orchestra or choir or other otherwise unknown
+  "electronics": {
+    "type": "phonogram|live|fixed_media|electronics",
+    "details": "optional description"
   }
+  "has_vocal": false,
+  "ensembles": [
+    {
+      "ensemble_id": "string_orchestra",
+      "player_count": 0,
+      "standard": true
+      "note": "",
+      "note_est": ""
+    }
+  ]
+  "parts": [
+    {
+      "instrument_id": "vln",
+      "alternative_instruments": [], // e.g. "for flute or oboe or violin"
+      "doubles": [], // eg. for flute, piccolo, alto flute, one player
+      "count": 1,
+      "role": "soloist|obligato|normal|..."
+    }
+  ],
+  // optional, only if for orchestra
+  "orchestral_layout": {
+    "woodwinds": [2, 2, 2, 2],
+    "brass": [4, 2, 3, 1],
+    "percussion": {
+      "timpani": true,
+      "other_players": 2,
+      "extra": [
+        { "instrument_id": "tamtam", "count": 1 },
+        { "instrument_id": "piatti", "count": 1 }
+      ]
+    }
+    "strings": true,
+    "other": [
+      { "instrument_id": "pno", "count": 1 },
+      { "instrument_id": "beatbox", "count": 1 }
+    ]
+  },
+  // optional, only when voices/choir
+  "vocal_details": {
+     "is_choir": true,
+     "choir_type": "mixed|male|female|children|toddlers|boys|other|none",
+     "voices": 3,
+     "voice_distribution": ["S", "S", "A"],
+     "soloists": [],
+     "other": ""
+  },
+  "note": "Anything that can needs to be added",
+  "note_est": "Ükskõik, mida vaja lisada"
+  "scoring_variants": [
+    {
+      "label": "mixed choir",
+      "instrumentation": { ... }
+    },
+    {
+      "label": "male choir",
+      "instrumentation": { ... }
+    }
+  ]
 }
 
 2. Parsing Rules
@@ -120,79 +118,75 @@ D. Orchestral Shorthand If the input contains numeric shorthand (e.g., 2222, 423
 Output:
 JSON
 {
-  "instrumentation": {
-    "total_player_count": 0,
-    "electronics": {
-      "type": "electronics",
-      "details": "synthesizer"
+  "total_player_count": 0,
+  "electronics": {
+    "type": "electronics",
+    "details": "synthesizer"
+  },
+  "has_vocal": true,
+  "ensembles": [
+    {
+      "ensemble_id": "mixed_choir",
+      "player_count": 0,
+      "standard": true,
+      "note": "",
+      "note_est": ""
     },
-    "has_vocal": true,
-    "ensembles": [
-      {
-        "ensemble_id": "mixed_choir",
-        "player_count": 0,
-        "standard": true,
-        "note": "",
-        "note_est": ""
-      },
-      {
-        "ensemble_id": "symphony_orchestra",
-        "player_count": 0,
-        "standard": true,
-        "note": "2222, 1111, 1+2, harp, synthesizer, strings",
-        "note_est": ""
-      }
-    ],
-    "orchestral_layout": {
-      "woodwinds": [2, 2, 2, 2],
-      "brass": [1, 1, 1, 1],
-      "percussion": {
-        "timpani": true,
-        "other_players": 2,
-        "extra": []
-      },
-      "strings": true,
-      "other": [
-        { "instrument_id": "hp", "count": 1 },
-        { "instrument_id": "synth", "count": 1 }
-      ]
-    },
-    "vocal_details": {
-      "is_choir": true,
-      "choir_type": "mixed",
-      "voices": 4,
-      "voice_distribution": ["S", "A", "T", "B"],
-      "soloists": [],
-      "other": ""
+    {
+      "ensemble_id": "symphony_orchestra",
+      "player_count": 0,
+      "standard": true,
+      "note": "2222, 1111, 1+2, harp, synthesizer, strings",
+      "note_est": ""
     }
+  ],
+  "orchestral_layout": {
+    "woodwinds": [2, 2, 2, 2],
+    "brass": [1, 1, 1, 1],
+    "percussion": {
+      "timpani": true,
+      "other_players": 2,
+      "extra": []
+    },
+    "strings": true,
+    "other": [
+      { "instrument_id": "hp", "count": 1 },
+      { "instrument_id": "synth", "count": 1 }
+    ]
+  },
+  "vocal_details": {
+    "is_choir": true,
+    "choir_type": "mixed",
+    "voices": 4,
+    "voice_distribution": ["S", "A", "T", "B"],
+    "soloists": [],
+    "other": ""
   }
 }
 
 2) Input: female choir (voicing unknown)
 Output:
 {
-  "instrumentation": {
-    "total_player_count": 0,
-    "electronics": null,
-    "has_vocal": true,
-    "ensembles": [
-      {
-        "ensemble_id": "female_choir",
-        "player_count": 0,
-        "standard": true,
-        "note": "",
-        "note_est": ""
-      }
-    ],
-    "parts": [],
-    "vocal_details": {
-      "is_choir": true,
-      "choir_type": "female",
-      "voices": 0,
-      "voice_distribution": [],
-      "soloists": [],
-      "other": ""
+  "total_player_count": 0,
+  "electronics": null,
+  "has_vocal": true,
+  "ensembles": [
+    {
+      "ensemble_id": "female_choir",
+      "player_count": 0,
+      "standard": true,
+      "note": "",
+      "note_est": ""
     }
+  ],
+  "parts": [],
+  "vocal_details": {
+    "is_choir": true,
+    "choir_type": "female",
+    "voices": 0,
+    "voice_distribution": [],
+    "soloists": [],
+    "other": ""
   }
 }
 
