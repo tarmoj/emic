@@ -1,0 +1,7364 @@
+[
+  {
+    "id": 890,
+    "title": "Funeral Ode for the Memory of Ordinary Piano Music",
+    "original_text": "prepared piano (20 hands)",
+    "instrumentation": {
+      "total_player_count": 10,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 10,
+          "standard": false,
+          "note": "prepared piano (20 hands)",
+          "note_est": "preapreeritud klaver (20 kätt)"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "prepared",
+          "note_est": "preapreeritud"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "The ensemble is a chamber ensemble, with a total of 10 players for the prepared piano, as it's for 20 hands.",
+      "note_est": "Ansambel on kammeransambel, kokku 10 mängijat prepareeritud klaverile, kuna see on 20 käe jaoks."
+    }
+  },
+  {
+    "id": 8748,
+    "title": "Sonatina No. 2 for Violin and Piano",
+    "original_text": "violin, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 13108,
+    "title": "Golden",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 2946,
+    "title": "Melodia",
+    "original_text": "cello",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 13576,
+    "title": "Last Chance",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7147,
+    "title": "Sonata for Piano No. 2",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5241,
+    "title": "A Draught of Air",
+    "original_text": "rock band: keyboards, guitar, bass guitar, percussion; soloists, piano, mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "rock_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "keyboards, guitar, bass guitar, percussion",
+          "note_est": "klahvpillid, kitarr, basskitarr, löökriistad"
+        },
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "key",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "bgtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "perc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies 'soloists' before 'piano', which could imply the piano is a soloist part. The 'percussion' is assumed to be a general percussion role within the rock ensemble.",
+      "note_est": "Sisendis on 'sooloartistid' enne 'klaverit', mis võib viidata sellele, et klaver on sooloosa. 'Löökriistad' on eeldatavasti üldine löökriistade roll rokkansamblis."
+    }
+  },
+  {
+    "id": 8378,
+    "title": "A Mouth",
+    "original_text": "children's choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "children",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5654,
+    "title": "Man’s Mind",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12343,
+    "title": "Ways",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5108,
+    "title": "Love Came",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14745,
+    "title": "Drive the Herd Here",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3638,
+    "title": "Prelude and Metamorphosis, Op. 38",
+    "original_text": "clarinet, cello, piano",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 3,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "cl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7999,
+    "title": "Ubi caritas",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 13889,
+    "title": "Bridges to the Swamp",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 4787,
+    "title": "Shadows of the Past",
+    "original_text": "string orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "string_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The instrumentation for a string orchestra is typically composed of violins, violas, cellos, and double basses. The exact number of players for each section is not specified and can vary.",
+      "note_est": "Keelpilliorkestri koosseis koosneb tavaliselt viiulitest, viooladest, tšellodest ja kontrabassidest. Täpne mängijate arv igas sektsioonis ei ole täpsustatud ja võib varieeruda."
+    }
+  },
+  {
+    "id": 14056,
+    "title": "Eddy Current",
+    "original_text": "flute, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 2955,
+    "title": "Sonata",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 10727,
+    "title": "Three Pieces",
+    "original_text": "flute, string orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "string_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The flute is listed before the string orchestra, indicating it may be a solo part.",
+      "note_est": "Flööt on loetletud enne keelpillorkestrit, mis võib viidata sellele, et see on sooloosa."
+    }
+  },
+  {
+    "id": 10538,
+    "title": "Hepatica",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 457,
+    "title": "The Gate of Dreams",
+    "original_text": "soprano, saxophone quartet",
+    "instrumentation": {
+      "total_player_count": 5,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "saxophone_quartet",
+          "player_count": 4,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "sx",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 4,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "S"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The soprano is listed first, indicating it is a soloist part with the saxophone quartet.",
+      "note_est": "Sopran on loetletud esimesena, mis näitab, et see on sooloosa koos saksofonikvartetiga."
+    }
+  },
+  {
+    "id": 5936,
+    "title": "Sunrise",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7615,
+    "title": "Three Songs to Poems by Marie Under",
+    "original_text": "soprano, symphony orchestra: 2222, 4000, 1, harp, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "2222, 4000, 1, harp, strings",
+          "note_est": "2222, 4000, 1, harf, keelpillid"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "brass": [
+          4,
+          0,
+          0,
+          0
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 1,
+          "extra": []
+        },
+        "strings": true,
+        "other": [
+          {
+            "instrument_id": "hp",
+            "count": 1
+          }
+        ]
+      },
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "S"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The 'soprano' is listed before the orchestra, indicating a solo part. The percussion shorthand '1' usually implies timpani, but if other percussion is intended, it's not specified.",
+      "note_est": "Sopran on loetletud enne orkestrit, mis näitab sooloosa. Löökriistade lühend '1' tähendab tavaliselt timpaneid, kuid kui on mõeldud muid löökriistu, pole see täpsustatud."
+    }
+  },
+  {
+    "id": 13553,
+    "title": "Smile!",
+    "original_text": "solo voice, instrumental ensemble: piano, double bass, percussion, guitar",
+    "instrumentation": {
+      "total_player_count": 5,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 4,
+          "standard": true,
+          "note": "piano, double bass, percussion, guitar",
+          "note_est": "klaver, kontrabass, löökriistad, kitarr"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "db",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "perc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "voice"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The 'solo voice' is specified as a solo part, and the remaining instruments form an instrumental ensemble.",
+      "note_est": "'Soolohääl' on määratletud sooloosana ja ülejäänud instrumendid moodustavad instrumentaalansambli."
+    }
+  },
+  {
+    "id": 7353,
+    "title": "Satire Songs",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3409,
+    "title": "A New Foot of Ground for One’s Heart and Thought, Op. 103",
+    "original_text": "mixed choir, symphony orchestra: 4333, 4331, 1+4, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "4333, 4331, 1+4, strings",
+          "note_est": "4333, 4331, 1+4, keelpillid"
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [
+          4,
+          3,
+          3,
+          3
+        ],
+        "brass": [
+          4,
+          3,
+          3,
+          1
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 4,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The percussion shorthand '1+4' implies 1 player for timpani and 4 additional percussion players.",
+      "note_est": "Löökriistade lühend '1+4' tähendab 1 mängijat timpanidele ja 4 lisalöökeilja mängijat."
+    }
+  },
+  {
+    "id": 9573,
+    "title": "Victory Song",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9800,
+    "title": "Quintet, Op. 22",
+    "original_text": "violin, clarinet, horn, cello, piano",
+    "instrumentation": {
+      "total_player_count": 5,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 5,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "cl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "hn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9358,
+    "title": "Homesickness",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 317,
+    "title": "O, Oriens",
+    "original_text": "counter tenor (or alto), 2 male choirs, 3 instrumental ensembles: 2 trumpets, trombone; 2 oboes, English horn, bassoon; 2 trombones, contrabassoon",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "2 trumpets, trombone",
+          "note_est": "2 trompetit, tromboon"
+        },
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "2 oboes, English horn, bassoon",
+          "note_est": "2 oboed, inglissarv, fagott"
+        },
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "2 trombones, contrabassoon",
+          "note_est": "2 trombooni, kontrafagott"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "CT",
+          "alternative_instruments": [
+            "A"
+          ],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "tp",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "tbn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "ob",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "Eh",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "bn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "tbn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "cbn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": "Two male choirs are present."
+      },
+      "note": "The 'counter tenor (or alto)' is specified as a soloist. There are two distinct male choirs and three separate instrumental ensembles, each with its own instrumentation listed.",
+      "note_est": "Kontratenor (või alt) on määratletud sooloosana. On kaks eraldiseisvat meeskoori ja kolm eraldi instrumentaalansamblit, millel igaühel on oma kirjeldatud koosseis."
+    }
+  },
+  {
+    "id": 174,
+    "title": "In the Spring",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9117,
+    "title": "Let's Make Merry",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 4871,
+    "title": "Soup, Main Course and Dessert, Op. 104",
+    "original_text": "alto, female choir, ensemble of kitchen utensils",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "new",
+          "player_count": 0,
+          "standard": false,
+          "note": "ensemble of kitchen utensils",
+          "note_est": "köögiriistade ansambel"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "A",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "kitchen utensils",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "This instrument is not in the provided list and has been added as 'new'.",
+          "note_est": "See instrument ei ole antud nimekirjas ja on lisatud kui 'uus'."
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The 'alto' is specified as a soloist. The 'ensemble of kitchen utensils' is a new ensemble type and the instruments within it are treated as a single part as specific items were not listed.",
+      "note_est": "'Alt' on määratletud sooloosana. 'Köögiriistade ansambel' on uus ansamblitüüp ja selle instrumendid on käsitletud ühe osana, kuna konkreetseid esemeid ei olnud loetletud."
+    }
+  },
+  {
+    "id": 8705,
+    "title": "Pastorale",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12938,
+    "title": "In the Evening",
+    "original_text": "children's choir or mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": "The choice between children's choir or mixed choir is not specified."
+      },
+      "note": "The input indicates an alternative between children's choir and mixed choir.",
+      "note_est": "Sisend näitab alternatiivi lastekoori ja segakoori vahel."
+    }
+  },
+  {
+    "id": 4075,
+    "title": "My Native Language",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 13905,
+    "title": "On the Ski Mountain",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 546,
+    "title": "Sleep Comes",
+    "original_text": "children's choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "children",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 4013,
+    "title": "Journey with Cello and Percussion, Op. 128",
+    "original_text": "cello, percussion (2 players)",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 3,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "perc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 8339,
+    "title": "Little Steed",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 13402,
+    "title": "Prayer of Quiet",
+    "original_text": "2 guitars",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7672,
+    "title": "Playing Chopin",
+    "original_text": "2 pianos, harpsichord",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 3,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "hpsd",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7447,
+    "title": "On the Hiking Path",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 11577,
+    "title": "Like a Fount of Light",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5664,
+    "title": "Laudate Dominum",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 44,
+    "title": "Occidental Paranoia",
+    "original_text": "piano, symphony orchestra: 2222, 0220, percussion, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "2222, 0220, percussion, strings",
+          "note_est": "2222, 0220, löökriistad, keelpillid"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "brass": [
+          0,
+          2,
+          2,
+          0
+        ],
+        "percussion": {
+          "timpani": false,
+          "other_players": 1,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The piano is listed before the symphony orchestra, indicating it is a solo part.",
+      "note_est": "Klaver on loetletud enne sümfooniaorkestrit, mis näitab, et see on sooloosa."
+    }
+  },
+  {
+    "id": 8285,
+    "title": "No Land Is Alone",
+    "original_text": "voices, accompaniment",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 0,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 0,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 0,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "The input specifies 'voices' in plural without a specific count or type, and 'accompaniment' without instrumentation. Therefore, 'voices' is treated as a general vocal part and 'accompaniment' as a placeholder.",
+      "note_est": "Sisendis on 'hääled' mitmuses ilma konkreetse arvuta või tüübita ja 'saade' ilma instrumentatsioonita. Seega käsitletakse 'hääli' üldise vokaalosana ja 'saadet' kohatäitjana."
+    }
+  },
+  {
+    "id": 13231,
+    "title": "Suite for Russian Folk Music Ensemble, No. 1",
+    "original_text": "Folk music ensemble",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "folk_music_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "A folk music ensemble can include a wide variety of instruments depending on the specific tradition. No specific instruments were listed.",
+      "note_est": "Folkmuusika ansambel võib sisaldada laia valikut instrumente sõltuvalt konkreetsest traditsioonist. Konkreetseid instrumente ei olnud loetletud."
+    }
+  },
+  {
+    "id": 264,
+    "title": "Estonian Lullaby",
+    "original_text": "guitar",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12547,
+    "title": "Dance Suite",
+    "original_text": "wind orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "wind_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": false,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The instrumentation for a wind orchestra typically includes a wide range of woodwind and brass instruments, as well as percussion. The specific instruments and their numbers are not detailed in the input.",
+      "note_est": "Puhkpilliorkestri koosseis sisaldab tavaliselt laia valikut puhkpille (puupilli- ja vaskpillid) ning löökriistu. Konkreetseid instrumente ja nende arvu sisend ei täpsustanud."
+    }
+  },
+  {
+    "id": 10363,
+    "title": "Moment musical",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 751,
+    "title": "Flakes of Life",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9670,
+    "title": "Kiss Me",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14444,
+    "title": "Scherzino",
+    "original_text": "string orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "string_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The instrumentation for a string orchestra is typically composed of violins, violas, cellos, and double basses. The exact number of players for each section is not specified and can vary.",
+      "note_est": "Keelpilliorkestri koosseis koosneb tavaliselt viiulitest, viooladest, tšellodest ja kontrabassidest. Täpne mängijate arv igas sektsioonis ei ole täpsustatud ja võib varieeruda."
+    }
+  },
+  {
+    "id": 7990,
+    "title": "Chamber Symphony No. 2",
+    "original_text": "chamber orchestra: 0200, 2000, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "0200, 2000, strings",
+          "note_est": "0200, 2000, keelpillid"
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [
+          0,
+          2,
+          0,
+          0
+        ],
+        "brass": [
+          2,
+          0,
+          0,
+          0
+        ],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The orchestral shorthand indicates 0 flutes, 2 oboes, 0 clarinets, 0 bassoons for woodwinds and 2 horns, 0 trumpets, 0 trombones, 0 tubas for brass. Strings are present.",
+      "note_est": "Orkestri lühend tähendab 0 flööti, 2 oboed, 0 klarnetit, 0 fagotti puhkpillide seas ning 2 metsasarve, 0 trompetit, 0 trombooni, 0 tuubat vaskpillide seas. Keelpillid on esindatud."
+    }
+  },
+  {
+    "id": 3699,
+    "title": "Prelude",
+    "original_text": "string orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "string_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The instrumentation for a string orchestra is typically composed of violins, violas, cellos, and double basses. The exact number of players for each section is not specified and can vary.",
+      "note_est": "Keelpilliorkestri koosseis koosneb tavaliselt viiulitest, viooladest, tšellodest ja kontrabassidest. Täpne mängijate arv igas sektsioonis ei ole täpsustatud ja võib varieeruda."
+    }
+  },
+  {
+    "id": 13802,
+    "title": "Ballade-Concerto, Op. 54",
+    "original_text": "piano, chamber orchestra: 1111, 0000, 1+0, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "1111, 0000, 1+0, strings",
+          "note_est": "1111, 0000, 1+0, keelpillid"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "brass": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The piano is listed before the chamber orchestra, indicating it is a solo part. The orchestral shorthand indicates 1 flute, 1 oboe, 1 clarinet, 1 bassoon for woodwinds, no brass instruments, timpani, and strings.",
+      "note_est": "Klaver on loetletud enne kammerorkestrit, mis näitab, et see on sooloosa. Orkestri lühend tähendab 1 flööti, 1 oboed, 1 klarnetit, 1 fagotti puhkpillide seas, ühtegi vaskpilli, timpaneid ja keelpillid."
+    }
+  },
+  {
+    "id": 13962,
+    "title": "Wind in a Thatch",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12772,
+    "title": "Afar",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3253,
+    "title": "Song of Silence",
+    "original_text": "vocal ensemble (6 voices)",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "vocal_ensemble",
+          "player_count": 6,
+          "standard": true,
+          "note": "6 voices",
+          "note_est": "6 häält"
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 6,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies a vocal ensemble with 6 voices.",
+      "note_est": "Sisend täpsustab vokaalansambli 6 häälega."
+    }
+  },
+  {
+    "id": 1767,
+    "title": "Empty",
+    "original_text": "trombone quartet",
+    "instrumentation": {
+      "total_player_count": 4,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 4,
+          "standard": false,
+          "note": "trombone quartet",
+          "note_est": "tromboonikvartett"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "tbn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 4,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "A trombone quartet consists of four trombones.",
+      "note_est": "Tromboonikvartett koosneb neljast tromboonist."
+    }
+  },
+  {
+    "id": 1411,
+    "title": "The White Blossom of Autumn",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9271,
+    "title": "The Song about You Is Still Living",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 6870,
+    "title": "Listen all Nations!",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9734,
+    "title": "Mother",
+    "original_text": "piano, chamber orchestra: 1000, glockenspiel, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "1000, glockenspiel, strings",
+          "note_est": "1000, kellamäng, keelpillid"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "brass": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "percussion": {
+          "timpani": false,
+          "other_players": 1,
+          "extra": [
+            {
+              "instrument_id": "glock",
+              "count": 1
+            }
+          ]
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The piano is listed before the chamber orchestra, indicating it is a solo part. The orchestral shorthand indicates 1 flute, 0 oboes, 0 clarinets, 0 bassoons for woodwinds, no brass instruments, 1 glockenspiel, and strings.",
+      "note_est": "Klaver on loetletud enne kammerorkestrit, mis näitab, et see on sooloosa. Orkestri lühend tähendab 1 flööti, 0 oboed, 0 klarnetit, 0 fagotti puhkpillide seas, ühtegi vaskpilli, 1 kellamängu ja keelpillid."
+    }
+  },
+  {
+    "id": 1436,
+    "title": "Apple of Your Eye",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3296,
+    "title": "The First and the Second",
+    "original_text": "vocal ensemble, flute/bass flute, electric guitar, synthesizer, live electronics",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": {
+        "type": "live",
+        "details": "live electronics"
+      },
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "vocal_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [
+            "bfl"
+          ],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "synth",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": "The input mentions 'vocal ensemble' but does not specify the number of voices or their distribution. It is assumed that the vocal ensemble is distinct from the other listed parts."
+      },
+      "note": "The ensemble includes a vocal ensemble, flute (doubling bass flute), electric guitar, synthesizer, and live electronics.",
+      "note_est": "Ansambel sisaldab vokaalansamblit, flööti (topelt bassflööt), elektrikitra, süntesaatorit ja live-elektroonikat."
+    }
+  },
+  {
+    "id": 1858,
+    "title": "Drouth",
+    "original_text": "string quartet",
+    "instrumentation": {
+      "total_player_count": 4,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "string_quartet",
+          "player_count": 4,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "va",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "A string quartet typically consists of two violins, one viola, and one cello.",
+      "note_est": "Keelpillikvartett koosneb tavaliselt kahest viiulist, ühest vioolast ja ühest tšellost."
+    }
+  },
+  {
+    "id": 2368,
+    "title": "Cadenza and Theme",
+    "original_text": "guitar",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 6750,
+    "title": "Song of a Saurus",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 6668,
+    "title": "Ode of Tshapayev",
+    "original_text": "wind orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "wind_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": false,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The instrumentation for a wind orchestra typically includes a wide range of woodwind and brass instruments, as well as percussion. The specific instruments and their numbers are not detailed in the input.",
+      "note_est": "Puhkpilliorkestri koosseis sisaldab tavaliselt laia valikut puhkpilli- (puupilli- ja vaskpillid) ning löökriistu. Konkreetseid instrumente ja nende arvu sisend ei täpsustanud."
+    }
+  },
+  {
+    "id": 336,
+    "title": "Sin otra luz…",
+    "original_text": "mezzo-soprano, violin, cello, piano, percussion",
+    "instrumentation": {
+      "total_player_count": 5,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 5,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "Ms",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "perc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "Ms"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The mezzo-soprano is listed first, indicating it is a soloist part.",
+      "note_est": "Metso-sopran on loetletud esimesena, mis näitab, et see on sooloosa."
+    }
+  },
+  {
+    "id": 14901,
+    "title": "Evening on the Beach",
+    "original_text": "soprano, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "S"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3038,
+    "title": "Beginning Song",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1497,
+    "title": "Only One Glance",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3663,
+    "title": "Autograph for Rein Rannap, Op. 110",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3105,
+    "title": "Song About Berries",
+    "original_text": "2 voices, accompaniment",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 3,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 2,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies '2 voices' and 'accompaniment'. The accompaniment instrumentation is not specified. The total player count is 2 voices + 1 for accompaniment (assuming a single instrument/player for accompaniment).",
+      "note_est": "Sisend täpsustab '2 häält' ja 'saade'. Saate instrumentatsiooni ei täpsustatud. Mängijate koguarv on 2 häält + 1 saate jaoks (eeldades ühe instrumendi/mängija saateks)."
+    }
+  },
+  {
+    "id": 8639,
+    "title": "Standing by the Grave",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 11317,
+    "title": "Old Woman Spinning",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14750,
+    "title": "My Grief",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 8210,
+    "title": "Prelude in B minor (Prelude No. 16)",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 8377,
+    "title": "Through the Time, Over the Death",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14863,
+    "title": "Violin Sonata",
+    "original_text": "violin, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9780,
+    "title": "Evening, Op. 28 No. 3",
+    "original_text": "bass, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "Bs",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "Bs"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 13340,
+    "title": "Snow Thought",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5881,
+    "title": "Let the Hammers Whistle",
+    "original_text": "boys’ choir, cymbals, tom-tom",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "boys_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "cym",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "tom-tom",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "This instrument is not in the provided list and has been added as 'new'.",
+          "note_est": "See instrument ei ole antud nimekirjas ja on lisatud kui 'uus'."
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "boys",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies a boys' choir and two percussion instruments: cymbals and tom-tom. The tom-tom is not in the provided instrument list and has been added as 'new'.",
+      "note_est": "Sisend täpsustab poistekoori ja kaks löökriista: taldrikud ja tom-tom. Tom-tom ei ole antud instrumendiloendis ja on lisatud kui 'uus'."
+    }
+  },
+  {
+    "id": 14464,
+    "title": "Five Estonian Folk Dances",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12394,
+    "title": "I Don't Understand",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 15379,
+    "title": "I Wanted to Fly a Kite",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 2401,
+    "title": "School Waltz",
+    "original_text": "violin, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7823,
+    "title": "Sonata breve",
+    "original_text": "violin",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 2832,
+    "title": "MU-NYYD-OH",
+    "original_text": "wind orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "wind_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": false,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The instrumentation for a wind orchestra typically includes a wide range of woodwind and brass instruments, as well as percussion. The specific instruments and their numbers are not detailed in the input.",
+      "note_est": "Puhkpilliorkestri koosseis sisaldab tavaliselt laia valikut puhkpilli- (puupilli- ja vaskpillid) ning löökriistu. Konkreetseid instrumente ja nende arvu sisend ei täpsustanud."
+    }
+  },
+  {
+    "id": 12795,
+    "title": "White Cherry Blossom",
+    "original_text": "soprano, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "S"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5867,
+    "title": "Song about a Good Person",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5128,
+    "title": "Life Itself is Singing",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7586,
+    "title": "Lullaby",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1845,
+    "title": "Bedtime Story",
+    "original_text": "flute, Estonian zither kannel, accordion",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 3,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "kannel",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "Estonian zither kannel is recognized as 'kannel'.",
+          "note_est": "Eesti kandlemäng on tuntud kui 'kannel'."
+        },
+        {
+          "instrument_id": "accord",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "The instruments listed are flute, Estonian zither (kannel), and accordion.",
+      "note_est": "Loetletud instrumendid on flööt, Eesti kannel ja akordion."
+    }
+  },
+  {
+    "id": 831,
+    "title": "First Steps",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1763,
+    "title": "Academic Prelude",
+    "original_text": "wind orchestra (wind and brass section of symphony orchestra): 2121, 2230, 1",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "wind_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "wind and brass section of symphony orchestra: 2121, 2230, 1",
+          "note_est": "sümfooniaorkestri puhkpilli- ja vaskpillide sektsioon: 2121, 2230, 1"
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "brass": [
+          2,
+          2,
+          3,
+          0
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": false,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The input specifies a wind orchestra consisting of the wind and brass sections of a symphony orchestra, with the following instrumentation shorthand: 2121 (woodwinds: 2 flutes, 1 oboe, 2 clarinets, 1 bassoon), 2230 (brass: 2 horns, 2 trumpets, 3 trombones, 0 tubas), and 1 (percussion, implying timpani).",
+      "note_est": "Sisend täpsustab puhkpilliorkestri, mis koosneb sümfooniaorkestri puhk- ja vaskpillide sektsioonidest, järgmise instrumentatsiooni lühendiga: 2121 (puupillid: 2 flööti, 1 oboe, 2 klarnetit, 1 fagott), 2230 (vaskpillid: 2 metsasarve, 2 trompetit, 3 trombooni, 0 tuubat) ja 1 (löökriistad, mis viitab timpanidele)."
+    }
+  },
+  {
+    "id": 7895,
+    "title": "Ave Maria V",
+    "original_text": "voice",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 1,
+          "standard": false,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "voice"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies 'voice' without further details on accompaniment or ensemble type. It is treated as a solo voice part with an unspecified accompaniment.",
+      "note_est": "Sisend täpsustab 'hääl' ilma saate või ansambli tüübi täpsustuseta. Seda käsitletakse soolo vokaalosana koos täpsustamata saatega."
+    }
+  },
+  {
+    "id": 9661,
+    "title": "Sunday in Kadriorg",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 6609,
+    "title": "Land of the Soul",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1241,
+    "title": "In the Memory of Clear Water",
+    "original_text": "wind symphony orchestra: 4440, 5562, 6, piano",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "wind_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "wind symphony orchestra: 4440, 5562, 6, piano",
+          "note_est": "tuule sümfooniaorkester: 4440, 5562, 6, klaver"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          4,
+          4,
+          4,
+          0
+        ],
+        "brass": [
+          5,
+          5,
+          6,
+          2
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": false,
+        "other": [
+          {
+            "instrument_id": "pf",
+            "count": 1
+          }
+        ]
+      },
+      "vocal_details": null,
+      "note": "The input specifies a wind symphony orchestra with the instrumentation shorthand: 4440 (woodwinds: 4 flutes, 4 oboes, 4 clarinets, 0 bassoons), 5562 (brass: 5 horns, 5 trumpets, 6 trombones, 2 tubas), 6 (percussion, implying 6 players, likely including timpani), and piano.",
+      "note_est": "Sisend täpsustab tuule sümfooniaorkestri instrumentatsiooni lühendiga: 4440 (puupillid: 4 flööti, 4 oboed, 4 klarnetit, 0 fagotti), 5562 (vaskpillid: 5 metsasarve, 5 trompetit, 6 trombooni, 2 tuubat), 6 (löökriistad, mis viitab 6 mängijale, tõenäoliselt koos timpanidega) ja klaver."
+    }
+  },
+  {
+    "id": 8540,
+    "title": "Power of Song",
+    "original_text": "children's choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "children",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 15099,
+    "title": "Of Your Hands and Heart",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 11361,
+    "title": "Midsummer-Day Songs",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 636,
+    "title": "Under the Asp",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 10570,
+    "title": "Attacca",
+    "original_text": "trombone",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "tbn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1424,
+    "title": "Viola Concerto \"Illuminatio\"",
+    "original_text": "viola, symphony orchestra: 2222, 4221, 1+3, harp, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "2222, 4221, 1+3, harp, strings",
+          "note_est": "2222, 4221, 1+3, harf, keelpillid"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "va",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "brass": [
+          4,
+          2,
+          2,
+          1
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 3,
+          "extra": []
+        },
+        "strings": true,
+        "other": [
+          {
+            "instrument_id": "hp",
+            "count": 1
+          }
+        ]
+      },
+      "vocal_details": null,
+      "note": "The viola is listed before the symphony orchestra, indicating it is a solo part. The percussion shorthand '1+3' implies 1 player for timpani and 3 additional percussion players.",
+      "note_est": "Vioola on loetletud enne sümfooniaorkestrit, mis näitab, et see on sooloosa. Löökriistade lühend '1+3' tähendab 1 mängijat timpanidele ja 3 lisalöökeilja mängijat."
+    }
+  },
+  {
+    "id": 2373,
+    "title": "Two Duets",
+    "original_text": "female voice, male voice, piano",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 3,
+          "standard": false,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "female voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "male voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 2,
+        "voice_distribution": [
+          "female voice",
+          "male voice"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies two solo voices (female and male) with piano accompaniment.",
+      "note_est": "Sisend täpsustab kaks soolohäält (nais- ja meeshääl) koos klaverisaatega."
+    }
+  },
+  {
+    "id": 2153,
+    "title": "Paradox",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3870,
+    "title": "A Song",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12849,
+    "title": "My Heart",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1840,
+    "title": "Summer Colors",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7913,
+    "title": "Symphony of Flutes",
+    "original_text": "3 flutes",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 3,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 3,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 980,
+    "title": "Line",
+    "original_text": "flute, cello, piano",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 3,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7342,
+    "title": "Piece for Solo Flute",
+    "original_text": "solo flute",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "The term 'solo' indicates the flute is a soloist part.",
+      "note_est": "Termin 'soolo' näitab, et flööt on sooloosa."
+    }
+  },
+  {
+    "id": 13794,
+    "title": "Waltz",
+    "original_text": "symphony orchestra: 2222, 4230, 1+0, harp, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "2222, 4230, 1+0, harp, strings",
+          "note_est": "2222, 4230, 1+0, harf, keelpillid"
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "brass": [
+          4,
+          2,
+          3,
+          0
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": [
+          {
+            "instrument_id": "hp",
+            "count": 1
+          }
+        ]
+      },
+      "vocal_details": null,
+      "note": "The percussion shorthand '1+0' implies 1 player for timpani and 0 additional percussion players.",
+      "note_est": "Löökriistade lühend '1+0' tähendab 1 mängijat timpanidele ja 0 lisalöökeilja mängijat."
+    }
+  },
+  {
+    "id": 13532,
+    "title": "For Music",
+    "original_text": "girls' choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": "The term 'girls' choir' is categorized as 'female_choir'."
+      },
+      "note": "A girls' choir is categorized as a female choir.",
+      "note_est": "Tüdrukute koor kategoriseeritakse naiskoorina."
+    }
+  },
+  {
+    "id": 14888,
+    "title": "Who Comes Thence?",
+    "original_text": "baritone, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "Bar",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "Bar"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14956,
+    "title": "Variations on Basso-ostinato",
+    "original_text": "organ",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "org",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14300,
+    "title": "Dead Sea",
+    "original_text": "piano in 4 hands",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "piano for 4 hands",
+          "note_est": "klaver 4 käele"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "played by 2 players",
+          "note_est": "mängib 2 mängijat"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "Piano for 4 hands means two players are required for one piano.",
+      "note_est": "Klaver 4 käele tähendab, et ühe klaveri jaoks on vaja kahte mängijat."
+    }
+  },
+  {
+    "id": 3231,
+    "title": "Song of Money",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 2009,
+    "title": "Then I Saw",
+    "original_text": "organ, guitar",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "instrumental_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "org",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3730,
+    "title": "4 Miniatures",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5807,
+    "title": "Wry",
+    "original_text": "cello",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "vc",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14095,
+    "title": "Što nastanet vesna [Spring is Coming]",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 4841,
+    "title": "Trio for Bassoon, Violin and Piano",
+    "original_text": "bassoon, violin, piano",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 3,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "bn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "vn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 910,
+    "title": "Play",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5789,
+    "title": "Recalling Fairy Tales",
+    "original_text": "electronics",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": {
+        "type": "electronics",
+        "details": ""
+      },
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "electronics_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "The input specifies 'electronics' which is interpreted as an electronics ensemble.",
+      "note_est": "Sisend täpsustab 'elektroonika', mida tõlgendatakse elektroonikaansamblina."
+    }
+  },
+  {
+    "id": 3651,
+    "title": "For the Liberty of the Nation, Op.1",
+    "original_text": "soprano, baritone, mixed choir, female choir, male choir, symphony orchestra: 3332, 4331, 1+2, celesta, harp, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "3332, 4331, 1+2, celesta, harp, strings",
+          "note_est": "3332, 4331, 1+2, kellamäng, harf, keelpillid"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "Bar",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          3,
+          3,
+          3,
+          2
+        ],
+        "brass": [
+          4,
+          3,
+          3,
+          1
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 2,
+          "extra": []
+        },
+        "strings": true,
+        "other": [
+          {
+            "instrument_id": "cel",
+            "count": 1
+          },
+          {
+            "instrument_id": "hp",
+            "count": 1
+          }
+        ]
+      },
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [
+          "S",
+          "Bar"
+        ],
+        "other": "Includes a mixed choir, female choir, and male choir. Soprano and Baritone are soloists."
+      },
+      "note": "The input lists multiple choirs (mixed, female, male) and soloists (soprano, baritone) in addition to a symphony orchestra. The percussion shorthand '1+2' implies 1 player for timpani and 2 additional percussion players.",
+      "note_est": "Sisend loetleb mitu koori (segakoor, naiskoor, meeskoor) ja sooloartistid (sopran, bariton) lisaks sümfooniaorkestrile. Löökriistade lühend '1+2' tähendab 1 mängijat timpanidele ja 2 lisalöökeilja mängijat."
+    }
+  },
+  {
+    "id": 2736,
+    "title": "Finno-Ugric Landscapes - 15 Folk Songs (Suomalais-ugrilaisia maisemia - 15 kansanlaulua)",
+    "original_text": "children's choir, (soprano saxophone in B)",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "ssx",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "soprano saxophone in B",
+          "note_est": "sopransaksofon B-s"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "children",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies a children's choir and a soprano saxophone in B.",
+      "note_est": "Sisend täpsustab lastekoori ja sopransaksofoni B-s."
+    }
+  },
+  {
+    "id": 737,
+    "title": "Estonia",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12567,
+    "title": "2 Duets",
+    "original_text": "2 trumpets",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "tp",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9489,
+    "title": "On October Path",
+    "original_text": "baritone, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "Bar",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "Bar"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 13189,
+    "title": "Ball Game, op. 42",
+    "original_text": "piano, chamber orchestra: 1110, 1100, 0+1, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "1110, 1100, 0+1, strings",
+          "note_est": "1110, 1100, 0+1, keelpillid"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "brass": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "percussion": {
+          "timpani": false,
+          "other_players": 1,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": null,
+      "note": "The piano is listed before the chamber orchestra, indicating it is a solo part. The orchestral shorthand indicates 1 flute, 1 oboe, 1 clarinet, 0 bassoons for woodwinds and 1 horn, 1 trumpet, 0 trombones, 0 tubas for brass. Percussion is listed as 0+1, implying 1 percussion player (likely not timpani as it's not specified as true). Strings are present.",
+      "note_est": "Klaver on loetletud enne kammerorkestrit, mis näitab, et see on sooloosa. Orkestri lühend tähendab 1 flööti, 1 oboed, 1 klarnetit, 0 fagotti puhkpillide seas ja 1 metsasarve, 1 trompetit, 0 trombooni, 0 tuubat vaskpillide seas. Löökriistad on loetletud kui 0+1, mis viitab 1 löökriistamängijale (tõenäoliselt mitte timpanid, kuna seda pole täpsustatud). Keelpillid on esindatud."
+    }
+  },
+  {
+    "id": 9473,
+    "title": "My Home",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14151,
+    "title": "How to Draw a Door?",
+    "original_text": "solo voice, bass flute, kannel ad libitum",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": false,
+          "note": "bass flute (ad libitum)",
+          "note_est": "bassflööt (ad libitum)"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "bfl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "ad libitum",
+          "note_est": "ad libitum"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "voice"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The 'solo voice' is a soloist part. The 'bass flute' is listed as 'ad libitum', meaning it is optional. The total player count is 2 (1 for voice, 1 for bass flute).",
+      "note_est": "'Soolohääl' on sooloosa. 'Bassflööt' on loetletud 'ad libitum', mis tähendab, et see on valikuline. Mängijate koguarv on 2 (1 häälele, 1 bassflöödile)."
+    }
+  },
+  {
+    "id": 7178,
+    "title": "Cantata-Requiem",
+    "original_text": "soprano, mixed choir, symphony orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": false,
+        "other": []
+      },
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [
+          "S"
+        ],
+        "other": "Includes a soprano soloist and a mixed choir."
+      },
+      "note": "The soprano is listed before the other ensembles, indicating it is a soloist part.",
+      "note_est": "Sopran on loetletud enne teisi ansambleid, mis näitab, et see on sooloosa."
+    }
+  },
+  {
+    "id": 6841,
+    "title": "A Mighty Fortress Is Our God",
+    "original_text": "flute, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "fl",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 407,
+    "title": "The Blue Gate",
+    "original_text": "symphony orchestra: 4333, 4331, percussion (3 players), 2 harps, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "4333, 4331, percussion (3 players), 2 harps, strings",
+          "note_est": "4333, 4331, löökriistad (3 mängijat), 2 harfi, keelpillid"
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [
+          4,
+          3,
+          3,
+          3
+        ],
+        "brass": [
+          4,
+          3,
+          3,
+          1
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 3,
+          "extra": []
+        },
+        "strings": true,
+        "other": [
+          {
+            "instrument_id": "hp",
+            "count": 2
+          }
+        ]
+      },
+      "vocal_details": null,
+      "note": "The percussion is specified as 3 players. This implies timpani (if standard orchestral setup) plus 2 additional percussionists, or the 3 players cover all percussion including timpani. The shorthand '1+3' for percussion in similar examples implied 1 timpani player and 3 others, so here it's interpreted as 3 players for percussion in total, including timpani.",
+      "note_est": "Löökriistad on täpsustatud kui 3 mängijat. See tähendab timpaneid (kui standardne orkestri koosseis) pluss 2 lisalöökeilja mängijat, või need 3 mängijat katavad kõik löökriistad, sealhulgas timpanid. Lühend '1+3' löökriistade jaoks sarnastes näidetes tähendas 1 timpanimängijat ja 3 teist, seega siin tõlgendatakse seda kui kokku 3 löökriistamängijat, sealhulgas timpanid."
+    }
+  },
+  {
+    "id": 11513,
+    "title": "We Won’t Get Tired While Travelling",
+    "original_text": "children’s choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "children",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 4072,
+    "title": "French Horn Sonatina",
+    "original_text": "horn, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "hn",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 10765,
+    "title": "Molto vivo in F sharp minor",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 10639,
+    "title": "Prelude and Toccata",
+    "original_text": "tuba, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "tuba",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7579,
+    "title": "First Letter to Ing",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 8943,
+    "title": "Before and Now",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 2771,
+    "title": "A Viru Tale",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 8736,
+    "title": "It’s a Song of Estonia",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7453,
+    "title": "My Sweet, Little Home",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7785,
+    "title": "Alone",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9392,
+    "title": "On Riverside",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 11127,
+    "title": "Don't You Ask",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 139,
+    "title": "Estonian Rhapsody, Op. 26",
+    "original_text": "symphony orchestra: 3232, 4220, 1+5, harp, strings",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "3232, 4220, 1+5, harp, strings",
+          "note_est": "3232, 4220, 1+5, harf, keelpillid"
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": {
+        "woodwinds": [
+          3,
+          2,
+          3,
+          2
+        ],
+        "brass": [
+          4,
+          2,
+          2,
+          0
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 5,
+          "extra": []
+        },
+        "strings": true,
+        "other": [
+          {
+            "instrument_id": "hp",
+            "count": 1
+          }
+        ]
+      },
+      "vocal_details": null,
+      "note": "The percussion shorthand '1+5' implies 1 player for timpani and 5 additional percussion players.",
+      "note_est": "Löökriistade lühend '1+5' tähendab 1 mängijat timpanidele ja 5 lisalöökeilja mängijat."
+    }
+  },
+  {
+    "id": 15094,
+    "title": "Dandelion",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14069,
+    "title": "Evening Tune (Evening Song)",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 10762,
+    "title": "Moderato sostenuto in D minor",
+    "original_text": "voice, viola, piano",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 3,
+          "standard": false,
+          "note": "viola and piano accompaniment",
+          "note_est": "vioola ja klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "va",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "voice"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies a solo voice with viola and piano accompaniment.",
+      "note_est": "Sisend täpsustab soolohääle vioola ja klaverisaatega."
+    }
+  },
+  {
+    "id": 6906,
+    "title": "Portraits of Renaissance Dances",
+    "original_text": "piano",
+    "instrumentation": {
+      "total_player_count": 1,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 1,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5410,
+    "title": "Buds",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 3076,
+    "title": "All Us Together",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 11890,
+    "title": "Oh Raven, Sing to Me",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 9799,
+    "title": "Convulsions, Op. 32 No. 3",
+    "original_text": "alto saxophone, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "chamber_ensemble",
+          "player_count": 2,
+          "standard": false,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "asx",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 15044,
+    "title": "Wedding Ride",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 7832,
+    "title": "On the Georgian Hillside",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 280,
+    "title": "I said, Who are You? - He said, You",
+    "original_text": "counter tenor, alto saxophone, organ, string orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "string_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "CT",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "asx",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "org",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [],
+        "brass": [],
+        "percussion": {
+          "timpani": false,
+          "other_players": 0,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "CT"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The counter tenor is listed first, indicating it is a soloist part. The string orchestra is an ensemble, and the alto saxophone and organ are also individual parts.",
+      "note_est": "Kontratenor on loetletud esimesena, mis näitab, et see on sooloosa. Keelpillorkester on ansambel ning alt saksofon ja orel on samuti üksikud osad."
+    }
+  },
+  {
+    "id": 11300,
+    "title": "Standing Guard at Night",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12731,
+    "title": "Joke Song",
+    "original_text": "male choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 15057,
+    "title": "Falling Flakes",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 14498,
+    "title": "To the Partner",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 8533,
+    "title": "In the Cradle",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 6866,
+    "title": "The Dream of Queen",
+    "original_text": "children’s choir, piano",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "children",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies a children's choir and piano accompaniment.",
+      "note_est": "Sisend täpsustab lastekoori ja klaverisaate."
+    }
+  },
+  {
+    "id": 15129,
+    "title": "An Old Tram",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 5715,
+    "title": "Rookie’s Lullaby",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 2852,
+    "title": "2 slawische Psalmen [Two Slavonic Psalms]",
+    "original_text": "soloists (soprano, alto, countertenor, tenor, bass) or mixed choir (SACtenTB)",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "SACtenTB",
+          "note_est": "SACtenTB"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "A",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "CT",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "T",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "Bs",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 6,
+        "voice_distribution": [
+          "S",
+          "A",
+          "CT",
+          "T",
+          "Bs"
+        ],
+        "soloists": [
+          "S",
+          "A",
+          "CT",
+          "T",
+          "Bs"
+        ],
+        "other": "The input specifies a choice between soloists (soprano, alto, countertenor, tenor, bass) or a mixed choir with the distribution SACtenTB. The 'SACtenTB' likely refers to the combined voices of Soprano, Alto, Countertenor, Tenor, and Bass."
+      },
+      "note": "The input presents an alternative: either soloists (S, A, CT, T, Bs) or a mixed choir with a specific voice distribution (SACtenTB). The output reflects both possibilities, prioritizing the soloists for explicit part listing and noting the mixed choir possibility in vocal_details.",
+      "note_est": "Sisend esitab alternatiivi: kas sooloartistid (S, A, CT, T, Bs) või segakoor konkreetse jaotusega (SACtenTB). 'SACtenTB' viitab tõenäoliselt Soprani, Alto, Kontratenori, Tenori ja Basso ühendatud häältele."
+    }
+  },
+  {
+    "id": 8535,
+    "title": "Song to Estonia",
+    "original_text": "mixed choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 12919,
+    "title": "Music for Johann Wolfgang von Goethe's play \"Faust\"",
+    "original_text": "symphony orchestra: 1212, 4220, 1+2, piano, strings (A. Symphonic numbers); voice (B. Songs, No. 1-6); voice, guitar (B. Songs, No. 7)",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "1212, 4220, 1+2, piano, strings (A. Symphonic numbers)",
+          "note_est": "1212, 4220, 1+2, klaver, keelpillid (A. Sümfoonilised numbrid)"
+        },
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 0,
+          "standard": false,
+          "note": "voice, guitar (B. Songs, No. 7)",
+          "note_est": "hääl, kitarr (B. Laulud, Nr. 7)"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "for A. Symphonic numbers",
+          "note_est": "A. Sümfooniliste numbrite jaoks"
+        },
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "for B. Songs, No. 1-6",
+          "note_est": "B. Laulude jaoks, Nr. 1-6"
+        },
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "for B. Songs, No. 7",
+          "note_est": "B. Laulude jaoks, Nr. 7"
+        },
+        {
+          "instrument_id": "gtr",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal",
+          "note": "for B. Songs, No. 7",
+          "note_est": "B. Laulude jaoks, Nr. 7"
+        }
+      ],
+      "orchestral_layout": {
+        "woodwinds": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "brass": [
+          4,
+          2,
+          2,
+          0
+        ],
+        "percussion": {
+          "timpani": true,
+          "other_players": 2,
+          "extra": []
+        },
+        "strings": true,
+        "other": []
+      },
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": "Vocal parts are specified for 'B. Songs, No. 1-6' and 'B. Songs, No. 7'."
+      },
+      "note": "The input describes two distinct sets of instrumentation and works: A. Symphonic numbers for symphony orchestra with piano and strings, and B. Songs (No. 1-6) for voice with unspecified accompaniment, and Song No. 7 for voice with guitar. The total player count is set to 0 as the symphony orchestra is a large, scalable ensemble.",
+      "note_est": "Sisend kirjeldab kahte erinevat instrumentatsiooni ja teost: A. Sümfoonilised numbrid sümfooniaorkestrile koos klaveri ja keelpillidega, ning B. Laulud (Nr. 1-6) häälele täpsustamata saatega, ja laul nr. 7 häälele kitarriga. Mängijate koguarv on seatud 0-le, kuna sümfooniaorkester on suur, skaleeritav ansambel."
+    }
+  },
+  {
+    "id": 1492,
+    "title": "To Believe or to Doubt?",
+    "original_text": "toddlers' choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "children_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "children",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": "The term 'toddlers' choir' is categorized as 'children_choir'."
+      },
+      "note": "A toddlers' choir is categorized as a children's choir.",
+      "note_est": "Väikelaste koor kategoriseeritakse lastekoorina."
+    }
+  },
+  {
+    "id": 9483,
+    "title": "Young Hikers",
+    "original_text": "2 voices, piano",
+    "instrumentation": {
+      "total_player_count": 3,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 3,
+          "standard": false,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 2,
+          "role": "normal"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 2,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "The input specifies 2 voices and a piano accompaniment. The total player count is 3 (2 for voices, 1 for piano).",
+      "note_est": "Sisend täpsustab 2 häält ja klaverisaate. Mängijate koguarv on 3 (2 häälte jaoks, 1 klaveri jaoks)."
+    }
+  },
+  {
+    "id": 10293,
+    "title": "Whirl of the Snowstorm",
+    "original_text": "voice, accompaniment",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "accompaniment unspecified",
+          "note_est": "Saade täpsustamata"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "accompaniment",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1809,
+    "title": "Now I Know",
+    "original_text": "female choir",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "female",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 6993,
+    "title": "Setting Day",
+    "original_text": "jazz quintet",
+    "instrumentation": {
+      "total_player_count": 5,
+      "electronics": null,
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "jazz_ensemble",
+          "player_count": 5,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "A jazz quintet typically consists of 5 musicians. Common instrumentation includes a rhythm section (piano, bass, drums) and two horns (e.g., saxophone, trumpet). However, the specific instruments are not detailed in the input.",
+      "note_est": "Džässikvintett koosneb tavaliselt 5 muusikust. Levinud instrumentatsioon hõlmab rütmisektsiooni (klaver, bass, trummid) ja kahte puhkpilli (nt saksofon, trompet). Konkreetsed instrumendid ei ole sisendis täpsustatud."
+    }
+  },
+  {
+    "id": 10957,
+    "title": "Singer of the Liberty",
+    "original_text": "soloists, female choir, male choir, mixed choir, symphony orchestra",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "female_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "mixed_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        },
+        {
+          "ensemble_id": "symphony_orchestra",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "soloist",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 0,
+          "role": "soloist",
+          "note": "Specific soloists not detailed.",
+          "note_est": "Konkreetsed sooloartistid ei ole täpsustatud."
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "mixed",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [
+          "soloist"
+        ],
+        "other": "Includes female choir, male choir, and mixed choir. Soloists are indicated but not specified."
+      },
+      "note": "The input lists multiple vocal ensembles (female choir, male choir, mixed choir) and indicates the presence of soloists, along with a symphony orchestra. The specific solo voice parts are not detailed.",
+      "note_est": "Sisend loetleb mitu vokaalansamblit (naiskoor, meeskoor, segakoor) ja näitab sooloartistide olemasolu koos sümfooniaorkestriga. Spetsiifilised soolohääled ei ole täpsustatud."
+    }
+  },
+  {
+    "id": 8423,
+    "title": "Anthem",
+    "original_text": "tenor, male choir, piano",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "male_choir",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "T",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": true,
+        "choir_type": "male",
+        "voices": 0,
+        "voice_distribution": [],
+        "soloists": [
+          "T"
+        ],
+        "other": "Tenor is a soloist part with male choir and piano accompaniment."
+      },
+      "note": "The tenor is listed first, indicating it is a soloist part with the male choir and piano accompaniment.",
+      "note_est": "Tenor on loetletud esimesena, mis näitab, et see on sooloosa koos meeskoori ja klaverisaatega."
+    }
+  },
+  {
+    "id": 5065,
+    "title": "Voice of the Piano",
+    "original_text": "piano, live-electronics",
+    "instrumentation": {
+      "total_player_count": 0,
+      "electronics": {
+        "type": "live",
+        "details": "live-electronics"
+      },
+      "has_vocal": false,
+      "ensembles": [
+        {
+          "ensemble_id": "electronics_ensemble",
+          "player_count": 0,
+          "standard": true,
+          "note": "",
+          "note_est": ""
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "The instrumentation includes piano and live electronics, suggesting an ensemble focused on electronic music or a performance where electronics are a significant component.",
+      "note_est": "Instrumentatsioon hõlmab klaverit ja live-elektroonikat, mis viitab elektroonilisele muusikale või esitusele, kus elektroonika on oluline komponent."
+    }
+  },
+  {
+    "id": 10978,
+    "title": "Homely Scenery",
+    "original_text": "voice, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "voice",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": null,
+      "note": "",
+      "note_est": ""
+    }
+  },
+  {
+    "id": 1721,
+    "title": "Weep, Weep",
+    "original_text": "soprano, piano",
+    "instrumentation": {
+      "total_player_count": 2,
+      "electronics": null,
+      "has_vocal": true,
+      "ensembles": [
+        {
+          "ensemble_id": "voice_and_accompaniment",
+          "player_count": 2,
+          "standard": true,
+          "note": "piano accompaniment",
+          "note_est": "klaverisaade"
+        }
+      ],
+      "parts": [
+        {
+          "instrument_id": "S",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "soloist"
+        },
+        {
+          "instrument_id": "pf",
+          "alternative_instruments": [],
+          "doubles": [],
+          "count": 1,
+          "role": "normal"
+        }
+      ],
+      "orchestral_layout": null,
+      "vocal_details": {
+        "is_choir": false,
+        "choir_type": "none",
+        "voices": 1,
+        "voice_distribution": [
+          "S"
+        ],
+        "soloists": [],
+        "other": ""
+      },
+      "note": "",
+      "note_est": ""
+    }
+  }
+]
