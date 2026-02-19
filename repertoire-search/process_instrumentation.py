@@ -9,9 +9,9 @@ import google.generativeai as genai
 import mysql.connector
 
 # Configuration
-INPUT_FILE = "test_data2.json"
-OUTPUT_FILE = "test-instrumentations2.json"
-FAILED_FILE = "failed-instrumentations2.json"
+INPUT_FILE = "teosed1.json"
+OUTPUT_FILE = "koosseisud1.json"
+FAILED_FILE = "vead1.json"
 # Database configuration
 DB_CONFIG = {
     "host": "localhost",
@@ -189,12 +189,12 @@ def main():
 
             try:
                 insert_query = (
-                    f"INSERT INTO {DB_TABLE} (id, title, original_text, instrumentation) "
+                    f"INSERT INTO {DB_TABLE} (teosed_id, pealkiri, koosseis_tekst, intrumentatsioon) "
                     "VALUES (%s, %s, %s, %s) "
                     "ON DUPLICATE KEY UPDATE "
-                    "title = VALUES(title), "
-                    "original_text = VALUES(original_text), "
-                    "instrumentation = VALUES(instrumentation)"
+                    "pealkiri = VALUES(pealkiri), "
+                    "koosseis_tekst = VALUES(koosseis_tekst), "
+                    "intrumentatsioon = VALUES(intrumentatsioon)"
                 )
                 db_cursor.execute(
                     insert_query,
