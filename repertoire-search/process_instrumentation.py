@@ -9,9 +9,9 @@ import google.generativeai as genai
 import mysql.connector
 
 # Configuration
-INPUT_FILE = "teosed1.json"
-OUTPUT_FILE = "koosseisud1.json"
-FAILED_FILE = "vead1.json"
+INPUT_FILE = "teosed2.json"
+OUTPUT_FILE = "koosseisud2.json"
+FAILED_FILE = "vead2.json"
 # Database configuration
 DB_CONFIG = {
     "host": "localhost",
@@ -25,8 +25,8 @@ DB_TABLE = "teosed_koosseisud"
 DELAY_BETWEEN_REQUESTS = 0.5 #15
 
 # Test mode: if True, only process first 10 items
-TEST_MODE = True # True
-TEST_LIMIT = 10
+TEST_MODE = False
+TEST_LIMIT = 3
 START_FROM = 1
 
 # System prompt
@@ -77,7 +77,7 @@ def main():
         'gemini-2.5-flash-lite',
         system_instruction=SYSTEM_PROMPT
     )
-    chat = model.start_chat(history=[])
+    # chat = model.start_chat(history=[])
 
     
     try:
@@ -154,7 +154,7 @@ def main():
             max_retries = 3
             for attempt in range(max_retries):
                 try:
-                    response = chat.send_message(
+                    response = model.generate_content(
                         f"Input: {instr_text}",
                         generation_config={"response_mime_type": "application/json"}
                     )
