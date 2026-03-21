@@ -1,7 +1,7 @@
 import json
 
 # Configuration
-INPUT_FILE = 'teosed3.json'
+INPUT_FILE = 'teosed_koik.json'
 SYSTEM_PROMPT_FILE = 'system_prompt.txt'
 OUTPUT_FILE = 'gemini_batch_input.jsonl'
 
