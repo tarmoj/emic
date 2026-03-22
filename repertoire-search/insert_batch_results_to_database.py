@@ -1,8 +1,9 @@
 import json
+import re
 import mysql.connector
 
 # --- Configuration ---
-ORIGINAL_DATA_FILE = "teosed3.json"
+ORIGINAL_DATA_FILE = "teosed_koik.json"
 BATCH_RESULTS_FILE = "gemini_results_final.jsonl"
 DB_CONFIG = {
     "host": "localhost",
@@ -10,6 +11,92 @@ DB_CONFIG = {
     "password": "tobias",
     "database": "emic"
 }
+
+
+def _extract_json_candidates(raw_text):
+    text = (raw_text or "").strip()
+    if not text:
+        return []
+
+    fenced = re.findall(r"```(?:json)?\s*(.*?)\s*```", text, flags=re.DOTALL | re.IGNORECASE)
+    if fenced:
+        return [block.strip() for block in fenced if block and block.strip()]
+    return [text]
+
+
+def _repair_json_text(text):
+    repaired = []
+    in_string = False
+    escaped = False
+    length = len(text)
+
+    for index, char in enumerate(text):
+        if in_string:
+            if escaped:
+                repaired.append(char)
+                escaped = False
+                continue
+
+            if char == "\\":
+                repaired.append(char)
+                escaped = True
+                continue
+
+            if char == "\n":
+                repaired.append("\\n")
+                continue
+
+            if char == '"':
+                lookahead = index + 1
+                while lookahead < length and text[lookahead] in " \t\r\n":
+                    lookahead += 1
+                next_char = text[lookahead] if lookahead < length else ""
+
+                if next_char in {",", "}", "]", ":", ""}:
+                    repaired.append('"')
+                    in_string = False
+                else:
+                    repaired.append('\\"')
+                continue
+
+            repaired.append(char)
+            continue
+
+        repaired.append(char)
+        if char == '"':
+            in_string = True
+
+    return "".join(repaired)
+
+
+def _parse_instrumentation_response(raw_text):
+    decoder = json.JSONDecoder()
+
+    for candidate in _extract_json_candidates(raw_text):
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            pass
+
+        try:
+            parsed, _ = decoder.raw_decode(candidate)
+            return parsed
+        except json.JSONDecodeError:
+            pass
+
+        repaired = _repair_json_text(candidate)
+        try:
+            return json.loads(repaired)
+        except json.JSONDecodeError:
+            pass
+
+        try:
+            parsed, _ = decoder.raw_decode(repaired)
+            return parsed
+        except json.JSONDecodeError:
+            pass
+
+    raise json.JSONDecodeError("Could not parse model JSON", raw_text or "", 0)
 
 def insert_results():
     # 1. Load original data into a lookup dictionary {id: {pealkiri, koosseis}}
@@ -39,8 +126,7 @@ def insert_results():
             # Get the raw string response from Gemini
             try:
                 raw_response = batch_item['response']['candidates'][0]['content']['parts'][0]['text']
-                # The model usually returns the JSON inside a string
-                instrumentation_json = json.loads(raw_response)
+                instrumentation_json = _parse_instrumentation_response(raw_response)
             except (KeyError, json.JSONDecodeError) as e:
                 print(f"Error parsing Gemini response for ID {work_id}: {e}")
                 continue
