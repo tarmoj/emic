@@ -10,7 +10,7 @@ if not API_KEY:
     print("GEMINI_API_KEY not found.")
     sys.exit(1)
         
-INPUT_FILE_PATH = "gemini_batch_input.jsonl"
+INPUT_FILE_PATH = "gemini_batch_cached.jsonl"
 MODEL_ID = "gemini-2.5-flash-lite"
 
 client = genai.Client(api_key=API_KEY)

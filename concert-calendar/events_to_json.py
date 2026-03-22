@@ -173,7 +173,7 @@ def main():
     print()
     
     # Initialize Gemini model
-    model = genai.GenerativeModel('gemini-2.5-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash-lite')
     
     # Clear problems file if it exists
     if os.path.exists(PROBLEMS_FILE):

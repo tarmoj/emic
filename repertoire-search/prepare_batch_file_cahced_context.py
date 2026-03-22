@@ -1,6 +1,6 @@
 import json
 
-CACHE_NAME = "PASTE_YOUR_CACHE_NAME_HERE" # From Step 1
+CACHE_NAME = "cachedContents/ayo8l0lus1c89w5ppl0ypr1284n9gsuzz7fxvhxa" # From Step 1
 
 def create_cached_batch_file(input_data_path, output_jsonl_path):
     with open(input_data_path, 'r', encoding='utf-8') as f:
@@ -12,7 +12,7 @@ def create_cached_batch_file(input_data_path, output_jsonl_path):
             batch_request = {
                 "key": str(item['id']),
                 "request": {
-                    "model": "models/gemini-2.5-flash",
+                    "model": "models/gemini-2.5-flash-lite",
                     "cached_content": CACHE_NAME,
                     "contents": [
                         {"parts": [{"text": item['koosseis']}]}

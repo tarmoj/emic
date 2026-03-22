@@ -9,7 +9,7 @@ if not API_KEY:
     print("GEMINI_API_KEY not found.")
     sys.exit(1)
     
-BATCH_JOB_ID = "batches/9b24gnuj99kecxp51du15ftz9xxlyz1zdqup"
+BATCH_JOB_ID = "batches/z943d40ijhs0172fi6fkoxkm1yr05736liqz"
 
 client = genai.Client(api_key=API_KEY)
 
