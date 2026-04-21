@@ -5,3 +5,7 @@ test-instrumentations-copy.json
 repertoire-search/process_instruments.log
 *.jsonl
 repertoire-search/tables/*
+emic_all.sql
+emic_hinnapakkumine.pdf
+emic_hinnapakkumine.xls
+emic_local.sql
