@@ -213,6 +213,15 @@ WHERE
     AND JSON_VALUE(intrumentatsioon, '$.parts[0].instrument_id') = 'fl';
 
 
+### Otsing pikkuse järgi
+
+teosed.pikkus - 
+Arendajale: praegu sisend nagu 51'  11\' vm -  vaja puhastada ja sisendile mingi validaator.
+
+
+## Täiendamine (uued teosed)
+
+Võimalus lisada uusi ansambleid (table 'anamblid'), pille (tabel 'instrumendid')
 
 ----------------------------
  
