@@ -144,30 +144,8 @@ Päris palju vigu (90), 1159 õnnestumist (kuhu jäi 1? Limit? --vaja väike ül
 
 Aega kulus: 4323 sek. 
 
-Probleem: tabel salvesatakse alles peale lõpetamist, oleks vaja peale igat salvestust.
+Kasutasin: batch processing, system_prompt ette üles laaditud, gemini-2.5-flash-lite (soodsaim lahendus)
 
-Veateade: 
-Processing 1239: id=1372
-  -> Input text: voice, piano...
-  -> Rate limit hit. Waiting 1.34s...
-  -> Rate limit hit. Waiting 2.34s...
-  -> API/Parse Error: 429 POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?%24alt=json%3Benum-encoding%3Dint: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_paid_tier_input_token_count, limit: 4000000, model: gemini-2.5-flash-lite
-Please retry in 416.333102ms. [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_paid_tier_input_token_count', 'quotaId': 'GenerateContentPaidTierInputTokensPerModelPerMinute', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '4000000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '0s'}]
-Processing 1240: id=1373
-  -> Input text: voice, piano...
-  -> Rate limit hit. Waiting 1.03s...
-  -> Rate limit hit. Waiting 2.94s...
-  -> API/Parse Error: 429 POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?%24alt=json%3Benum-encoding%3Dint: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_paid_tier_input_token_count, limit: 4000000, model: gemini-2.5-flash-lite
-Please retry in 54.240427609s. [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_paid_tier_input_token_count', 'quotaId': 'GenerateContentPaidTierInputTokensPerModelPerMinute', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '4000000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '54s'}]
-Processing 1241: id=1374
-  -> Input text: voice, piano...
-  -> Rate limit hit. Waiting 1.38s...
-  -> Rate limit hit. Waiting 2.86s...
-  -> API/Parse Error: 429 POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?%24alt=json%3Benum-encoding%3Dint: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
-* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_paid_tier_input_token_count, limit: 4000000, model: gemini-2.5-flash-lite
-Please retry in 47.980209879s. [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_paid_tier_input_token_count', 'quotaId': 'GenerateContentPaidTierInputTokensPerModelPerMinute', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '4000000'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]
 
 
 ## Otsingud:
@@ -177,16 +155,62 @@ Otsi, kas pill on:
 SELECT title  FROM teosed_koosseisud  WHERE JSON_OVERLAPS(     instrumentation->'$.parts[*].instrument_id',      CAST('["vn"]' AS JSON) );
 
 VÕI (töötab ka mariadb-s):
-SELECT title 
+SELECT pealkiri, teosed_id
 FROM teosed_koosseisud 
-WHERE JSON_SEARCH(instrumentation, 'all', 'vn', NULL, '$.parts[*].instrument_id') IS NOT NULL;
+WHERE JSON_SEARCH(intrumentatsioon, 'all', 'vn', NULL, '$.parts[*].instrument_id') IS NOT NULL;
+
+valik ka helilooja:
+
+SELECT 
+  teosed_koosseisud.teosed_id, 
+  pealkiri, 
+  heliloojad.nimi
+FROM teosed_koosseisud 
+JOIN 
+    heliloojad_teosed ON teosed_koosseisud.teosed_id = heliloojad_teosed.teosed_id
+JOIN heliloojad 
+    ON heliloojad_teosed.heliloojad_id = heliloojad.id  
+WHERE JSON_SEARCH(intrumentatsioon, 'all', 'vn', NULL, '$.parts[*].instrument_id') IS NOT NULL;
+
 
 Veel näiteid (boolean):
+
 SELECT title, JSON_VALUE(instrumentation, "$.total_player_count") AS Players
 FROM teosed_koosseisud where !JSON_VALUE(instrumentation, "$.has_vocal");
 
 
-
+otsi pillide ja arvu järgi (flööt-harf duod)
+SELECT 
+  teosed_koosseisud.teosed_id,
+  heliloojad.nimi,
+  pealkiri,
+  teosed_koosseisud.koosseis_tekst 
+FROM teosed_koosseisud 
+JOIN heliloojad_teosed 
+  ON teosed_koosseisud.teosed_id = heliloojad_teosed.teosed_id
+JOIN heliloojad 
+  ON heliloojad_teosed.heliloojad_id = heliloojad.id  
+WHERE 
+  -- Requirement 1: Total player count must be 2
+  JSON_EXTRACT(intrumentatsioon, '$.total_player_count') = 2
+  
+  -- Requirement 2: Must contain Flute ('fl')
+  AND JSON_OVERLAPS(JSON_EXTRACT(intrumentatsioon, '$.parts[*].instrument_id'), '"fl"')
+  
+  -- Requirement 3: Must contain Harp ('hp')
+  AND JSON_OVERLAPS(JSON_EXTRACT(intrumentatsioon, '$.parts[*].instrument_id'), '"hp"');
+  
+  
+  Veel näiteid:
+  
+  Kaks flööti:
+  
+  WHERE 
+    JSON_EXTRACT(intrumentatsioon, '$.total_player_count') = 2
+    
+    AND JSON_LENGTH(JSON_EXTRACT(intrumentatsioon, '$.parts')) = 1
+    
+    AND JSON_VALUE(intrumentatsioon, '$.parts[0].instrument_id') = 'fl';
 
 
 
