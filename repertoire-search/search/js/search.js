@@ -63,7 +63,7 @@ instrumentTags.addEventListener('click', (event) => {
 async function loadMetadata() {
   const data = await fetchJson('./api/metadata.php');
   if (!data.ok) {
-    throw new Error(data.error || 'Metaandmete laadimine ebaonnestus');
+    throw new Error(data.error || 'Metaandmete laadimine ebaõnnestus');
   }
 
   const yearMax = data.yearMax;
@@ -125,7 +125,7 @@ instrumentInput.addEventListener('input', () => {
     try {
       const data = await fetchJson('./api/instruments.php?q=' + encodeURIComponent(q));
       if (!data.ok) {
-        throw new Error(data.error || 'Instrumentide laadimine ebaonnestus');
+        throw new Error(data.error || 'Instrumentide laadimine ebaõnnestus');
       }
       instrumentCache = data.items;
       renderInstrumentMenu(instrumentCache);

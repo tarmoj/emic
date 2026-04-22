@@ -72,22 +72,22 @@
                     </div>
 
                     <div class="field half">
-                        <label for="keyword">Otsingusona</label>
+                        <label for="keyword">Otsingusõna</label>
                         <input id="keyword" name="keyword" type="text" placeholder="Vaba teksti otsing">
                     </div>
                     <div class="field half autocomplete">
-                        <label for="instrumentInput">Koosseis (instrumentide tagid)</label>
+                        <label for="instrumentInput">Koosseis</label>
                         <input id="instrumentInput" type="text" placeholder="Nt vn, fl, hp ...">
                         <div id="instrumentMenu" class="menu" role="listbox"></div>
                         <div id="instrumentTags" class="tags"></div>
                     </div>
 
                     <div class="field third">
-                        <label for="bornYearFrom">Helilooja sunniaasta alates</label>
+                        <label for="bornYearFrom">Helilooja sünniaasta alates</label>
                         <input id="bornYearFrom" name="bornYearFrom" type="number" min="1845" max="2100" value="1845">
                     </div>
                     <div class="field third">
-                        <label for="bornYearTo">Helilooja sunniaasta kuni</label>
+                        <label for="bornYearTo">Helilooja sünniaasta kuni</label>
                         <input id="bornYearTo" name="bornYearTo" type="number" min="1845" max="2100">
                     </div>
                     <div class="field third">
@@ -132,7 +132,7 @@
 
                 <div class="actions">
                     <button class="primary" type="submit">Otsi</button>
-                    <button class="secondary" type="button" id="resetBtn">Tyhjenda</button>
+                    <button class="secondary" type="button" id="resetBtn">Tühjenda</button>
                 </div>
             </form>
 
