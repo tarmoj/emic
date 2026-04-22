@@ -24,6 +24,7 @@ function escapeHtml(value) {
 async function fetchJson(url, options = {}) {
   const response = await fetch(url, options);
   if (!response.ok) {
+    console.log("Error. Response:", response, url, options);
     throw new Error('HTTP ' + response.status);
   }
   return response.json();
@@ -57,7 +58,7 @@ instrumentTags.addEventListener('click', (event) => {
   const btn = event.target.closest('button[data-abbr]');
   if (!btn) return;
   removeInstrument(btn.dataset.abbr);
-});stylestyle
+});
 
 async function loadMetadata() {
   const data = await fetchJson('./api/metadata.php');
@@ -166,7 +167,7 @@ function buildPayload() {
   payload.onlySelectedInstruments = document.getElementById('onlySelectedInstruments').checked;
   payload.selectedInstruments = selectedInstruments.map((item) => item.lyhend);
   payload.page = 1;
-  payload.perPage = 50;style
+  payload.perPage = 50;
 
   return payload;
 }
@@ -209,6 +210,7 @@ form.addEventListener('submit', async (event) => {
     setStatus(`Leitud: ${data.total}`);
     renderResults(data);
   } catch (err) {
+    console.error(err);
     setStatus('Otsing ebaonnestus. Kontrolli serveri logi.');
   }
 });

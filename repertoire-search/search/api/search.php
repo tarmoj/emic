@@ -174,22 +174,28 @@ try {
     }
 
     if ($filters['title'] !== '') {
-        $sql .= " AND (tt.pealkiri LIKE :title OR tk.pealkiri LIKE :title)";
-        $params[':title'] = '%' . $filters['title'] . '%';
+        $sql .= " AND (tt.pealkiri LIKE :title1 OR tk.pealkiri LIKE :title2)";
+        $params[':title1'] = '%' . $filters['title'] . '%';
+        $params[':title2'] = '%' . $filters['title'] . '%';
     }
 
     if ($filters['keyword'] !== '') {
         $sql .= " AND (
-            tt.pealkiri LIKE :keyword
-            OR tt.seletusrida LIKE :keyword
-            OR tt.koosseis LIKE :keyword
-            OR tt.lisainfo LIKE :keyword
-            OR tk.koosseis_tekst LIKE :keyword
+            tt.pealkiri LIKE :kw1
+            OR tt.seletusrida LIKE :kw2
+            OR tt.koosseis LIKE :kw3
+            OR tt.lisainfo LIKE :kw4
+            OR tk.koosseis_tekst LIKE :kw5
         )";
-        $params[':keyword'] = '%' . $filters['keyword'] . '%';
+        $needle = '%' . $filters['keyword'] . '%';
+        $params[':kw1'] = $needle;
+        $params[':kw2'] = $needle;
+        $params[':kw3'] = $needle;
+        $params[':kw4'] = $needle;
+        $params[':kw5'] = $needle;
     }
 
-    $sql .= " ORDER BY h.nimi ASC, pealkiri ASC LIMIT 5000";
+    $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC LIMIT 5000";
 
     $stmt = $pdo->prepare($sql);
     foreach ($params as $key => $value) {
