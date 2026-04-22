@@ -158,7 +158,7 @@ try {
         LEFT JOIN teosed_tekstid tt ON tt.teosed_id = t.id AND tt.keel = 'est'
         LEFT JOIN teosed_koosseisud tk ON tk.teosed_id = t.id
         LEFT JOIN teosed_zanrid tz ON tz.teoseId = t.id
-        WHERE t.staatus = 1
+        WHERE 1 = 1
     ";
 
     $params = [];
@@ -195,7 +195,11 @@ try {
         $params[':kw5'] = $needle;
     }
 
-    $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC LIMIT 5000";
+    $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC";
+    
+    // temporary, for debugging:
+    error_log("SQL: " . $sql);
+    error_log("PARAMS: " . json_encode($params, JSON_UNESCAPED_UNICODE));    
 
     $stmt = $pdo->prepare($sql);
     foreach ($params as $key => $value) {
