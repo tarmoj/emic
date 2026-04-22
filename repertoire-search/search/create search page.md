@@ -30,6 +30,8 @@ Composer -  Title - Intrumentation_text. And it links to according work on emic.
 
 The "Koosseis / Instrumentation" should have a smart search -  when user types, it tries to look for suitable instrument from the instruments table (description below) and inserts its abbreviation as tag to the search field or above it. There should be also an optional dropdown with instruments (when an entry selected, add the tag).
 
+Žanr (Genre) (or category) corresponds to field tooted_kategooriad.nimi and the linking table between composition and category/genre is in teosed_zanrid. 
+
 
 ## Database
 
