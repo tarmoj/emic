@@ -11,6 +11,9 @@ const resetBtn = document.getElementById('resetBtn');
 let selectedInstruments = [];
 let instrumentCache = [];
 let defaultRangeFilters = null;
+let currentPage = 1;
+let totalPages = 1;
+let lastSearchBasePayload = null;
 
 function setStatus(text) {
   statusEl.textContent = text;
@@ -155,7 +158,7 @@ document.addEventListener('click', (event) => {
   }
 });
 
-function buildPayload() {
+function buildPayload(page = 1) {
   const data = new FormData(form);
   const payload = Object.fromEntries(data.entries());
 
@@ -201,10 +204,30 @@ function buildPayload() {
 
   payload.onlySelectedInstruments = document.getElementById('onlySelectedInstruments').checked;
   payload.selectedInstruments = selectedInstruments.map((item) => item.lyhend);
-  payload.page = 1;
+  payload.page = page;
   payload.perPage = 50;
 
   return payload;
+}
+
+function renderPagination(data) {
+  totalPages = Math.max(1, Math.ceil((data.total || 0) / (data.perPage || 50)));
+  currentPage = data.page || 1;
+
+  if (totalPages <= 1) {
+    return '';
+  }
+
+  const prevDisabled = currentPage <= 1 ? 'disabled' : '';
+  const nextDisabled = currentPage >= totalPages ? 'disabled' : '';
+
+  return `
+    <div class="meta" style="margin-top:12px;display:flex;gap:8px;align-items:center;">
+      <button type="button" data-page-action="prev" ${prevDisabled}>Eelmine</button>
+      <span>Leht ${currentPage} / ${totalPages}</span>
+      <button type="button" data-page-action="next" ${nextDisabled}>Järgmine</button>
+    </div>
+  `;
 }
 
 function renderResults(data) {
@@ -223,7 +246,31 @@ function renderResults(data) {
     `;
   }).join('');
 
-  resultsEl.innerHTML = html;
+  resultsEl.innerHTML = html + renderPagination(data);
+}
+
+async function runSearch(page = 1) {
+  if (!lastSearchBasePayload) {
+    lastSearchBasePayload = buildPayload(1);
+  }
+
+  const payload = {
+    ...lastSearchBasePayload,
+    page
+  };
+
+  const data = await fetchJson('./api/search.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+
+  if (!data.ok) {
+    throw new Error(data.error || 'Otsing ebaonnestus');
+  }
+
+  setStatus(`Leitud: ${data.total}`);
+  renderResults(data);
 }
 
 form.addEventListener('submit', async (event) => {
@@ -231,28 +278,47 @@ form.addEventListener('submit', async (event) => {
   setStatus('Otsin...');
 
   try {
-    const payload = buildPayload();
-    const data = await fetchJson('./api/search.php', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-
-    if (!data.ok) {
-      throw new Error(data.error || 'Otsing ebaonnestus');
-    }
-
-    setStatus(`Leitud: ${data.total}`);
-    renderResults(data);
+    currentPage = 1;
+    lastSearchBasePayload = buildPayload(1);
+    await runSearch(currentPage);
   } catch (err) {
     console.error(err);
     setStatus('Otsing ebaonnestus. Kontrolli serveri logi.');
   }
 });
 
+resultsEl.addEventListener('click', async (event) => {
+  const btn = event.target.closest('button[data-page-action]');
+  if (!btn) {
+    return;
+  }
+
+  if (!lastSearchBasePayload) {
+    return;
+  }
+
+  const action = btn.dataset.pageAction;
+  const targetPage = action === 'prev' ? currentPage - 1 : currentPage + 1;
+
+  if (targetPage < 1 || targetPage > totalPages) {
+    return;
+  }
+
+  setStatus('Laen lehte...');
+  try {
+    await runSearch(targetPage);
+  } catch (err) {
+    console.error(err);
+    setStatus('Lehe vahetamine ebaonnestus.');
+  }
+});
+
 resetBtn.addEventListener('click', () => {
   form.reset();
   selectedInstruments = [];
+  lastSearchBasePayload = null;
+  currentPage = 1;
+  totalPages = 1;
   renderTags();
   resultsEl.innerHTML = '';
   setStatus('Filtrid on tyhjendatud.');
