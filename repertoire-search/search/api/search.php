@@ -130,6 +130,15 @@ $filters = [
     'selectedInstruments' => is_array($input['selectedInstruments'] ?? null) ? $input['selectedInstruments'] : [],
 ];
 
+$activeInput = is_array($input['activeFilters'] ?? null) ? $input['activeFilters'] : [];
+$activeFilters = [
+    'bornYear' => (bool) ($activeInput['bornYear'] ?? false),
+    'compositionYear' => (bool) ($activeInput['compositionYear'] ?? false),
+    'duration' => (bool) ($activeInput['duration'] ?? false),
+    'performers' => (bool) ($activeInput['performers'] ?? false),
+    'soloists' => (bool) ($activeInput['soloists'] ?? false),
+];
+
 $selectedInstruments = [];
 foreach ($filters['selectedInstruments'] as $abbr) {
     $abbr = trim((string) $abbr);
@@ -216,27 +225,33 @@ try {
     $filtered = [];
     foreach ($rows as $row) {
         $bornYear = parse_year((string) ($row['helilooja_sunnikuupaev'] ?? ''));
-        if ($filters['bornYearFrom'] > 0 && ($bornYear === null || $bornYear < $filters['bornYearFrom'])) {
-            continue;
-        }
-        if ($filters['bornYearTo'] > 0 && ($bornYear === null || $bornYear > $filters['bornYearTo'])) {
-            continue;
+        if ($activeFilters['bornYear']) {
+            if ($filters['bornYearFrom'] > 0 && ($bornYear === null || $bornYear < $filters['bornYearFrom'])) {
+                continue;
+            }
+            if ($filters['bornYearTo'] > 0 && ($bornYear === null || $bornYear > $filters['bornYearTo'])) {
+                continue;
+            }
         }
 
         $compositionYear = parse_year((string) ($row['aasta'] ?? ''));
-        if ($filters['compositionYearFrom'] > 0 && ($compositionYear === null || $compositionYear < $filters['compositionYearFrom'])) {
-            continue;
-        }
-        if ($filters['compositionYearTo'] > 0 && ($compositionYear === null || $compositionYear > $filters['compositionYearTo'])) {
-            continue;
+        if ($activeFilters['compositionYear']) {
+            if ($filters['compositionYearFrom'] > 0 && ($compositionYear === null || $compositionYear < $filters['compositionYearFrom'])) {
+                continue;
+            }
+            if ($filters['compositionYearTo'] > 0 && ($compositionYear === null || $compositionYear > $filters['compositionYearTo'])) {
+                continue;
+            }
         }
 
         $duration = parse_duration_minutes((string) ($row['pikkus'] ?? ''));
-        if ($filters['durationFrom'] > 0 && ($duration === null || $duration < $filters['durationFrom'])) {
-            continue;
-        }
-        if ($filters['durationTo'] > 0 && ($duration === null || $duration > $filters['durationTo'])) {
-            continue;
+        if ($activeFilters['duration']) {
+            if ($filters['durationFrom'] > 0 && ($duration === null || $duration < $filters['durationFrom'])) {
+                continue;
+            }
+            if ($filters['durationTo'] > 0 && ($duration === null || $duration > $filters['durationTo'])) {
+                continue;
+            }
         }
 
         $instrumentationRaw = (string) ($row['intrumentatsioon'] ?? '');
@@ -249,12 +264,12 @@ try {
         }
 
         $playerCount = extract_player_count($instrumentation);
-        if ($playerCount < $filters['performersFrom'] || $playerCount > $filters['performersTo']) {
+        if ($activeFilters['performers'] && ($playerCount < $filters['performersFrom'] || $playerCount > $filters['performersTo'])) {
             continue;
         }
 
         $soloists = extract_soloists($instrumentation);
-        if ($soloists < $filters['soloistsFrom'] || $soloists > $filters['soloistsTo']) {
+        if ($activeFilters['soloists'] && ($soloists < $filters['soloistsFrom'] || $soloists > $filters['soloistsTo'])) {
             continue;
         }
 

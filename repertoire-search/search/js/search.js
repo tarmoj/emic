@@ -10,6 +10,7 @@ const resetBtn = document.getElementById('resetBtn');
 
 let selectedInstruments = [];
 let instrumentCache = [];
+let defaultRangeFilters = null;
 
 function setStatus(text) {
   statusEl.textContent = text;
@@ -86,6 +87,19 @@ async function loadMetadata() {
     opt.textContent = composer.nimi;
     composerSelect.appendChild(opt);
   });
+
+  defaultRangeFilters = {
+    bornYearFrom: Number(document.getElementById('bornYearFrom').value || 0),
+    bornYearTo: Number(document.getElementById('bornYearTo').value || 0),
+    compositionYearFrom: Number(document.getElementById('compositionYearFrom').value || 0),
+    compositionYearTo: Number(document.getElementById('compositionYearTo').value || 0),
+    durationFrom: Number(document.getElementById('durationFrom').value || 0),
+    durationTo: Number(document.getElementById('durationTo').value || 0),
+    performersFrom: Number(document.getElementById('performersFrom').value || 0),
+    performersTo: Number(document.getElementById('performersTo').value || 0),
+    soloistsFrom: Number(document.getElementById('soloistsFrom').value || 0),
+    soloistsTo: Number(document.getElementById('soloistsTo').value || 0)
+  };
 }
 
 function renderInstrumentMenu(items) {
@@ -163,6 +177,27 @@ function buildPayload() {
   intKeys.forEach((key) => {
     payload[key] = Number(payload[key] || 0);
   });
+
+  const defaults = defaultRangeFilters || {
+    bornYearFrom: 1845,
+    bornYearTo: 0,
+    compositionYearFrom: 1845,
+    compositionYearTo: 0,
+    durationFrom: 0,
+    durationTo: 480,
+    performersFrom: 0,
+    performersTo: 100,
+    soloistsFrom: 0,
+    soloistsTo: 20
+  };
+
+  payload.activeFilters = {
+    bornYear: payload.bornYearFrom !== defaults.bornYearFrom || payload.bornYearTo !== defaults.bornYearTo,
+    compositionYear: payload.compositionYearFrom !== defaults.compositionYearFrom || payload.compositionYearTo !== defaults.compositionYearTo,
+    duration: payload.durationFrom !== defaults.durationFrom || payload.durationTo !== defaults.durationTo,
+    performers: payload.performersFrom !== defaults.performersFrom || payload.performersTo !== defaults.performersTo,
+    soloists: payload.soloistsFrom !== defaults.soloistsFrom || payload.soloistsTo !== defaults.soloistsTo
+  };
 
   payload.onlySelectedInstruments = document.getElementById('onlySelectedInstruments').checked;
   payload.selectedInstruments = selectedInstruments.map((item) => item.lyhend);
