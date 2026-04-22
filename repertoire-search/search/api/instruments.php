@@ -20,26 +20,31 @@ try {
         $stmt->execute();
     } else {
         $needle = '%' . $q . '%';
+        $prefix = $q . '%';
         $stmt = $pdo->prepare(
             "SELECT lyhend, nimi, nimi_eng, teised_nimed
              FROM instrumendid
-             WHERE lyhend LIKE :needle
-                OR nimi LIKE :needle
-                OR nimi_eng LIKE :needle
-                OR teised_nimed LIKE :needle
+             WHERE lyhend LIKE :needle1
+                OR nimi LIKE :needle2
+                OR nimi_eng LIKE :needle3
+                OR teised_nimed LIKE :needle4
              ORDER BY
                 CASE
                     WHEN lyhend = :exact THEN 0
-                    WHEN lyhend LIKE :prefix THEN 1
-                    WHEN nimi LIKE :prefix THEN 2
+                    WHEN lyhend LIKE :prefix1 THEN 1
+                    WHEN nimi LIKE :prefix2 THEN 2
                     ELSE 3
                 END,
                 nimi ASC
              LIMIT :limit"
         );
-        $stmt->bindValue(':needle', $needle, PDO::PARAM_STR);
+        $stmt->bindValue(':needle1', $needle, PDO::PARAM_STR);
+        $stmt->bindValue(':needle2', $needle, PDO::PARAM_STR);
+        $stmt->bindValue(':needle3', $needle, PDO::PARAM_STR);
+        $stmt->bindValue(':needle4', $needle, PDO::PARAM_STR);
         $stmt->bindValue(':exact', $q, PDO::PARAM_STR);
-        $stmt->bindValue(':prefix', $q . '%', PDO::PARAM_STR);
+        $stmt->bindValue(':prefix1', $prefix, PDO::PARAM_STR);
+        $stmt->bindValue(':prefix2', $prefix, PDO::PARAM_STR);
         $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
     }
