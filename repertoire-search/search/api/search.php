@@ -158,8 +158,8 @@ try {
             h.sunnikuupaev AS helilooja_sunnikuupaev,
             t.aasta AS aasta,
             t.pikkus AS pikkus,
-            COALESCE(NULLIF(tt.pealkiri, ''), NULLIF(tk.pealkiri, ''), '(pealkiri puudub)') AS pealkiri,
-            COALESCE(NULLIF(tk.koosseis_tekst, ''), '-') AS koosseis_tekst,
+            COALESCE(NULLIF(tt.pealkiri, ''), '(pealkiri puudub)') AS pealkiri,
+            '-' AS koosseis_tekst,
             tk.intrumentatsioon AS intrumentatsioon
         FROM teosed t
         JOIN heliloojad_teosed ht ON ht.teosed_id = t.id
@@ -183,9 +183,8 @@ try {
     }
 
     if ($filters['title'] !== '') {
-        $sql .= " AND (tt.pealkiri LIKE :title1 OR tk.pealkiri LIKE :title2)";
+        $sql .= " AND (tt.pealkiri LIKE :title1)";
         $params[':title1'] = '%' . $filters['title'] . '%';
-        $params[':title2'] = '%' . $filters['title'] . '%';
     }
 
     if ($filters['keyword'] !== '') {
@@ -194,14 +193,12 @@ try {
             OR tt.seletusrida LIKE :kw2
             OR tt.koosseis LIKE :kw3
             OR tt.lisainfo LIKE :kw4
-            OR tk.koosseis_tekst LIKE :kw5
         )";
         $needle = '%' . $filters['keyword'] . '%';
         $params[':kw1'] = $needle;
         $params[':kw2'] = $needle;
         $params[':kw3'] = $needle;
         $params[':kw4'] = $needle;
-        $params[':kw5'] = $needle;
     }
 
     $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC";
@@ -221,6 +218,9 @@ try {
 
     $stmt->execute();
     $rows = $stmt->fetchAll();
+
+    // temporary, for debugging:
+    error_log("Fetched rows count: " . count($rows));
 
     $filtered = [];
     foreach ($rows as $row) {

@@ -7,7 +7,7 @@ try {
     $pdo = emic_db();
 
     $genresStmt = $pdo->query(
-        "SELECT id, COALESCE(NULLIF(nimi_est, ''), NULLIF(nimi, ''), nimi_eng) AS nimi
+        "SELECT id, nimi
          FROM tooted_kategooriad
          WHERE peidetud = '0'
          ORDER BY prioriteet DESC, nimi ASC"

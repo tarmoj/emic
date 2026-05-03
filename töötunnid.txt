@@ -1,5 +1,7 @@
 ## Instrumentatsiooniotsing
 
+### Eeltööd ning andmeanalüüs
+
 Prototüübi loomine | 3
 Andmebaasi ülesseadmine, struktuuriga tutvumine | 2
 Esmaste päringute (SQL) koostamine, testandmed, andameaasi puhastamine | 2
@@ -8,7 +10,9 @@ AI skripti täiustamine, katusetused, test 200 kirjega | 4
 
 Instrumentatsiooni strukuuri testimine, täiustused | 2 
 Gemini Batch processing skripti loomine, andmebaasi töötlemine | 1
-Otsingu SQL kirjete loomine | 2
 
+### Otisgusüsteemi loomine
 
-
+Töö SQL otsigukirjetega | 2
+Otsingusüsteemi kirjledamine (prompt) | 1
+Töö otsingusüsteemi parandamise/täiustamisega | 3

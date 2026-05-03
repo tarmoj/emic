@@ -158,7 +158,7 @@ document.addEventListener('click', (event) => {
   }
 });
 
-function buildPayload(page = 1) {
+function buildPayload() {
   const data = new FormData(form);
   const payload = Object.fromEntries(data.entries());
 
@@ -204,7 +204,6 @@ function buildPayload(page = 1) {
 
   payload.onlySelectedInstruments = document.getElementById('onlySelectedInstruments').checked;
   payload.selectedInstruments = selectedInstruments.map((item) => item.lyhend);
-  payload.page = page;
   payload.perPage = 50;
 
   return payload;
@@ -251,7 +250,7 @@ function renderResults(data) {
 
 async function runSearch(page = 1) {
   if (!lastSearchBasePayload) {
-    lastSearchBasePayload = buildPayload(1);
+    lastSearchBasePayload = buildPayload();
   }
 
   const payload = {
@@ -279,7 +278,7 @@ form.addEventListener('submit', async (event) => {
 
   try {
     currentPage = 1;
-    lastSearchBasePayload = buildPayload(1);
+    lastSearchBasePayload = buildPayload();
     await runSearch(currentPage);
   } catch (err) {
     console.error(err);
