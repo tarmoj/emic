@@ -75,7 +75,10 @@ async function loadMetadata() {
     const el = document.getElementById(id);
     el.value = yearMax;
     el.max = yearMax;
+    el.dispatchEvent(new Event('input'));
   });
+  document.getElementById('compositionYearFrom').max = yearMax;
+  document.getElementById('bornYearFrom').max = yearMax;
 
   data.genres.forEach((genre) => {
     const opt = document.createElement('option');
@@ -100,8 +103,6 @@ async function loadMetadata() {
     durationTo: Number(document.getElementById('durationTo').value || 0),
     performersFrom: Number(document.getElementById('performersFrom').value || 0),
     performersTo: Number(document.getElementById('performersTo').value || 0),
-    soloistsFrom: Number(document.getElementById('soloistsFrom').value || 0),
-    soloistsTo: Number(document.getElementById('soloistsTo').value || 0)
   };
 }
 
@@ -172,9 +173,7 @@ function buildPayload() {
     'durationFrom',
     'durationTo',
     'performersFrom',
-    'performersTo',
-    'soloistsFrom',
-    'soloistsTo'
+    'performersTo'
   ];
 
   intKeys.forEach((key) => {
@@ -189,17 +188,14 @@ function buildPayload() {
     durationFrom: 0,
     durationTo: 480,
     performersFrom: 0,
-    performersTo: 100,
-    soloistsFrom: 0,
-    soloistsTo: 20
+    performersTo: 100
   };
 
   payload.activeFilters = {
     bornYear: payload.bornYearFrom !== defaults.bornYearFrom || payload.bornYearTo !== defaults.bornYearTo,
     compositionYear: payload.compositionYearFrom !== defaults.compositionYearFrom || payload.compositionYearTo !== defaults.compositionYearTo,
     duration: payload.durationFrom !== defaults.durationFrom || payload.durationTo !== defaults.durationTo,
-    performers: payload.performersFrom !== defaults.performersFrom || payload.performersTo !== defaults.performersTo,
-    soloists: payload.soloistsFrom !== defaults.soloistsFrom || payload.soloistsTo !== defaults.soloistsTo
+    performers: payload.performersFrom !== defaults.performersFrom || payload.performersTo !== defaults.performersTo
   };
 
   payload.onlySelectedInstruments = document.getElementById('onlySelectedInstruments').checked;

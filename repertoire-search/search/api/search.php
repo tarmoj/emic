@@ -124,8 +124,6 @@ $filters = [
     'durationTo' => (int) ($input['durationTo'] ?? 480),
     'performersFrom' => (int) ($input['performersFrom'] ?? 0),
     'performersTo' => (int) ($input['performersTo'] ?? 100),
-    'soloistsFrom' => (int) ($input['soloistsFrom'] ?? 0),
-    'soloistsTo' => (int) ($input['soloistsTo'] ?? 20),
     'onlySelectedInstruments' => (bool) ($input['onlySelectedInstruments'] ?? false),
     'selectedInstruments' => is_array($input['selectedInstruments'] ?? null) ? $input['selectedInstruments'] : [],
 ];
@@ -136,7 +134,6 @@ $activeFilters = [
     'compositionYear' => (bool) ($activeInput['compositionYear'] ?? false),
     'duration' => (bool) ($activeInput['duration'] ?? false),
     'performers' => (bool) ($activeInput['performers'] ?? false),
-    'soloists' => (bool) ($activeInput['soloists'] ?? false),
 ];
 
 $selectedInstruments = [];
@@ -159,7 +156,6 @@ try {
             t.aasta AS aasta,
             t.pikkus AS pikkus,
             COALESCE(NULLIF(tt.pealkiri, ''), '(pealkiri puudub)') AS pealkiri,
-            '-' AS koosseis_tekst,
             tk.intrumentatsioon AS intrumentatsioon
         FROM teosed t
         JOIN heliloojad_teosed ht ON ht.teosed_id = t.id
@@ -266,9 +262,6 @@ try {
         }
 
         $soloists = extract_soloists($instrumentation);
-        if ($activeFilters['soloists'] && ($soloists < $filters['soloistsFrom'] || $soloists > $filters['soloistsTo'])) {
-            continue;
-        }
 
         $instrumentsInWork = extract_instrument_ids($instrumentation);
         if (!empty($selectedInstruments)) {
@@ -301,11 +294,22 @@ try {
         }
 
         $teosId = (int) $row['teos_id'];
+
+        $koosseisArr = [];
+        foreach ($instrumentation['parts'] ?? [] as $part) {
+            $instr = trim((string) ($part['instrument_id'] ?? ''));
+            $count = (int) ($part['count'] ?? 1);
+            if ($instr !== '') {
+                $koosseisArr[] = ($count > 1 ? $count : '') . $instr;
+            }
+        }
+        $koosseisText = implode(', ', $koosseisArr);
+
         $filtered[] = [
             'teos_id' => $teosId,
             'helilooja' => (string) $row['helilooja'],
             'pealkiri' => (string) $row['pealkiri'],
-            'koosseis_tekst' => strip_tags((string) $row['koosseis_tekst']),
+            'koosseis_tekst' => $koosseisText,
             'aasta' => $compositionYear,
             'pikkus_min' => $duration,
             'esitajaid' => $playerCount,

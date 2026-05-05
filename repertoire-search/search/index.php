@@ -20,23 +20,38 @@
         .hero h1 { margin: 0 0 8px; font-size: 2rem; }
         .hero p { margin: 0; }
         .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+        .form-section { border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 16px; }
+        .form-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
         .grid { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); gap: 12px; }
         .field { grid-column: span 12; }
         .field.half { grid-column: span 6; }
         .field.third { grid-column: span 4; }
+        .field.full { grid-column: span 12; }
         label { display: block; font-size: .92rem; margin-bottom: 6px; font-weight: 700; }
-        input, select { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 10px; font: inherit; background: #fff; }
-        .actions { display: flex; gap: 10px; margin-top: 12px; }
-        button { border: 0; border-radius: 999px; padding: 10px 18px; font: inherit; font-weight: 700; cursor: pointer; }
-        button.primary { background: var(--accent); color: #fff; }
-        button.secondary { background: #ece8da; color: var(--text); }
+        input[type=text], input[type=number], select { width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 8px; padding: 10px; font: inherit; background: #fff; }
+        /* Range slider */
+        .range-field { grid-column: span 6; }
+        .range-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+        .range-label span { font-size: .92rem; font-weight: 700; }
+        .range-label output { font-size: .88rem; color: var(--accent); font-weight: 700; }
+        .range-wrap { display: flex; gap: 8px; align-items: center; }
+        .range-wrap input[type=range] { flex: 1; accent-color: var(--accent); }
+        /* Accordion */
+        .accordion-toggle { background: none; border: none; padding: 0; font: inherit; font-size: .92rem; color: var(--accent); font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; border-radius: 0; }
+        .accordion-toggle::before { content: '▶'; font-size: .7rem; transition: transform .2s; }
+        .accordion-toggle[aria-expanded=true]::before { transform: rotate(90deg); }
+        .accordion-body { display: none; margin-top: 12px; }
+        .accordion-body.open { display: block; }
+        .actions { display: flex; gap: 10px; margin-top: 16px; }
+        button.primary { background: var(--accent); color: #fff; border: 0; border-radius: 999px; padding: 10px 18px; font: inherit; font-weight: 700; cursor: pointer; }
+        button.secondary { background: #ece8da; color: var(--text); border: 0; border-radius: 999px; padding: 10px 18px; font: inherit; font-weight: 700; cursor: pointer; }
         .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
         .tag { border: 1px solid #c8d6c6; background: #f0f7ef; color: #1f4f30; border-radius: 999px; padding: 5px 10px; font-size: .86rem; }
-        .tag button { padding: 0; margin-left: 8px; background: transparent; color: inherit; }
+        .tag button { padding: 0; margin-left: 8px; background: transparent; color: inherit; border: none; cursor: pointer; font-weight: 700; }
         .autocomplete { position: relative; }
         .menu { position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 20; background: #fff; border: 1px solid var(--line); border-radius: 8px; max-height: 220px; overflow: auto; display: none; }
         .menu.show { display: block; }
-        .menu button { display: block; width: 100%; text-align: left; border-radius: 0; padding: 10px; background: #fff; border-bottom: 1px solid #f0eee6; }
+        .menu button { display: block; width: 100%; text-align: left; border-radius: 0; padding: 10px; background: #fff; border: none; border-bottom: 1px solid #f0eee6; font: inherit; cursor: pointer; }
         .menu button:hover { background: #f5f9f5; }
         .results { margin-top: 16px; }
         .item { border-top: 1px solid var(--line); padding: 12px 0; }
@@ -44,7 +59,7 @@
         .meta { color: #5e635e; font-size: .92rem; margin-top: 4px; }
         .status { margin-top: 12px; color: #5d4f2f; }
         @media (max-width: 900px) {
-            .field.half, .field.third { grid-column: span 12; }
+            .field.half, .field.third, .range-field { grid-column: span 12; }
         }
     </style>
 </head>
@@ -57,76 +72,93 @@
 
         <section class="panel">
             <form id="searchForm" novalidate>
-                <div class="grid">
-                    <div class="field third">
-                        <label for="genreId">Žanr</label>
-                        <select id="genreId" name="genreId"><option value="">õik žanrid</option></select>
-                    </div>
-                    <div class="field third">
-                        <label for="composerId">Helilooja</label>
-                        <select id="composerId" name="composerId"><option value="">Koik heliloojad</option></select>
-                    </div>
-                    <div class="field third">
-                        <label for="title">Pealkiri</label>
-                        <input id="title" name="title" type="text" placeholder="Nt Sona sonale">
-                    </div>
 
-                    <div class="field half">
-                        <label for="keyword">Otsingusõna</label>
-                        <input id="keyword" name="keyword" type="text" placeholder="Vaba teksti otsing">
+                <!-- Section 1: Basic filters -->
+                <div class="form-section">
+                    <div class="grid">
+                        <div class="field third">
+                            <label for="genreId">Žanr</label>
+                            <select id="genreId" name="genreId"><option value="">Kõik žanrid</option></select>
+                        </div>
+                        <div class="field third">
+                            <label for="composerId">Helilooja</label>
+                            <select id="composerId" name="composerId"><option value="">Kõik heliloojad</option></select>
+                        </div>
+                        <div class="field third">
+                            <label for="title">Pealkiri</label>
+                            <input id="title" name="title" type="text" placeholder="Sõna või sõna osa">
+                        </div>
+                        <div class="field full">
+                            <label for="keyword">Otsingusõna</label>
+                            <input id="keyword" name="keyword" type="text" placeholder="Vaba teksti otsing">
+                        </div>
                     </div>
-                    <div class="field half autocomplete">
-                        <label for="instrumentInput">Koosseis</label>
-                        <input id="instrumentInput" type="text" placeholder="Nt vn, fl, hp ...">
-                        <div id="instrumentMenu" class="menu" role="listbox"></div>
-                        <div id="instrumentTags" class="tags"></div>
-                    </div>
+                </div>
 
-                    <div class="field third">
-                        <label for="bornYearFrom">Helilooja sünniaasta alates</label>
-                        <input id="bornYearFrom" name="bornYearFrom" type="number" min="1845" max="2100" value="1845">
+                <!-- Section 2: Instrumentation -->
+                <div class="form-section">
+                    <div class="grid">
+                        <div class="field half autocomplete">
+                            <label for="instrumentInput">Koosseis</label>
+                            <input id="instrumentInput" type="text" placeholder="Nt vn, fl, hp ...">
+                            <div id="instrumentMenu" class="menu" role="listbox"></div>
+                            <div id="instrumentTags" class="tags"></div>
+                        </div>
+                        <div class="range-field">
+                            <div class="range-label">
+                                <span>Esitajaid</span>
+                                <output id="performersVal">0 – 100</output>
+                            </div>
+                            <div class="range-wrap">
+                                <input id="performersFrom" name="performersFrom" type="range" min="0" max="100" value="0">
+                                <input id="performersTo" name="performersTo" type="range" min="0" max="100" value="100">
+                            </div>
+                        </div>
+                        <div class="field full" style="display:flex;align-items:center;gap:8px;">
+                            <input id="onlySelectedInstruments" name="onlySelectedInstruments" type="checkbox" style="width:auto;">
+                            <label for="onlySelectedInstruments" style="margin:0;font-weight:400;">Ainult need instrumendid/hääled</label>
+                        </div>
                     </div>
-                    <div class="field third">
-                        <label for="bornYearTo">Helilooja sünniaasta kuni</label>
-                        <input id="bornYearTo" name="bornYearTo" type="number" min="1845" max="2100">
-                    </div>
-                    <div class="field third">
-                        <label for="compositionYearFrom">Loomisaasta alates</label>
-                        <input id="compositionYearFrom" name="compositionYearFrom" type="number" min="1845" max="2100" value="1845">
-                    </div>
+                </div>
 
-                    <div class="field third">
-                        <label for="compositionYearTo">Loomisaasta kuni</label>
-                        <input id="compositionYearTo" name="compositionYearTo" type="number" min="1845" max="2100">
-                    </div>
-                    <div class="field third">
-                        <label for="durationFrom">Kestus alates (min)</label>
-                        <input id="durationFrom" name="durationFrom" type="number" min="0" max="480" value="0">
-                    </div>
-                    <div class="field third">
-                        <label for="durationTo">Kestus kuni (min)</label>
-                        <input id="durationTo" name="durationTo" type="number" min="0" max="480" value="480">
-                    </div>
-
-                    <div class="field third">
-                        <label for="performersFrom">Esitajaid alates</label>
-                        <input id="performersFrom" name="performersFrom" type="number" min="0" max="100" value="0">
-                    </div>
-                    <div class="field third">
-                        <label for="performersTo">Esitajaid kuni</label>
-                        <input id="performersTo" name="performersTo" type="number" min="0" max="100" value="100">
-                    </div>
-                    <div class="field third">
-                        <label for="soloistsFrom">Soliste alates</label>
-                        <input id="soloistsFrom" name="soloistsFrom" type="number" min="0" max="20" value="0">
-                    </div>
-
-                    <div class="field third">
-                        <label for="soloistsTo">Soliste kuni</label>
-                        <input id="soloistsTo" name="soloistsTo" type="number" min="0" max="20" value="20">
-                    </div>
-                    <div class="field third" style="display:flex;align-items:flex-end;">
-                        <label><input id="onlySelectedInstruments" name="onlySelectedInstruments" type="checkbox"> Ainult need instrumendid/haaled</label>
+                <!-- Section 3: More options (accordion) -->
+                <div class="form-section">
+                    <button type="button" class="accordion-toggle" id="moreToggle" aria-expanded="false" aria-controls="moreBody">
+                        Rohkem valikuid
+                    </button>
+                    <div class="accordion-body" id="moreBody">
+                        <div class="grid" style="margin-top:0;">
+                            <div class="range-field">
+                                <div class="range-label">
+                                    <span>Helilooja sünniaasta</span>
+                                    <output id="bornYearVal">1845 – <span id="bornYearToLabel"></span></output>
+                                </div>
+                                <div class="range-wrap">
+                                    <input id="bornYearFrom" name="bornYearFrom" type="range" min="1845" max="2026" value="1845">
+                                    <input id="bornYearTo" name="bornYearTo" type="range" min="1845" max="2026" value="2026">
+                                </div>
+                            </div>
+                            <div class="range-field">
+                                <div class="range-label">
+                                    <span>Teose loomisaasta</span>
+                                    <output id="compositionYearVal">1845 – <span id="compositionYearToLabel"></span></output>
+                                </div>
+                                <div class="range-wrap">
+                                    <input id="compositionYearFrom" name="compositionYearFrom" type="range" min="1845" max="2026" value="1845">
+                                    <input id="compositionYearTo" name="compositionYearTo" type="range" min="1845" max="2026" value="2026">
+                                </div>
+                            </div>
+                            <div class="range-field">
+                                <div class="range-label">
+                                    <span>Kestus (min)</span>
+                                    <output id="durationVal">0 – 480</output>
+                                </div>
+                                <div class="range-wrap">
+                                    <input id="durationFrom" name="durationFrom" type="range" min="0" max="480" value="0">
+                                    <input id="durationTo" name="durationTo" type="range" min="0" max="480" value="480">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -141,6 +173,34 @@
         </section>
     </main>
 
+    <script>
+        // Accordion
+        const moreToggle = document.getElementById('moreToggle');
+        const moreBody = document.getElementById('moreBody');
+        moreToggle.addEventListener('click', () => {
+            const open = moreBody.classList.toggle('open');
+            moreToggle.setAttribute('aria-expanded', open);
+        });
+
+        // Range slider display helpers
+        function updateOutput(fromId, toId, outputId, suffix = '') {
+            const from = document.getElementById(fromId);
+            const to = document.getElementById(toId);
+            const out = document.getElementById(outputId);
+            function update() {
+                const lo = Math.min(Number(from.value), Number(to.value));
+                const hi = Math.max(Number(from.value), Number(to.value));
+                out.textContent = lo + ' – ' + hi + suffix;
+            }
+            from.addEventListener('input', update);
+            to.addEventListener('input', update);
+            update();
+        }
+        updateOutput('performersFrom', 'performersTo', 'performersVal');
+        updateOutput('bornYearFrom', 'bornYearTo', 'bornYearVal');
+        updateOutput('compositionYearFrom', 'compositionYearTo', 'compositionYearVal');
+        updateOutput('durationFrom', 'durationTo', 'durationVal', ' min');
+    </script>
     <script src="./js/search.js"></script>
 </body>
 </html>
