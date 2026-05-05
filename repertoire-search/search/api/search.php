@@ -203,9 +203,9 @@ try {
 
     $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC";
     
-    // temporary, for debugging:
-    error_log("SQL: " . $sql);
-    error_log("PARAMS: " . json_encode($params, JSON_UNESCAPED_UNICODE));    
+    // for debugging:
+    //error_log("SQL: " . $sql);
+    //error_log("PARAMS: " . json_encode($params, JSON_UNESCAPED_UNICODE));    
 
     $stmt = $pdo->prepare($sql);
     foreach ($params as $key => $value) {
@@ -218,10 +218,7 @@ try {
 
     $stmt->execute();
     $rows = $stmt->fetchAll();
-
-    // temporary, for debugging:
-    error_log("Fetched rows count: " . count($rows));
-
+    
     $filtered = [];
     foreach ($rows as $row) {
         $bornYear = parse_year((string) ($row['helilooja_sunnikuupaev'] ?? ''));
