@@ -151,6 +151,7 @@ try {
     $sql = "
         SELECT DISTINCT
             t.id AS teos_id,
+            h.id AS heliloojad_id,
             h.nimi AS helilooja,
             h.sunnikuupaev AS helilooja_sunnikuupaev,
             t.aasta AS aasta,
@@ -314,7 +315,7 @@ try {
             'pikkus_min' => $duration,
             'esitajaid' => $playerCount,
             'soliste' => $soloists,
-            'url' => 'https://www.emic.ee/?sisu=heliloojad&mid=58&id=' . $teosId . '&lang=est&action=view&method=teosed#' . $teosId,
+            'url' => 'https://www.emic.ee/?sisu=heliloojad&mid=32&id=' . (int) $row['heliloojad_id'] . '&lang=est&action=view&method=teosed#' . $teosId,
         ];
     }
 
