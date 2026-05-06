@@ -18,7 +18,7 @@ try {
         "SELECT id, nimi, sunnikuupaev
          FROM heliloojad
          WHERE staatus = 1
-         ORDER BY TRIM(SUBSTRING_INDEX(nimi, ' ', -1)) ASC, nimi ASC"
+         ORDER BY nimi ASC"
     );
     $composers = $composersStmt->fetchAll();
 
