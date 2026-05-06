@@ -157,6 +157,7 @@ try {
             t.aasta AS aasta,
             t.pikkus AS pikkus,
             COALESCE(NULLIF(tt.pealkiri, ''), '(pealkiri puudub)') AS pealkiri,
+            tt.koosseis AS koosseis,
             tk.intrumentatsioon AS intrumentatsioon
         FROM teosed t
         JOIN heliloojad_teosed ht ON ht.teosed_id = t.id
@@ -296,21 +297,11 @@ try {
 
         $teosId = (int) $row['teos_id'];
 
-        $koosseisArr = [];
-        foreach ($instrumentation['parts'] ?? [] as $part) {
-            $instr = trim((string) ($part['instrument_id'] ?? ''));
-            $count = (int) ($part['count'] ?? 1);
-            if ($instr !== '') {
-                $koosseisArr[] = ($count > 1 ? $count : '') . $instr;
-            }
-        }
-        $koosseisText = implode(', ', $koosseisArr);
-
         $filtered[] = [
             'teos_id' => $teosId,
             'helilooja' => (string) $row['helilooja'],
             'pealkiri' => (string) $row['pealkiri'],
-            'koosseis_tekst' => $koosseisText,
+            'koosseis_tekst' => strip_tags((string) ($row['koosseis'] ?? '')),
             'aasta' => $compositionYear,
             'pikkus_min' => $duration,
             'esitajaid' => $playerCount,
