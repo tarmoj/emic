@@ -110,8 +110,8 @@
                                 <output id="performersVal">0 – 100</output>
                             </div>
                             <div class="range-wrap">
-                                <input id="performersFrom" name="performersFrom" type="range" min="0" max="100" value="0">
-                                <input id="performersTo" name="performersTo" type="range" min="0" max="100" value="100">
+                                <input id="performersFrom" name="performersFrom" type="range" min="0" max="16" value="0">
+                                <input id="performersTo" name="performersTo" type="range" min="0" max="16" value="16">
                             </div>
                         </div>
                         <div class="field full" style="display:flex;align-items:center;gap:8px;">
@@ -183,20 +183,21 @@
         });
 
         // Range slider display helpers
-        function updateOutput(fromId, toId, outputId, suffix = '') {
+        function updateOutput(fromId, toId, outputId, suffix = '', maxLabel = null) {
             const from = document.getElementById(fromId);
             const to = document.getElementById(toId);
             const out = document.getElementById(outputId);
             function update() {
                 const lo = Math.min(Number(from.value), Number(to.value));
                 const hi = Math.max(Number(from.value), Number(to.value));
-                out.textContent = lo + ' – ' + hi + suffix;
+                const hiStr = (maxLabel !== null && hi >= Number(to.max)) ? maxLabel : hi + suffix;
+                out.textContent = lo + ' – ' + hiStr;
             }
             from.addEventListener('input', update);
             to.addEventListener('input', update);
             update();
         }
-        updateOutput('performersFrom', 'performersTo', 'performersVal');
+        updateOutput('performersFrom', 'performersTo', 'performersVal', '', '16+');
         updateOutput('bornYearFrom', 'bornYearTo', 'bornYearVal');
         updateOutput('compositionYearFrom', 'compositionYearTo', 'compositionYearVal');
         updateOutput('durationFrom', 'durationTo', 'durationVal', ' min');

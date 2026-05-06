@@ -188,7 +188,7 @@ function buildPayload() {
     durationFrom: 0,
     durationTo: 480,
     performersFrom: 0,
-    performersTo: 100
+    performersTo: 16
   };
 
   payload.activeFilters = {

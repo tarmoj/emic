@@ -123,7 +123,7 @@ $filters = [
     'durationFrom' => (int) ($input['durationFrom'] ?? 0),
     'durationTo' => (int) ($input['durationTo'] ?? 480),
     'performersFrom' => (int) ($input['performersFrom'] ?? 0),
-    'performersTo' => (int) ($input['performersTo'] ?? 100),
+    'performersTo' => (int) ($input['performersTo'] ?? 16),
     'onlySelectedInstruments' => (bool) ($input['onlySelectedInstruments'] ?? false),
     'selectedInstruments' => is_array($input['selectedInstruments'] ?? null) ? $input['selectedInstruments'] : [],
 ];
@@ -161,7 +161,7 @@ try {
             tk.intrumentatsioon AS intrumentatsioon
         FROM teosed t
         JOIN heliloojad_teosed ht ON ht.teosed_id = t.id
-        JOIN heliloojad h ON h.id = ht.heliloojad_id
+        JOIN heliloojad h ON h.id = ht.heliloojad_id AND h.staatus = 1
         LEFT JOIN teosed_tekstid tt ON tt.teosed_id = t.id AND tt.keel = 'est'
         LEFT JOIN teosed_koosseisud tk ON tk.teosed_id = t.id
         LEFT JOIN teosed_zanrid tz ON tz.teoseId = t.id
@@ -259,7 +259,7 @@ try {
         }
 
         $playerCount = extract_player_count($instrumentation);
-        if ($activeFilters['performers'] && ($playerCount < $filters['performersFrom'] || $playerCount > $filters['performersTo'])) {
+        if ($activeFilters['performers'] && ($playerCount < $filters['performersFrom'] || ($filters['performersTo'] < 16 && $playerCount > $filters['performersTo']))) {
             continue;
         }
 
