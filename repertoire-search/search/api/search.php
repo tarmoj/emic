@@ -161,7 +161,7 @@ try {
             tk.intrumentatsioon AS intrumentatsioon
         FROM teosed t
         JOIN heliloojad_teosed ht ON ht.teosed_id = t.id
-        JOIN heliloojad h ON h.id = ht.heliloojad_id AND h.staatus = 1
+        JOIN heliloojad h ON h.id = ht.heliloojad_id
         LEFT JOIN teosed_tekstid tt ON tt.teosed_id = t.id AND tt.keel = 'est'
         LEFT JOIN teosed_koosseisud tk ON tk.teosed_id = t.id
         LEFT JOIN teosed_zanrid tz ON tz.teoseId = t.id
