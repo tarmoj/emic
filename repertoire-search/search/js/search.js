@@ -310,6 +310,7 @@ resultsEl.addEventListener('click', async (event) => {
 
 resetBtn.addEventListener('click', () => {
   form.reset();
+  form.querySelectorAll('input[type=range]').forEach((el) => el.dispatchEvent(new Event('input')));
   selectedInstruments = [];
   lastSearchBasePayload = null;
   currentPage = 1;

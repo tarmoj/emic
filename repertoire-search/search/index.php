@@ -34,8 +34,11 @@
         .range-label { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
         .range-label span { font-size: .92rem; font-weight: 700; }
         .range-label output { font-size: .88rem; color: var(--accent); font-weight: 700; }
-        .range-wrap { display: flex; gap: 8px; align-items: center; }
-        .range-wrap input[type=range] { flex: 1; accent-color: var(--accent); }
+        .range-container { position: relative; width: 100%; height: 2rem; }
+        .slider-track { width: 100%; height: 4px; background: #d5d5d5; position: absolute; top: 50%; transform: translateY(-50%); border-radius: 4px; pointer-events: none; }
+        input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; outline: none; position: absolute; top: 50%; transform: translateY(-50%); background: transparent; pointer-events: none; margin: 0; padding: 0; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 1.4rem; width: 1.4rem; background: var(--accent); cursor: pointer; border-radius: 50%; pointer-events: auto; }
+        input[type=range]::-moz-range-thumb { height: 1.4rem; width: 1.4rem; background: var(--accent); cursor: pointer; border-radius: 50%; pointer-events: auto; border: none; box-sizing: border-box; }
         /* Accordion */
         .accordion-toggle { background: none; border: none; padding: 0; font: inherit; font-size: .92rem; color: var(--accent); font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; border-radius: 0; }
         .accordion-toggle::before { content: '▶'; font-size: .7rem; transition: transform .2s; }
@@ -107,9 +110,10 @@
                         <div class="range-field">
                             <div class="range-label">
                                 <span>Esitajaid</span>
-                                <output id="performersVal">0 – 100</output>
+                                <output id="performersVal">0 – 16+</output>
                             </div>
-                            <div class="range-wrap">
+                            <div class="range-container">
+                                <div class="slider-track"></div>
                                 <input id="performersFrom" name="performersFrom" type="range" min="0" max="16" value="0">
                                 <input id="performersTo" name="performersTo" type="range" min="0" max="16" value="16">
                             </div>
@@ -131,9 +135,10 @@
                             <div class="range-field">
                                 <div class="range-label">
                                     <span>Helilooja sünniaasta</span>
-                                    <output id="bornYearVal">1845 – <span id="bornYearToLabel"></span></output>
+                                    <output id="bornYearVal">1845 – <span id="bornYearToLabel">2026</span></output>
                                 </div>
-                                <div class="range-wrap">
+                                <div class="range-container">
+                                    <div class="slider-track"></div>
                                     <input id="bornYearFrom" name="bornYearFrom" type="range" min="1845" max="2026" value="1845">
                                     <input id="bornYearTo" name="bornYearTo" type="range" min="1845" max="2026" value="2026">
                                 </div>
@@ -141,9 +146,10 @@
                             <div class="range-field">
                                 <div class="range-label">
                                     <span>Teose loomisaasta</span>
-                                    <output id="compositionYearVal">1845 – <span id="compositionYearToLabel"></span></output>
+                                    <output id="compositionYearVal">1845 – <span id="compositionYearToLabel">2026</span></output>
                                 </div>
-                                <div class="range-wrap">
+                                <div class="range-container">
+                                    <div class="slider-track"></div>
                                     <input id="compositionYearFrom" name="compositionYearFrom" type="range" min="1845" max="2026" value="1845">
                                     <input id="compositionYearTo" name="compositionYearTo" type="range" min="1845" max="2026" value="2026">
                                 </div>
@@ -153,7 +159,8 @@
                                     <span>Kestus (min)</span>
                                     <output id="durationVal">0 – 480</output>
                                 </div>
-                                <div class="range-wrap">
+                                <div class="range-container">
+                                    <div class="slider-track"></div>
                                     <input id="durationFrom" name="durationFrom" type="range" min="0" max="480" value="0">
                                     <input id="durationTo" name="durationTo" type="range" min="0" max="480" value="480">
                                 </div>
@@ -182,25 +189,50 @@
             moreToggle.setAttribute('aria-expanded', open);
         });
 
-        // Range slider display helpers
-        function updateOutput(fromId, toId, outputId, suffix = '', maxLabel = null) {
-            const from = document.getElementById(fromId);
-            const to = document.getElementById(toId);
-            const out = document.getElementById(outputId);
-            function update() {
-                const lo = Math.min(Number(from.value), Number(to.value));
-                const hi = Math.max(Number(from.value), Number(to.value));
-                const hiStr = (maxLabel !== null && hi >= Number(to.max)) ? maxLabel : hi + suffix;
-                out.textContent = lo + ' – ' + hiStr;
+        // Dual-handle range slider
+        class RangeSlider {
+            constructor({ fromId, toId, outputId, suffix = '', maxLabel = null }) {
+                this.from     = document.getElementById(fromId);
+                this.to       = document.getElementById(toId);
+                this.out      = document.getElementById(outputId);
+                this.suffix   = suffix;
+                this.maxLabel = maxLabel;
+                this.track    = this.from.closest('.range-container').querySelector('.slider-track');
+                this.from.addEventListener('input', () => this._onFrom());
+                this.to.addEventListener('input',   () => this._onTo());
+                this._fill();
             }
-            from.addEventListener('input', update);
-            to.addEventListener('input', update);
-            update();
+            _onFrom() {
+                if (Number(this.from.value) > Number(this.to.value)) this.from.value = this.to.value;
+                this._fill();
+            }
+            _onTo() {
+                if (Number(this.to.value) < Number(this.from.value)) this.to.value = this.from.value;
+                this._fill();
+            }
+            _fill() {
+                const min = Number(this.from.min);
+                const max = Number(this.to.max);
+                const lo  = Number(this.from.value);
+                const hi  = Number(this.to.value);
+                const p1  = max > min ? ((lo - min) / (max - min)) * 100 : 0;
+                const p2  = max > min ? ((hi - min) / (max - min)) * 100 : 100;
+                this.track.style.background =
+                    `linear-gradient(to right, #d5d5d5 ${p1}%, var(--accent) ${p1}%, var(--accent) ${p2}%, #d5d5d5 ${p2}%)`;
+                const hiStr = (this.maxLabel !== null && hi >= max) ? this.maxLabel : hi + this.suffix;
+                const toLabel = document.getElementById(this.toId + 'Label');
+                if (toLabel) {
+                    toLabel.textContent = hiStr;
+                    this.out.childNodes[0].textContent = lo + ' – ';
+                } else {
+                    this.out.textContent = lo + ' – ' + hiStr;
+                }
+            }
         }
-        updateOutput('performersFrom', 'performersTo', 'performersVal', '', '16+');
-        updateOutput('bornYearFrom', 'bornYearTo', 'bornYearVal');
-        updateOutput('compositionYearFrom', 'compositionYearTo', 'compositionYearVal');
-        updateOutput('durationFrom', 'durationTo', 'durationVal', ' min');
+        new RangeSlider({ fromId: 'performersFrom',      toId: 'performersTo',      outputId: 'performersVal',      maxLabel: '16+' });
+        new RangeSlider({ fromId: 'bornYearFrom',        toId: 'bornYearTo',        outputId: 'bornYearVal' });
+        new RangeSlider({ fromId: 'compositionYearFrom', toId: 'compositionYearTo', outputId: 'compositionYearVal' });
+        new RangeSlider({ fromId: 'durationFrom',        toId: 'durationTo',        outputId: 'durationVal',        suffix: ' min' });
     </script>
     <script src="./js/search.js"></script>
 </body>
