@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMIC instrumentatsiooni testleht</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+  h1 { font-size: 1.2rem; margin-bottom: 1.5rem; }
+  label { display: block; font-weight: bold; margin-top: 1rem; margin-bottom: .25rem; }
+  input[type=number], input[type=text], textarea { width: 100%; box-sizing: border-box; padding: .4rem; font-size: 1rem; border: 1px solid #aaa; border-radius: 3px; }
+  textarea { font-family: monospace; resize: vertical; }
+  .row { display: flex; gap: .5rem; margin-top: 1rem; align-items: flex-end; }
+  label.inline { margin: 0 0 .25rem 0; }
+  .field-url { flex: 1; }
+  .field-id { width: 120px; flex-shrink: 0; }
+  .buttons { margin-top: 1rem; display: flex; gap: .5rem; }
+  button { padding: .45rem 1.2rem; font-size: 1rem; cursor: pointer; border: 1px solid #888; border-radius: 3px; background: #f0f0f0; }
+  button.primary { background: #2a6eb5; color: #fff; border-color: #1f55a0; }
+  button.primary:hover { background: #1f55a0; }
+  .error { color: #c00; margin-top: .75rem; font-size: .95rem; }
+  .meta { color: #555; font-size: .85rem; margin-top: .4rem; }
+  #spinner { display: none; margin-left: .5rem; color: #555; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<h1>EMIC instrumentatsiooni API testleht</h1>
+
+<div class="row">
+  <div class="field-url">
+    <label class="inline" for="apiUrl">API URL</label>
+    <input type="text" id="apiUrl" value="index.php">
+  </div>
+</div>
+
+<label for="teosId">Teose ID</label>
+<input type="number" id="teosId" min="1" max="50000" value="42">
+
+<label for="instrumentation">Instrumenatatsioon</label>
+<textarea id="instrumentation" rows="4">soprano, 2 tenors, bass; early music consort; symphony orchestra: 1011, 1100, 1+0, strings</textarea>
+
+<div class="buttons">
+  <button class="primary" id="sendBtn">Saada päring</button>
+  <button id="clearBtn">Tühjenda</button>
+  <span id="spinner">Töötlen…</span>
+</div>
+
+<p class="error" id="errorMsg" style="display:none"></p>
+<p class="meta" id="statusMsg"></p>
+
+<label for="output">Vastus (JSON)</label>
+<textarea id="output" rows="20" readonly></textarea>
+
+<script>
+document.getElementById('sendBtn').addEventListener('click', async function() {
+    const url             = document.getElementById('apiUrl').value.trim();
+    const teosId          = parseInt(document.getElementById('teosId').value, 10);
+    const instrumentation = document.getElementById('instrumentation').value.trim();
+    const errorEl         = document.getElementById('errorMsg');
+    const statusEl        = document.getElementById('statusMsg');
+    const spinner         = document.getElementById('spinner');
+    const output          = document.getElementById('output');
+
+    errorEl.style.display = 'none';
+    errorEl.textContent   = '';
+    statusEl.textContent  = '';
+    output.value          = '';
+    spinner.style.display = 'inline';
+
+    const t0 = Date.now();
+
+    try {
+        const res = await fetch(url, {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify({ teosId, instrumentation }),
+        });
+
+        const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+        statusEl.textContent = `HTTP ${res.status} · ${elapsed}s`;
+
+        const text = await res.text();
+        let pretty = text;
+        try {
+            pretty = JSON.stringify(JSON.parse(text), null, 2);
+        } catch (_) { /* show raw */ }
+
+        output.value = pretty;
+
+        const data = JSON.parse(text);
+        if (!data.ok) {
+            errorEl.textContent   = data.error ?? 'Tundmatu viga.';
+            errorEl.style.display = 'block';
+        }
+    } catch (err) {
+        errorEl.textContent   = 'Võrguviga: ' + err.message;
+        errorEl.style.display = 'block';
+    } finally {
+        spinner.style.display = 'none';
+    }
+});
+
+document.getElementById('clearBtn').addEventListener('click', function() {
+    document.getElementById('teosId').value          = '';
+    document.getElementById('instrumentation').value = '';
+    document.getElementById('output').value          = '';
+    document.getElementById('errorMsg').style.display = 'none';
+    document.getElementById('statusMsg').textContent  = '';
+});
+</script>
+
+</body>
+</html>

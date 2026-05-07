@@ -1,0 +1,4 @@
+# Deny direct browser access to sensitive text files
+<FilesMatch "\.(txt)$">
+    Require all denied
+</FilesMatch>
