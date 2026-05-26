@@ -54,31 +54,6 @@ function extract_instrument_ids(array $instrumentation): array
     return array_keys($ids);
 }
 
-function extract_soloists(array $instrumentation): int
-{
-    $parts = $instrumentation['parts'] ?? [];
-    if (!is_array($parts)) {
-        return 0;
-    }
-
-    $soloCount = 0;
-    foreach ($parts as $part) {
-        if (!is_array($part)) {
-            continue;
-        }
-
-        $role = strtolower((string) ($part['role'] ?? ''));
-        if ($role !== 'soloist') {
-            continue;
-        }
-
-        $count = (int) ($part['count'] ?? 1);
-        $soloCount += max(1, $count);
-    }
-
-    return $soloCount;
-}
-
 function has_aggregate_ensemble_context(array $instrumentation): bool
 {
     if (!empty($instrumentation['orchestral_layout']) && is_array($instrumentation['orchestral_layout'])) {
@@ -297,8 +272,6 @@ try {
             continue;
         }
 
-        $soloists = extract_soloists($instrumentation);
-
         $instrumentsInWork = extract_instrument_ids($instrumentation);
         if (!empty($selectedInstruments)) {
             $selectedSet = array_fill_keys($selectedInstruments, true);
@@ -339,7 +312,6 @@ try {
             'aasta' => $compositionYear,
             'pikkus_min' => $duration,
             'esitajaid' => $playerCount,
-            'soliste' => $soloists,
             'url' => 'https://www.emic.ee/?sisu=heliloojad&mid=32&id=' . (int) $row['heliloojad_id'] . '&lang=est&action=view&method=teosed#' . $teosId,
         ];
     }

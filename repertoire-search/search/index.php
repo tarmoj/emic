@@ -103,7 +103,7 @@
                     <div class="grid">
                         <div class="field half autocomplete">
                             <label for="instrumentInput">Koosseis</label>
-                            <input id="instrumentInput" type="text" placeholder="Nt vn, fl, hp ...">
+                            <input id="instrumentInput" type="text" autocomplete="off" placeholder="Hakake kirjutama ja valige instrument rippmenüüst">
                             <div id="instrumentMenu" class="menu" role="listbox"></div>
                             <div id="instrumentTags" class="tags"></div>
                         </div>

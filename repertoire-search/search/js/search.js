@@ -236,7 +236,7 @@ function renderResults(data) {
       <article class="item">
         <a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.helilooja)} - ${escapeHtml(item.pealkiri)}</a>
         <div class="meta">${escapeHtml(item.koosseis_tekst || '-')}</div>
-        <div class="meta">Aasta: ${escapeHtml(item.aasta ?? '-')} | Kestus: ${escapeHtml(item.pikkus_min ?? '-')} min | Esitajaid: ${escapeHtml(item.esitajaid ?? '-')} | Soliste: ${escapeHtml(item.soliste ?? '-')}</div>
+        <div class="meta">Aasta: ${escapeHtml(item.aasta ?? '-')} | Kestus: ${escapeHtml(item.pikkus_min ?? '-')} min | Esitajaid: ${escapeHtml(item.esitajaid ?? '-')}</div>
       </article>
     `;
   }).join('');
