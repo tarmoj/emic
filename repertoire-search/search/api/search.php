@@ -79,11 +79,45 @@ function extract_soloists(array $instrumentation): int
     return $soloCount;
 }
 
+function has_aggregate_ensemble_context(array $instrumentation): bool
+{
+    if (!empty($instrumentation['orchestral_layout']) && is_array($instrumentation['orchestral_layout'])) {
+        return true;
+    }
+
+    if (!empty($instrumentation['has_vocal'])) {
+        return true;
+    }
+
+    $ensembles = $instrumentation['ensembles'] ?? [];
+    if (!is_array($ensembles)) {
+        return false;
+    }
+
+    foreach ($ensembles as $ensemble) {
+        if (!is_array($ensemble)) {
+            continue;
+        }
+
+        $ensembleId = strtolower((string) ($ensemble['ensemble_id'] ?? ''));
+        if ($ensembleId !== '' && (strpos($ensembleId, 'orchestra') !== false || strpos($ensembleId, 'choir') !== false)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 function extract_player_count(array $instrumentation): int
 {
     $total = (int) ($instrumentation['total_player_count'] ?? 0);
     if ($total > 0) {
         return $total;
+    }
+
+    // If orchestral/choir context exists but total is unknown, do not infer count from just listed solo parts.
+    if (has_aggregate_ensemble_context($instrumentation)) {
+        return 0;
     }
 
     $sum = 0;
