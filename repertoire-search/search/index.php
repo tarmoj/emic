@@ -91,6 +91,10 @@
                             <label for="title">Pealkiri</label>
                             <input id="title" name="title" type="text" placeholder="Sõna või sõna osa">
                         </div>
+                        <div class="field third">
+                            <label for="textAuthor">Teksti autor</label>
+                            <select id="textAuthor" name="textAuthor"><option value="">Kõik teksti autorid</option></select>
+                        </div>
                         <div class="field full">
                             <label for="keyword">Otsingusõna</label>
                             <input id="keyword" name="keyword" type="text" placeholder="Vaba teksti otsing">

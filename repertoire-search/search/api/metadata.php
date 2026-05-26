@@ -22,10 +22,20 @@ try {
     );
     $composers = $composersStmt->fetchAll();
 
+        $textAuthorsStmt = $pdo->query(
+                "SELECT DISTINCT TRIM(tekstiAutor) AS nimi
+                 FROM teosed_tekstid
+                 WHERE tekstiAutor IS NOT NULL
+                     AND TRIM(tekstiAutor) <> ''
+                 ORDER BY nimi ASC"
+        );
+        $textAuthors = $textAuthorsStmt->fetchAll();
+
     json_response([
         'ok' => true,
         'genres' => $genres,
         'composers' => $composers,
+        'textAuthors' => $textAuthors,
         'yearMin' => 1845,
         'yearMax' => (int) date('Y'),
     ]);

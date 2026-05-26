@@ -124,6 +124,7 @@ $filters = [
     'genreId' => (int) ($input['genreId'] ?? 0),
     'composerId' => (int) ($input['composerId'] ?? 0),
     'title' => trim((string) ($input['title'] ?? '')),
+    'textAuthor' => trim((string) ($input['textAuthor'] ?? '')),
     'keyword' => trim((string) ($input['keyword'] ?? '')),
     'bornYearFrom' => (int) ($input['bornYearFrom'] ?? 0),
     'bornYearTo' => (int) ($input['bornYearTo'] ?? 0),
@@ -192,6 +193,16 @@ try {
     if ($filters['title'] !== '') {
         $sql .= " AND (tt.pealkiri LIKE :title1)";
         $params[':title1'] = '%' . $filters['title'] . '%';
+    }
+
+    if ($filters['textAuthor'] !== '') {
+        $sql .= " AND EXISTS (
+            SELECT 1
+            FROM teosed_tekstid tta
+            WHERE tta.teosed_id = t.id
+              AND TRIM(tta.tekstiAutor) = :textAuthor
+        )";
+        $params[':textAuthor'] = $filters['textAuthor'];
     }
 
     if ($filters['keyword'] !== '') {
