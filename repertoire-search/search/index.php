@@ -93,7 +93,7 @@
                         </div>
                         <div class="field third">
                             <label for="textAuthor">Teksti autor</label>
-                            <select id="textAuthor" name="textAuthor"><option value="">Kõik teksti autorid</option></select>
+                            <input id="textAuthor" name="textAuthor" type="text" placeholder="Nimi või nime osa">
                         </div>
                         <div class="field full">
                             <label for="keyword">Otsingusõna</label>

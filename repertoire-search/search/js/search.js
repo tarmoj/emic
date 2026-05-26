@@ -1,7 +1,6 @@
 const form = document.getElementById('searchForm');
 const genreSelect = document.getElementById('genreId');
 const composerSelect = document.getElementById('composerId');
-const textAuthorSelect = document.getElementById('textAuthor');
 const statusEl = document.getElementById('status');
 const resultsEl = document.getElementById('results');
 const instrumentInput = document.getElementById('instrumentInput');
@@ -93,18 +92,6 @@ async function loadMetadata() {
     opt.value = composer.id;
     opt.textContent = composer.nimi;
     composerSelect.appendChild(opt);
-  });
-
-  (data.textAuthors || []).forEach((author) => {
-    const name = String(author.nimi || '').trim();
-    if (!name) {
-      return;
-    }
-
-    const opt = document.createElement('option');
-    opt.value = name;
-    opt.textContent = name;
-    textAuthorSelect.appendChild(opt);
   });
 
   defaultRangeFilters = {

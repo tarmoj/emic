@@ -200,9 +200,9 @@ try {
             SELECT 1
             FROM teosed_tekstid tta
             WHERE tta.teosed_id = t.id
-              AND TRIM(tta.tekstiAutor) = :textAuthor
+              AND TRIM(tta.tekstiAutor) LIKE :textAuthor
         )";
-        $params[':textAuthor'] = $filters['textAuthor'];
+        $params[':textAuthor'] = '%' . $filters['textAuthor'] . '%';
     }
 
     if ($filters['keyword'] !== '') {
