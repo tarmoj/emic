@@ -131,7 +131,7 @@ $filters = [
     'compositionYearFrom' => (int) ($input['compositionYearFrom'] ?? 0),
     'compositionYearTo' => (int) ($input['compositionYearTo'] ?? 0),
     'durationFrom' => (int) ($input['durationFrom'] ?? 0),
-    'durationTo' => (int) ($input['durationTo'] ?? 480),
+    'durationTo' => (int) ($input['durationTo'] ?? 60),
     'performersFrom' => (int) ($input['performersFrom'] ?? 0),
     'performersTo' => (int) ($input['performersTo'] ?? 16),
     'onlySelectedInstruments' => (bool) ($input['onlySelectedInstruments'] ?? false),
@@ -264,7 +264,7 @@ try {
             if ($filters['durationFrom'] > 0 && ($duration === null || $duration < $filters['durationFrom'])) {
                 continue;
             }
-            if ($filters['durationTo'] > 0 && ($duration === null || $duration > $filters['durationTo'])) {
+            if ($filters['durationTo'] > 0 && $filters['durationTo'] < 60 && ($duration === null || $duration > $filters['durationTo'])) {
                 continue;
             }
         }

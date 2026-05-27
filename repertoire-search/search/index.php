@@ -161,12 +161,12 @@
                             <div class="range-field">
                                 <div class="range-label">
                                     <span>Kestus (min)</span>
-                                    <output id="durationVal">0 – 480</output>
+                                    <output id="durationVal">0 – 60+</output>
                                 </div>
                                 <div class="range-container">
                                     <div class="slider-track"></div>
-                                    <input id="durationFrom" name="durationFrom" type="range" min="0" max="480" value="0">
-                                    <input id="durationTo" name="durationTo" type="range" min="0" max="480" value="480">
+                                    <input id="durationFrom" name="durationFrom" type="range" min="0" max="60" value="0">
+                                    <input id="durationTo" name="durationTo" type="range" min="0" max="60" value="60">
                                 </div>
                             </div>
                         </div>
@@ -236,7 +236,7 @@
         new RangeSlider({ fromId: 'performersFrom',      toId: 'performersTo',      outputId: 'performersVal',      maxLabel: '16+' });
         new RangeSlider({ fromId: 'bornYearFrom',        toId: 'bornYearTo',        outputId: 'bornYearVal' });
         new RangeSlider({ fromId: 'compositionYearFrom', toId: 'compositionYearTo', outputId: 'compositionYearVal' });
-        new RangeSlider({ fromId: 'durationFrom',        toId: 'durationTo',        outputId: 'durationVal',        suffix: ' min' });
+        new RangeSlider({ fromId: 'durationFrom',        toId: 'durationTo',        outputId: 'durationVal',        maxLabel: '60+' });
     </script>
     <script src="./js/search.js"></script>
 </body>

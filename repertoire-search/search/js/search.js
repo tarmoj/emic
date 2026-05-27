@@ -186,7 +186,7 @@ function buildPayload() {
     compositionYearFrom: 1845,
     compositionYearTo: 0,
     durationFrom: 0,
-    durationTo: 480,
+    durationTo: 60,
     performersFrom: 0,
     performersTo: 16
   };
