@@ -215,6 +215,8 @@ try {
             OR tt.lisainfo LIKE :kw6
             OR tt.lisatekst LIKE :kw7
             OR tt.lisamarkused LIKE :kw8
+            OR tt.kirjastaja LIKE :kw9
+            OR tt.cd LIKE :kw10
         )";
         $needle = '%' . $filters['keyword'] . '%';
         $params[':kw1'] = $needle;
@@ -225,6 +227,8 @@ try {
         $params[':kw6'] = $needle;
         $params[':kw7'] = $needle;
         $params[':kw8'] = $needle;
+        $params[':kw9'] = $needle;
+        $params[':kw10'] = $needle;
     }
 
     $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC";
