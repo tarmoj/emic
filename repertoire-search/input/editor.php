@@ -126,8 +126,7 @@ dialog h3 { margin: 0 0 14px 0; }
 }
 .variant-row-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
 .variant-label-input { width: 260px; }
-.variant-json { font-family: 'Courier New', monospace; font-size: 11px; width: 100%; min-height: 120px; background: #fafafa; }
-.variant-json-error { color: #c00; font-size: 11px; }
+.variant-editor { background: #fefef8; border: 1px solid #e0d8b0; border-radius: 3px; padding: 10px 12px; }
 </style>
 </head>
 <body>
@@ -901,16 +900,7 @@ function buildJSON() {
     // scoring_variants
     const variants = [];
     document.querySelectorAll('#variant-list .variant-row').forEach(row => {
-        const label = row.querySelector('.variant-label-input').value.trim();
-        const jsonTa = row.querySelector('.variant-json');
-        const errEl  = row.querySelector('.variant-json-error');
-        try {
-            const instr = JSON.parse(jsonTa.value);
-            variants.push({ label, instrumentation: instr });
-            errEl.textContent = '';
-        } catch (e) {
-            errEl.textContent = 'JSON viga: ' + e.message;
-        }
+        if (row._getJSON) variants.push(row._getJSON());
     });
     if (variants.length > 0) {
         obj.scoring_variants = variants;
@@ -1024,6 +1014,266 @@ function parseFromJSON(json) {
 }
 
 // ---------------------------------------------------------------------------
+// VARIANT EDITOR (reusable mini-form, mirrors main form sections)
+// ---------------------------------------------------------------------------
+
+function createVariantEditor(initialData) {
+    const wrap = document.createElement('div');
+    wrap.className = 'variant-editor';
+    wrap.innerHTML = `
+        <div class="field-row">
+            <label>Mängijaid kokku: <input type="number" class="ve-total" value="0" min="0" style="width:70px"></label>
+            <label style="margin-left:20px"><input type="checkbox" class="ve-has-vocal"> Vokaal</label>
+            <label style="margin-left:20px"><input type="checkbox" class="ve-has-electronics"> Elektroonika</label>
+        </div>
+        <div class="ve-electronics sub-section" style="display:none">
+            <div class="field-row">
+                <label>Tüüp: <input type="text" class="ve-elec-type" value="electronics" style="width:140px"></label>
+                <label style="margin-left:10px">Täpsustus: <input type="text" class="ve-elec-details" style="width:240px"></label>
+            </div>
+        </div>
+        <div style="font-size:12px;font-weight:bold;color:#669;margin:8px 0 4px">Ansamblid</div>
+        <div class="ve-ensemble-list"></div>
+        <div class="btn-row" style="margin-bottom:8px"><button type="button" class="ve-btn-add-ensemble">+ Lisa ansambel</button></div>
+        <div style="font-size:12px;font-weight:bold;color:#669;margin:8px 0 4px">Partiid</div>
+        <div class="ve-part-list"></div>
+        <div class="btn-row" style="margin-bottom:8px"><button type="button" class="ve-btn-add-part">+ Lisa partii</button></div>
+        <div class="field-row" style="margin-top:4px">
+            <label><input type="checkbox" class="ve-has-orch"> Orkestri koosseis</label>
+        </div>
+        <div class="ve-orch-section" style="display:none">
+            <div class="field-row">
+                <label>Puupillid:</label>
+                <label title="Flöödid">fl <input type="number" class="ve-ww-fl orch-num" value="0" min="0"></label>
+                <label title="Oboed">ob <input type="number" class="ve-ww-ob orch-num" value="0" min="0"></label>
+                <label title="Klarnetid">cl <input type="number" class="ve-ww-cl orch-num" value="0" min="0"></label>
+                <label title="Fagotid">bn <input type="number" class="ve-ww-bn orch-num" value="0" min="0"></label>
+            </div>
+            <div class="field-row">
+                <label>Vasepillid:</label>
+                <label title="Metsasarved">hn <input type="number" class="ve-br-hn orch-num" value="0" min="0"></label>
+                <label title="Trompetid">tp <input type="number" class="ve-br-tp orch-num" value="0" min="0"></label>
+                <label title="Tromboonid">tbn <input type="number" class="ve-br-tbn orch-num" value="0" min="0"></label>
+                <label title="Tuubad">tuba <input type="number" class="ve-br-tuba orch-num" value="0" min="0"></label>
+            </div>
+            <div class="field-row" style="align-items:center">
+                <label>Löökpillid:</label>
+                <label><input type="checkbox" class="ve-perc-timpani"> Timpanid</label>
+                <label style="margin-left:10px">Teised: <input type="number" class="ve-perc-other" value="0" min="0" style="width:50px"></label>
+                <label style="margin-left:6px">Lisad:</label>
+                <div class="tag-container ve-perc-extra-tags"></div>
+            </div>
+            <div class="field-row" style="align-items:center">
+                <label><input type="checkbox" class="ve-orch-strings"> Keelpillid</label>
+                <span style="margin-left:14px;color:#666">Muud:</span>
+                <div class="tag-container ve-orch-other-tags"></div>
+            </div>
+        </div>
+        <div class="field-row" style="margin-top:4px">
+            <label><input type="checkbox" class="ve-has-choir"> Koor</label>
+        </div>
+        <div class="ve-choir-section" style="display:none">
+            <div class="field-row">
+                <label>Tüüp:
+                    <select class="ve-choir-type">
+                        <option value="mixed">Segakoor</option>
+                        <option value="male">Meeskoor</option>
+                        <option value="female">Naiskoor</option>
+                        <option value="boys">Poistekoor</option>
+                        <option value="children">Lastekoor</option>
+                        <option value="youth">Noortekoor</option>
+                    </select>
+                </label>
+                <label style="margin-left:12px">Hääli: <input type="number" class="ve-choir-voices" value="0" min="0" style="width:55px"></label>
+            </div>
+            <div class="field-row" style="align-items:center">
+                <label>Jaotus:</label>
+                <div class="tag-container ve-choir-vd-tags"></div>
+            </div>
+            <div class="field-row" style="align-items:center">
+                <label>Solistid:</label>
+                <div class="tag-container ve-choir-sol-tags"></div>
+            </div>
+            <div class="field-row">
+                <label>Märkus (eng): <input type="text" class="ve-choir-note" style="width:260px"></label>
+                <label style="margin-left:10px">Märkus (est): <input type="text" class="ve-choir-note-est" style="width:200px"></label>
+            </div>
+            <div class="field-row">
+                <label>Lisainfo: <input type="text" class="ve-choir-other" style="width:440px"></label>
+            </div>
+        </div>`;
+
+    const q = sel => wrap.querySelector(sel);
+
+    // Init tag containers
+    initTagContainer(q('.ve-perc-extra-tags'), false, false);
+    initTagContainer(q('.ve-orch-other-tags'), false, false);
+    initTagContainer(q('.ve-choir-vd-tags'),   true,  true);
+    initTagContainer(q('.ve-choir-sol-tags'),  true,  false);
+
+    // Wire toggles
+    q('.ve-has-electronics').addEventListener('change', () => {
+        q('.ve-electronics').style.display = q('.ve-has-electronics').checked ? 'block' : 'none';
+        updateOutput();
+    });
+    q('.ve-has-orch').addEventListener('change', () => {
+        q('.ve-orch-section').style.display = q('.ve-has-orch').checked ? 'block' : 'none';
+        updateOutput();
+    });
+    q('.ve-has-choir').addEventListener('change', () => {
+        const show = q('.ve-has-choir').checked;
+        q('.ve-choir-section').style.display = show ? 'block' : 'none';
+        if (show) q('.ve-has-vocal').checked = true;
+        updateOutput();
+    });
+    q('.ve-has-vocal').addEventListener('change', updateOutput);
+    q('.ve-btn-add-ensemble').addEventListener('click', () => {
+        q('.ve-ensemble-list').appendChild(createEnsembleRow());
+        updateOutput();
+    });
+    q('.ve-btn-add-part').addEventListener('click', () => {
+        q('.ve-part-list').appendChild(createPartRow());
+        updateOutput();
+    });
+    wrap.querySelectorAll('input[type=text], input[type=number], select').forEach(el => {
+        el.addEventListener('input', updateOutput);
+        el.addEventListener('change', updateOutput);
+    });
+
+    wrap._getJSON = function () {
+        const obj = {};
+        obj.total_player_count = parseInt(q('.ve-total').value, 10) || 0;
+        obj.electronics = q('.ve-has-electronics').checked ? {
+            type:    q('.ve-elec-type').value.trim() || 'electronics',
+            details: q('.ve-elec-details').value.trim(),
+        } : null;
+        obj.has_vocal = q('.ve-has-vocal').checked;
+        obj.ensembles = [];
+        wrap.querySelectorAll('.ve-ensemble-list .ensemble-row').forEach(row => {
+            const sel    = row.querySelector('.ensemble-select');
+            const custIn = row.querySelector('.ensemble-custom-id');
+            const ensId  = sel.value === '__custom__' ? custIn.value.trim() : sel.value;
+            if (!ensId) return;
+            obj.ensembles.push({
+                ensemble_id:  ensId,
+                player_count: obj.total_player_count,
+                standard:     row.querySelector('.ensemble-standard').checked,
+                note:         row.querySelector('.ensemble-note').value.trim(),
+                note_est:     row.querySelector('.ensemble-note-est').value.trim(),
+            });
+        });
+        obj.parts = [];
+        wrap.querySelectorAll('.ve-part-list .part-row').forEach(row => {
+            const combo = row.querySelector('.instr-combo');
+            obj.parts.push({
+                instrument_id:           combo ? combo.dataset.value : '',
+                alternative_instruments: getTagValues(row.querySelector('.alternatives-tags')),
+                doubles:                 getTagValues(row.querySelector('.doubles-tags')),
+                count:                   parseInt(row.querySelector('.part-count').value, 10) || 1,
+                role:                    row.querySelector('.part-role').value,
+                note:                    (row.querySelector('.part-note').value || '').trim(),
+            });
+        });
+        if (q('.ve-has-orch').checked) {
+            obj.orchestral_layout = {
+                woodwinds:  ['fl','ob','cl','bn'].map(id => parseInt(q('.ve-ww-'+id).value,10)||0),
+                brass:      ['hn','tp','tbn','tuba'].map(id => parseInt(q('.ve-br-'+id).value,10)||0),
+                percussion: {
+                    timpani:       q('.ve-perc-timpani').checked,
+                    other_players: parseInt(q('.ve-perc-other').value,10)||0,
+                    extra:         getTagValues(q('.ve-perc-extra-tags')),
+                },
+                strings: q('.ve-orch-strings').checked,
+                other:   getTagValues(q('.ve-orch-other-tags')),
+            };
+        } else {
+            obj.orchestral_layout = null;
+        }
+        const hasChoir = q('.ve-has-choir').checked;
+        if (hasChoir) {
+            obj.has_vocal = true;
+            const choirType = q('.ve-choir-type').value;
+            obj.ensembles.unshift({
+                ensemble_id:  choirType + '_choir',
+                player_count: obj.total_player_count,
+                standard:     true,
+                note:         q('.ve-choir-note').value.trim(),
+                note_est:     q('.ve-choir-note-est').value.trim(),
+            });
+            obj.vocal_details = {
+                is_choir:           true,
+                choir_type:         choirType,
+                voices:             parseInt(q('.ve-choir-voices').value,10)||0,
+                voice_distribution: getTagValues(q('.ve-choir-vd-tags')),
+                soloists:           getTagValues(q('.ve-choir-sol-tags')),
+                other:              q('.ve-choir-other').value.trim(),
+            };
+        } else if (obj.has_vocal) {
+            obj.vocal_details = { is_choir: false, choir_type: 'none', voices: 0,
+                                   voice_distribution: [], soloists: [], other: '' };
+        } else {
+            obj.vocal_details = null;
+        }
+        return obj;
+    };
+
+    wrap._setJSON = function (json) {
+        if (!json || typeof json !== 'object') return;
+        q('.ve-total').value       = json.total_player_count ?? 0;
+        q('.ve-has-vocal').checked = !!json.has_vocal;
+        const hasElec = !!json.electronics;
+        q('.ve-has-electronics').checked   = hasElec;
+        q('.ve-electronics').style.display = hasElec ? 'block' : 'none';
+        if (hasElec) {
+            q('.ve-elec-type').value    = json.electronics.type    || 'electronics';
+            q('.ve-elec-details').value = json.electronics.details || '';
+        }
+        const isChoir    = !!(json.has_vocal && json.vocal_details && json.vocal_details.is_choir);
+        const choirEnsId = isChoir ? ((json.vocal_details.choir_type || 'mixed') + '_choir') : null;
+        const eList = q('.ve-ensemble-list');
+        eList.innerHTML = '';
+        (json.ensembles || [])
+            .filter(e => !choirEnsId || e.ensemble_id !== choirEnsId)
+            .forEach(e => eList.appendChild(createEnsembleRow(e)));
+        const pList = q('.ve-part-list');
+        pList.innerHTML = '';
+        (json.parts || []).forEach(p => pList.appendChild(createPartRow(p)));
+        const hasOrch = !!(json.orchestral_layout);
+        q('.ve-has-orch').checked           = hasOrch;
+        q('.ve-orch-section').style.display = hasOrch ? 'block' : 'none';
+        if (hasOrch) {
+            const ol = json.orchestral_layout;
+            const ww = ol.woodwinds || [0,0,0,0];
+            ['fl','ob','cl','bn'].forEach((id,i) => q('.ve-ww-'+id).value = ww[i]??0);
+            const br = ol.brass || [0,0,0,0];
+            ['hn','tp','tbn','tuba'].forEach((id,i) => q('.ve-br-'+id).value = br[i]??0);
+            const perc = ol.percussion || {};
+            q('.ve-perc-timpani').checked = perc.timpani ?? false;
+            q('.ve-perc-other').value     = perc.other_players ?? 0;
+            rebuildTagContainer(q('.ve-perc-extra-tags'), perc.extra || []);
+            q('.ve-orch-strings').checked  = ol.strings ?? false;
+            rebuildTagContainer(q('.ve-orch-other-tags'), ol.other || []);
+        }
+        q('.ve-has-choir').checked           = isChoir;
+        q('.ve-choir-section').style.display = isChoir ? 'block' : 'none';
+        if (isChoir && json.vocal_details) {
+            const vd = json.vocal_details;
+            q('.ve-choir-type').value   = vd.choir_type || 'mixed';
+            q('.ve-choir-voices').value = vd.voices ?? 0;
+            rebuildTagContainer(q('.ve-choir-vd-tags'),  vd.voice_distribution || []);
+            rebuildTagContainer(q('.ve-choir-sol-tags'), vd.soloists || []);
+            q('.ve-choir-other').value  = vd.other || '';
+            const choirEns = (json.ensembles || []).find(e => e.ensemble_id === choirEnsId);
+            q('.ve-choir-note').value     = choirEns ? (choirEns.note     || '') : '';
+            q('.ve-choir-note-est').value = choirEns ? (choirEns.note_est || '') : '';
+        }
+    };
+
+    if (initialData) wrap._setJSON(initialData);
+    return wrap;
+}
+
+// ---------------------------------------------------------------------------
 // SCORING VARIANT ROW
 // ---------------------------------------------------------------------------
 
@@ -1041,44 +1291,56 @@ function createVariantRow(label, instrObj) {
     labelIn.placeholder = 'Sildi nimi (nt. male choir, soloists…)';
     labelIn.addEventListener('input', updateOutput);
 
+    const toggleBtn = document.createElement('button');
+    toggleBtn.type        = 'button';
+    toggleBtn.className   = 'btn-secondary';
+    toggleBtn.textContent = 'Näita/muuda';
+
     const copyBtn = document.createElement('button');
     copyBtn.type        = 'button';
     copyBtn.className   = 'btn-secondary';
-    copyBtn.textContent = '← Kopeeri praegune vorm siia';
-    copyBtn.title       = 'Täidab variandi JSON vormi praeguse instrumentatsiooniga (ilma variantideta)';
-    copyBtn.addEventListener('click', () => {
-        const current = buildJSON();
-        delete current.scoring_variants;
-        ta.value = JSON.stringify(current, null, 2);
-        errEl.textContent = '';
-        updateOutput();
-    });
+    copyBtn.textContent = '← Kopeeri praegune';
+    copyBtn.title       = 'Kopeerib praeguse peavormi instrumentatsiooni siia varianti';
 
     const rm = document.createElement('button');
-    rm.type      = 'button';
-    rm.className = 'btn-remove';
+    rm.type        = 'button';
+    rm.className   = 'btn-remove';
     rm.textContent = 'Kustuta';
     rm.addEventListener('click', () => { row.remove(); updateOutput(); });
 
     top.appendChild(labelIn);
     top.appendChild(copyBtn);
+    top.appendChild(toggleBtn);
     top.appendChild(rm);
 
-    const ta = document.createElement('textarea');
-    ta.className   = 'variant-json';
-    ta.spellcheck  = false;
-    ta.placeholder = 'Instrumentatsiooni JSON…';
-    if (instrObj !== undefined && instrObj !== null) {
-        ta.value = JSON.stringify(instrObj, null, 2);
-    }
-    ta.addEventListener('input', updateOutput);
+    const editorWrap = document.createElement('div');
+    editorWrap.style.cssText = 'display:none;margin-top:8px;padding-top:8px;border-top:1px solid #e0d8b0';
+    const editor = createVariantEditor(instrObj || null);
+    editorWrap.appendChild(editor);
 
-    const errEl = document.createElement('div');
-    errEl.className = 'variant-json-error';
+    toggleBtn.addEventListener('click', () => {
+        const show = editorWrap.style.display === 'none';
+        editorWrap.style.display = show ? 'block' : 'none';
+        toggleBtn.textContent = show ? 'Peida' : 'Näita/muuda';
+    });
+
+    copyBtn.addEventListener('click', () => {
+        const current = buildJSON();
+        delete current.scoring_variants;
+        editor._setJSON(current);
+        editorWrap.style.display = 'block';
+        toggleBtn.textContent = 'Peida';
+        updateOutput();
+    });
 
     row.appendChild(top);
-    row.appendChild(ta);
-    row.appendChild(errEl);
+    row.appendChild(editorWrap);
+
+    row._getJSON = () => ({
+        label:           labelIn.value.trim(),
+        instrumentation: editor._getJSON(),
+    });
+
     return row;
 }
 
