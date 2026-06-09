@@ -17,7 +17,7 @@ Töö SQL otsigukirjetega | 2
 Otsingusüsteemi kirjledamine (prompt) | 1
 Töö otsingusüsteemi parandamise/täiustamisega | 6
 
-Otsinugüsteemi parendamine, tesimine (koosseisud, teksti autor) | 2
+Otsinugüsteemi parendamine, tesimine (koosseisud, teksti autor, sõnavaste) | 3
 
 
 Altenratiivse sisestussüteemini loomine (ilma AI-ta, kuid struktuur) | 1
