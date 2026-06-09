@@ -9,10 +9,10 @@ SCP="scp -q"
 echo "Deploying to ${REMOTE}:${DEST} ..."
 
 # Top-level files
-$SCP search/index.php search/style.css "${REMOTE}:${DEST}/"
+$SCP search/index.php search/style.css "${REMOTE}:${DEST}/search/"
 
 # Subdirectories (recursive)
-$SCP -r search/api search/js "${REMOTE}:${DEST}/"
+$SCP -r search/api search/js "${REMOTE}:${DEST}/search/"
 
 # Input folder
 $SCP -r input "${REMOTE}:${DEST}/"
