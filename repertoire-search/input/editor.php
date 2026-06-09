@@ -118,6 +118,16 @@ dialog::backdrop { background: rgba(0,0,0,.4); }
 dialog h3 { margin: 0 0 14px 0; }
 
 #save-status, #load-status { font-size: 12px; }
+
+/* --- Scoring variants --- */
+.variant-row {
+    border: 1px solid #d5c8a8; border-radius: 4px; padding: 8px 10px; margin-bottom: 10px;
+    background: #fffdf5;
+}
+.variant-row-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+.variant-label-input { width: 260px; }
+.variant-json { font-family: 'Courier New', monospace; font-size: 11px; width: 100%; min-height: 120px; background: #fafafa; }
+.variant-json-error { color: #c00; font-size: 11px; }
 </style>
 </head>
 <body>
@@ -289,6 +299,16 @@ dialog h3 { margin: 0 0 14px 0; }
     <div class="field-row">
       <label>Lisainfo: <input type="text" id="choir-other" style="width:560px"></label>
     </div>
+  </div>
+</section>
+
+<!-- ===== SCORING VARIANTS ===== -->
+<section class="section" id="s-variants">
+  <h2>Scoring variants (koosseisu variandid)</h2>
+  <p style="margin:0 0 10px 0; color:#666; font-size:12px;">Iga variant koosneb sildist ja täielikust instrumentatsiooniobjektist (JSON). Kasuta "Kopeeri praegune" et täita variandi JSON aktiivse vormi põhjal.</p>
+  <div id="variant-list"></div>
+  <div class="btn-row">
+    <button type="button" id="btn-add-variant">+ Lisa variant</button>
   </div>
 </section>
 
@@ -718,9 +738,18 @@ function createPartRow(data) {
     rm.type = 'button'; rm.className = 'btn-remove'; rm.textContent = 'Eemalda';
     rm.addEventListener('click', () => { row.remove(); updateOutput(); });
 
+    const noteIn = document.createElement('input');
+    noteIn.type        = 'text';
+    noteIn.className   = 'part-note';
+    noteIn.value       = data.note || '';
+    noteIn.placeholder = 'märkus (nt. in D, muted…)';
+    noteIn.style.width = '220px';
+    noteIn.addEventListener('input', updateOutput);
+
     [combo,
      makeFieldLabel('arv'), cntIn,
      makeFieldLabel('roll'), roleSel,
+     makeFieldLabel('märkus'), noteIn,
      rm
     ].forEach(el => top.appendChild(el));
 
@@ -813,6 +842,7 @@ function buildJSON() {
             doubles:                 getTagValues(row.querySelector('.doubles-tags')),
             count:                   parseInt(row.querySelector('.part-count').value, 10) || 1,
             role:                    row.querySelector('.part-role').value,
+            note:                    (row.querySelector('.part-note').value || '').trim(),
         });
     });
 
@@ -866,6 +896,24 @@ function buildJSON() {
         };
     } else {
         obj.vocal_details = null;
+    }
+
+    // scoring_variants
+    const variants = [];
+    document.querySelectorAll('#variant-list .variant-row').forEach(row => {
+        const label = row.querySelector('.variant-label-input').value.trim();
+        const jsonTa = row.querySelector('.variant-json');
+        const errEl  = row.querySelector('.variant-json-error');
+        try {
+            const instr = JSON.parse(jsonTa.value);
+            variants.push({ label, instrumentation: instr });
+            errEl.textContent = '';
+        } catch (e) {
+            errEl.textContent = 'JSON viga: ' + e.message;
+        }
+    });
+    if (variants.length > 0) {
+        obj.scoring_variants = variants;
     }
 
     return obj;
@@ -965,7 +1013,73 @@ function parseFromJSON(json) {
         document.getElementById('vocal-other').value       = vd.other || '';
     }
 
+    // Scoring variants
+    const vList = document.getElementById('variant-list');
+    vList.innerHTML = '';
+    (json.scoring_variants || []).forEach(v => {
+        vList.appendChild(createVariantRow(v.label || '', v.instrumentation));
+    });
+
     updateOutput();
+}
+
+// ---------------------------------------------------------------------------
+// SCORING VARIANT ROW
+// ---------------------------------------------------------------------------
+
+function createVariantRow(label, instrObj) {
+    const row = document.createElement('div');
+    row.className = 'variant-row';
+
+    const top = document.createElement('div');
+    top.className = 'variant-row-top';
+
+    const labelIn = document.createElement('input');
+    labelIn.type        = 'text';
+    labelIn.className   = 'variant-label-input';
+    labelIn.value       = label || '';
+    labelIn.placeholder = 'Sildi nimi (nt. male choir, soloists…)';
+    labelIn.addEventListener('input', updateOutput);
+
+    const copyBtn = document.createElement('button');
+    copyBtn.type        = 'button';
+    copyBtn.className   = 'btn-secondary';
+    copyBtn.textContent = '← Kopeeri praegune vorm siia';
+    copyBtn.title       = 'Täidab variandi JSON vormi praeguse instrumentatsiooniga (ilma variantideta)';
+    copyBtn.addEventListener('click', () => {
+        const current = buildJSON();
+        delete current.scoring_variants;
+        ta.value = JSON.stringify(current, null, 2);
+        errEl.textContent = '';
+        updateOutput();
+    });
+
+    const rm = document.createElement('button');
+    rm.type      = 'button';
+    rm.className = 'btn-remove';
+    rm.textContent = 'Kustuta';
+    rm.addEventListener('click', () => { row.remove(); updateOutput(); });
+
+    top.appendChild(labelIn);
+    top.appendChild(copyBtn);
+    top.appendChild(rm);
+
+    const ta = document.createElement('textarea');
+    ta.className   = 'variant-json';
+    ta.spellcheck  = false;
+    ta.placeholder = 'Instrumentatsiooni JSON…';
+    if (instrObj !== undefined && instrObj !== null) {
+        ta.value = JSON.stringify(instrObj, null, 2);
+    }
+    ta.addEventListener('input', updateOutput);
+
+    const errEl = document.createElement('div');
+    errEl.className = 'variant-json-error';
+
+    row.appendChild(top);
+    row.appendChild(ta);
+    row.appendChild(errEl);
+    return row;
 }
 
 // ---------------------------------------------------------------------------
@@ -1165,6 +1279,7 @@ function resetForm() {
     document.getElementById('work-title').value = '';
     document.getElementById('koosseis-tekst').value = '';
     document.getElementById('koosseis-tekst-row').style.display = 'none';
+    document.getElementById('variant-list').innerHTML = '';
     parseFromJSON({
         total_player_count: 0,
         electronics: null,
@@ -1202,6 +1317,10 @@ function init() {
     });
     document.getElementById('btn-add-part').addEventListener('click', () => {
         document.getElementById('part-list').appendChild(createPartRow());
+        updateOutput();
+    });
+    document.getElementById('btn-add-variant').addEventListener('click', () => {
+        document.getElementById('variant-list').appendChild(createVariantRow('', null));
         updateOutput();
     });
 
