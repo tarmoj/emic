@@ -142,7 +142,7 @@ dialog h3 { margin: 0 0 14px 0; }
     <label>Pealkiri:</label>
     <input type="text" id="work-title" style="width:440px">
   </div>
-  <div class="field-row">
+  <div class="field-row" id="koosseis-tekst-row" style="display:none">
     <label>Koosseis tekst:</label>
     <textarea id="koosseis-tekst" rows="2" style="width:560px"></textarea>
   </div>
@@ -176,13 +176,14 @@ dialog h3 { margin: 0 0 14px 0; }
   </div>
 </section>
 
-<!-- ===== OSAD ===== -->
+<!-- ===== PARTIID ===== -->
 <section class="section" id="s-osad">
-  <h2>Osad (pillid / hääled)</h2>
+  <h2>Partiid (pillid / hääled)</h2>
   <div id="part-list"></div>
   <div class="btn-row">
-    <button type="button" id="btn-add-part">+ Lisa osa</button>
-    <button type="button" id="btn-new-instr" class="btn-secondary">Lisa uus pill tabelisse…</button>
+    <button type="button" id="btn-add-part">+ Lisa partii</button>
+    <button type="button" id="btn-new-instr" class="btn-secondary">Lisa uus pill/hää<label for="
+    "></label> tabelisse…</button>
   </div>
 </section>
 
@@ -251,6 +252,43 @@ dialog h3 { margin: 0 0 14px 0; }
   </div>
   <div class="field-row">
     <label>Muu: <input type="text" id="vocal-other" style="width:320px"></label>
+  </div>
+</section>
+
+<!-- ===== KOOR ===== -->
+<section class="section" id="s-choir">
+  <h2><label><input type="checkbox" id="has-choir"> Koor</label></h2>
+  <div id="choir-section" style="display:none">
+    <div class="field-row">
+      <label>Koori tüüp:
+        <select id="choir-type">
+          <option value="mixed">Segakoor (mixed)</option>
+          <option value="male">Meeskoor (male)</option>
+          <option value="female">Naiskoor (female)</option>
+          <option value="boys">Poistekoor (boys)</option>
+          <option value="children">Lastekoor (children)</option>
+          <option value="youth">Noortekoor (youth)</option>
+        </select>
+      </label>
+      <label style="margin-left:20px">Hääli:
+        <input type="number" id="choir-voices" value="0" min="0" style="width:60px">
+      </label>
+    </div>
+    <div class="field-row" style="align-items:center">
+      <label>Häälte jaotus:</label>
+      <div class="tag-container" id="choir-voice-dist-tags"></div>
+    </div>
+    <div class="field-row" style="align-items:center">
+      <label>Solistid:</label>
+      <div class="tag-container" id="choir-soloists-tags"></div>
+    </div>
+    <div class="field-row">
+      <label>Märkus (eng): <input type="text" id="choir-note" style="width:340px" placeholder="nt. divisi"></label>
+      <label style="margin-left:12px">Märkus (est): <input type="text" id="choir-note-est" style="width:260px"></label>
+    </div>
+    <div class="field-row">
+      <label>Lisainfo: <input type="text" id="choir-other" style="width:560px"></label>
+    </div>
   </div>
 </section>
 
@@ -604,14 +642,6 @@ function createEnsembleRow(data) {
         updateOutput();
     });
 
-    const pc = document.createElement('input');
-    pc.type      = 'number';
-    pc.className = 'ensemble-player-count';
-    pc.value     = data.player_count ?? 0;
-    pc.min       = 0;
-    pc.style.width = '60px';
-    pc.title     = 'Mängijate arv';
-
     const stdLabel = document.createElement('label');
     const stdCb    = document.createElement('input');
     stdCb.type      = 'checkbox';
@@ -641,11 +671,11 @@ function createEnsembleRow(data) {
     rm.textContent = 'Eemalda';
     rm.addEventListener('click', () => { row.remove(); updateOutput(); });
 
-    [sel, customIn, pc, stdLabel,
+    [sel, customIn, stdLabel,
      document.createTextNode(' '), note, noteEst, rm
     ].forEach(el => row.appendChild(el));
 
-    [sel, customIn, pc, stdCb, note, noteEst].forEach(el =>
+    [sel, customIn, stdCb, note, noteEst].forEach(el =>
         el.addEventListener('input', updateOutput));
 
     return row;
@@ -765,7 +795,7 @@ function buildJSON() {
         if (!ensId) return;
         obj.ensembles.push({
             ensemble_id:  ensId,
-            player_count: parseInt(row.querySelector('.ensemble-player-count').value, 10) || 0,
+            player_count: obj.total_player_count,
             standard:     row.querySelector('.ensemble-standard').checked,
             note:         row.querySelector('.ensemble-note').value.trim(),
             note_est:     row.querySelector('.ensemble-note-est').value.trim(),
@@ -805,15 +835,34 @@ function buildJSON() {
         obj.orchestral_layout = null;
     }
 
-    // vocal_details
-    if (obj.has_vocal) {
+    // vocal_details — choir section overrides generic vocal section
+    const hasChoir = document.getElementById('has-choir').checked;
+    if (hasChoir) {
+        obj.has_vocal = true;
+        const choirType = document.getElementById('choir-type').value;
+        obj.ensembles.unshift({
+            ensemble_id:  choirType + '_choir',
+            player_count: obj.total_player_count,
+            standard:     true,
+            note:         document.getElementById('choir-note').value.trim(),
+            note_est:     document.getElementById('choir-note-est').value.trim(),
+        });
         obj.vocal_details = {
-            is_choir:          document.getElementById('vocal-is-choir').checked,
-            choir_type:        document.getElementById('vocal-choir-type').value,
-            voices:            parseInt(document.getElementById('vocal-voices').value, 10) || 0,
+            is_choir:           true,
+            choir_type:         choirType,
+            voices:             parseInt(document.getElementById('choir-voices').value, 10) || 0,
+            voice_distribution: getTagValues(document.getElementById('choir-voice-dist-tags')),
+            soloists:           getTagValues(document.getElementById('choir-soloists-tags')),
+            other:              document.getElementById('choir-other').value.trim(),
+        };
+    } else if (obj.has_vocal) {
+        obj.vocal_details = {
+            is_choir:           document.getElementById('vocal-is-choir').checked,
+            choir_type:         document.getElementById('vocal-choir-type').value,
+            voices:             parseInt(document.getElementById('vocal-voices').value, 10) || 0,
             voice_distribution: getTagValues(document.getElementById('voice-dist-tags')),
-            soloists:          getTagValues(document.getElementById('soloists-tags')),
-            other:             document.getElementById('vocal-other').value.trim(),
+            soloists:           getTagValues(document.getElementById('soloists-tags')),
+            other:              document.getElementById('vocal-other').value.trim(),
         };
     } else {
         obj.vocal_details = null;
@@ -854,10 +903,14 @@ function parseFromJSON(json) {
         document.getElementById('electronics-section').style.display = 'none';
     }
 
-    // Ensembles
+    // Ensembles — skip choir ensemble if choir section is active
+    const isChoir = !!(json.has_vocal && json.vocal_details && json.vocal_details.is_choir);
+    const choirEnsId = isChoir ? ((json.vocal_details.choir_type || 'mixed') + '_choir') : null;
     const eList = document.getElementById('ensemble-list');
     eList.innerHTML = '';
-    (json.ensembles || []).forEach(e => eList.appendChild(createEnsembleRow(e)));
+    (json.ensembles || [])
+        .filter(e => !choirEnsId || e.ensemble_id !== choirEnsId)
+        .forEach(e => eList.appendChild(createEnsembleRow(e)));
 
     // Parts
     const pList = document.getElementById('part-list');
@@ -884,9 +937,25 @@ function parseFromJSON(json) {
         rebuildTagContainer(document.getElementById('orch-other-tags'), ol.other || []);
     }
 
-    // Vocal details
-    document.getElementById('s-vocal').style.display = hasVocal ? 'block' : 'none';
-    if (hasVocal && json.vocal_details) {
+    // Choir section
+    document.getElementById('has-choir').checked = isChoir;
+    document.getElementById('choir-section').style.display = isChoir ? 'block' : 'none';
+    if (isChoir && json.vocal_details) {
+        const vd = json.vocal_details;
+        document.getElementById('choir-type').value   = vd.choir_type || 'mixed';
+        document.getElementById('choir-voices').value = vd.voices ?? 0;
+        rebuildTagContainer(document.getElementById('choir-voice-dist-tags'), vd.voice_distribution || []);
+        rebuildTagContainer(document.getElementById('choir-soloists-tags'), vd.soloists || []);
+        document.getElementById('choir-other').value  = vd.other || '';
+        // Restore choir ensemble note fields
+        const choirEns = (json.ensembles || []).find(e => e.ensemble_id === choirEnsId);
+        document.getElementById('choir-note').value     = choirEns ? (choirEns.note     || '') : '';
+        document.getElementById('choir-note-est').value = choirEns ? (choirEns.note_est || '') : '';
+    }
+
+    // Vocal details (generic — only when not choir)
+    document.getElementById('s-vocal').style.display = (hasVocal && !isChoir) ? 'block' : 'none';
+    if (hasVocal && !isChoir && json.vocal_details) {
         const vd = json.vocal_details;
         document.getElementById('vocal-is-choir').checked  = vd.is_choir ?? false;
         document.getElementById('vocal-choir-type').value  = vd.choir_type || 'none';
@@ -902,6 +971,21 @@ function parseFromJSON(json) {
 // ---------------------------------------------------------------------------
 // UI TOGGLES
 // ---------------------------------------------------------------------------
+
+function toggleChoir() {
+    const show = document.getElementById('has-choir').checked;
+    document.getElementById('choir-section').style.display = show ? 'block' : 'none';
+    if (show) {
+        // Choir implies vocal; hide generic vocal section to avoid conflict
+        document.getElementById('has-vocal').checked = true;
+        document.getElementById('s-vocal').style.display = 'none';
+    } else {
+        // Reveal generic vocal section only if has-vocal is still checked
+        const hasVocal = document.getElementById('has-vocal').checked;
+        document.getElementById('s-vocal').style.display = hasVocal ? 'block' : 'none';
+    }
+    updateOutput();
+}
 
 function toggleElectronics() {
     const show = document.getElementById('has-electronics').checked;
@@ -946,6 +1030,8 @@ async function loadWork() {
 
         document.getElementById('work-title').value    = data.pealkiri || '';
         document.getElementById('koosseis-tekst').value = data.koosseis_tekst || '';
+        document.getElementById('koosseis-tekst-row').style.display =
+            data.koosseis_tekst ? 'flex' : 'none';
 
         if (data.intrumentatsioon) {
             parseFromJSON(data.intrumentatsioon);
@@ -1078,6 +1164,7 @@ function resetForm() {
     document.getElementById('work-id').value    = '';
     document.getElementById('work-title').value = '';
     document.getElementById('koosseis-tekst').value = '';
+    document.getElementById('koosseis-tekst-row').style.display = 'none';
     parseFromJSON({
         total_player_count: 0,
         electronics: null,
@@ -1101,6 +1188,8 @@ function init() {
     initTagContainer(document.getElementById('orch-other-tags'), false, false);
     initTagContainer(document.getElementById('voice-dist-tags'), true,  true);  // allow duplicates
     initTagContainer(document.getElementById('soloists-tags'),   true,  false);
+    initTagContainer(document.getElementById('choir-voice-dist-tags'), true, true);  // allow duplicates
+    initTagContainer(document.getElementById('choir-soloists-tags'),   true, false);
 
     // Button wiring
     document.getElementById('btn-load').addEventListener('click', loadWork);
@@ -1127,6 +1216,7 @@ function init() {
     document.getElementById('has-electronics').addEventListener('change', toggleElectronics);
     document.getElementById('has-vocal').addEventListener('change', toggleVocalSection);
     document.getElementById('has-orch').addEventListener('change', toggleOrch);
+    document.getElementById('has-choir').addEventListener('change', toggleChoir);
 
     // Auto-update output on any change in fixed sections
     ['total-player-count','electronics-type','electronics-details',
@@ -1134,6 +1224,7 @@ function init() {
      'vocal-is-choir','vocal-choir-type','vocal-voices','vocal-other',
      'ww-fl','ww-ob','ww-cl','ww-bn',
      'br-hn','br-tp','br-tbn','br-tuba',
+     'choir-type','choir-voices','choir-note','choir-note-est','choir-other',
     ].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.addEventListener('input', updateOutput);
