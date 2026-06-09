@@ -151,7 +151,7 @@ dialog h3 { margin: 0 0 14px 0; }
     <label>Pealkiri:</label>
     <input type="text" id="work-title" style="width:440px">
   </div>
-  <div class="field-row" id="koosseis-tekst-row" style="display:none">
+  <div class="field-row" id="koosseis-tekst-row">
     <label>Koosseis tekst:</label>
     <textarea id="koosseis-tekst" rows="2" style="width:560px"></textarea>
   </div>
@@ -1406,8 +1406,6 @@ async function loadWork() {
 
         document.getElementById('work-title').value    = data.pealkiri || '';
         document.getElementById('koosseis-tekst').value = data.koosseis_tekst || '';
-        document.getElementById('koosseis-tekst-row').style.display =
-            data.koosseis_tekst ? 'flex' : 'none';
 
         if (data.intrumentatsioon) {
             parseFromJSON(data.intrumentatsioon);
@@ -1540,7 +1538,6 @@ function resetForm() {
     document.getElementById('work-id').value    = '';
     document.getElementById('work-title').value = '';
     document.getElementById('koosseis-tekst').value = '';
-    document.getElementById('koosseis-tekst-row').style.display = 'none';
     document.getElementById('variant-list').innerHTML = '';
     parseFromJSON({
         total_player_count: 0,
