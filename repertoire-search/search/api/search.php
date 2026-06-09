@@ -208,15 +208,23 @@ try {
     if ($filters['keyword'] !== '') {
         $sql .= " AND (
             tt.pealkiri LIKE :kw1
-            OR tt.seletusrida LIKE :kw2
-            OR tt.koosseis LIKE :kw3
-            OR tt.lisainfo LIKE :kw4
+            OR tt.ppealkiri LIKE :kw2
+            OR tt.seletusrida LIKE :kw3
+            OR tt.esiettekanne LIKE :kw4
+            OR tt.koosseis LIKE :kw5
+            OR tt.lisainfo LIKE :kw6
+            OR tt.lisatekst LIKE :kw7
+            OR tt.lisamarkused LIKE :kw8
         )";
         $needle = '%' . $filters['keyword'] . '%';
         $params[':kw1'] = $needle;
         $params[':kw2'] = $needle;
         $params[':kw3'] = $needle;
         $params[':kw4'] = $needle;
+        $params[':kw5'] = $needle;
+        $params[':kw6'] = $needle;
+        $params[':kw7'] = $needle;
+        $params[':kw8'] = $needle;
     }
 
     $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC";
