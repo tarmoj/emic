@@ -112,6 +112,12 @@ function extract_player_count(array $instrumentation): int
     return $sum;
 }
 
+function mysql_regexp_word(string $term): string
+{
+    $escaped = preg_replace('/([.+*?|{}\\[\\]()\\\\^$])/', '\\\\$1', $term);
+    return '[[:<:]]' . $escaped . '[[:>:]]';
+}
+
 $input = read_json_input();
 if (!$input) {
     $input = $_POST;
@@ -126,6 +132,8 @@ $filters = [
     'title' => trim((string) ($input['title'] ?? '')),
     'textAuthor' => trim((string) ($input['textAuthor'] ?? '')),
     'keyword' => trim((string) ($input['keyword'] ?? '')),
+    'titleMatchMode' => trim((string) ($input['titleMatchMode'] ?? 'partial')),
+    'keywordMatchMode' => trim((string) ($input['keywordMatchMode'] ?? 'partial')),
     'bornYearFrom' => (int) ($input['bornYearFrom'] ?? 0),
     'bornYearTo' => (int) ($input['bornYearTo'] ?? 0),
     'compositionYearFrom' => (int) ($input['compositionYearFrom'] ?? 0),
@@ -190,9 +198,26 @@ try {
         $params[':composerId'] = $filters['composerId'];
     }
 
+    $validModes = ['partial', 'word', 'exact'];
+    if (!in_array($filters['titleMatchMode'], $validModes, true)) {
+        $filters['titleMatchMode'] = 'partial';
+    }
+    if (!in_array($filters['keywordMatchMode'], $validModes, true)) {
+        $filters['keywordMatchMode'] = 'partial';
+    }
+
     if ($filters['title'] !== '') {
-        $sql .= " AND (tt.pealkiri LIKE :title1)";
-        $params[':title1'] = '%' . $filters['title'] . '%';
+        $mode = $filters['titleMatchMode'];
+        if ($mode === 'exact') {
+            $sql .= " AND (tt.pealkiri = :title1)";
+            $params[':title1'] = $filters['title'];
+        } elseif ($mode === 'word') {
+            $sql .= " AND (tt.pealkiri REGEXP :title1)";
+            $params[':title1'] = mysql_regexp_word($filters['title']);
+        } else {
+            $sql .= " AND (tt.pealkiri LIKE :title1)";
+            $params[':title1'] = '%' . $filters['title'] . '%';
+        }
     }
 
     if ($filters['textAuthor'] !== '') {
@@ -206,29 +231,27 @@ try {
     }
 
     if ($filters['keyword'] !== '') {
-        $sql .= " AND (
-            tt.pealkiri LIKE :kw1
-            OR tt.ppealkiri LIKE :kw2
-            OR tt.seletusrida LIKE :kw3
-            OR tt.esiettekanne LIKE :kw4
-            OR tt.koosseis LIKE :kw5
-            OR tt.lisainfo LIKE :kw6
-            OR tt.lisatekst LIKE :kw7
-            OR tt.lisamarkused LIKE :kw8
-            OR tt.kirjastaja LIKE :kw9
-            OR tt.cd LIKE :kw10
-        )";
-        $needle = '%' . $filters['keyword'] . '%';
-        $params[':kw1'] = $needle;
-        $params[':kw2'] = $needle;
-        $params[':kw3'] = $needle;
-        $params[':kw4'] = $needle;
-        $params[':kw5'] = $needle;
-        $params[':kw6'] = $needle;
-        $params[':kw7'] = $needle;
-        $params[':kw8'] = $needle;
-        $params[':kw9'] = $needle;
-        $params[':kw10'] = $needle;
+        $kwMode = $filters['keywordMatchMode'];
+        $kwFields = [
+            'tt.pealkiri', 'tt.ppealkiri', 'tt.seletusrida', 'tt.esiettekanne',
+            'tt.koosseis', 'tt.lisainfo', 'tt.lisatekst', 'tt.lisamarkused',
+            'tt.kirjastaja', 'tt.cd',
+        ];
+        $kwConditions = [];
+        foreach ($kwFields as $i => $field) {
+            $n = $i + 1;
+            if ($kwMode === 'exact') {
+                $kwConditions[] = "$field = :kw$n";
+                $params[":kw$n"] = $filters['keyword'];
+            } elseif ($kwMode === 'word') {
+                $kwConditions[] = "$field REGEXP :kw$n";
+                $params[":kw$n"] = mysql_regexp_word($filters['keyword']);
+            } else {
+                $kwConditions[] = "$field LIKE :kw$n";
+                $params[":kw$n"] = '%' . $filters['keyword'] . '%';
+            }
+        }
+        $sql .= ' AND (' . implode(' OR ', $kwConditions) . ')';
     }
 
     $sql = "SELECT * FROM ($sql) AS sub ORDER BY helilooja ASC, pealkiri ASC";

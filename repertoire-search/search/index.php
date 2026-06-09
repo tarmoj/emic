@@ -61,6 +61,9 @@
         .item a { color: var(--accent); font-weight: 700; text-decoration: none; }
         .meta { color: #5e635e; font-size: .92rem; margin-top: 4px; }
         .status { margin-top: 12px; color: #5d4f2f; }
+        .radio-group { display: flex; gap: 14px; margin-top: 6px; flex-wrap: wrap; }
+        .radio-group label { display: flex; align-items: center; gap: 4px; font-weight: 400; font-size: .88rem; margin-bottom: 0; cursor: pointer; }
+        .radio-group input[type=radio] { width: auto; cursor: pointer; }
         @media (max-width: 900px) {
             .field.half, .field.third, .range-field { grid-column: span 12; }
         }
@@ -90,6 +93,11 @@
                         <div class="field third">
                             <label for="title">Pealkiri</label>
                             <input id="title" name="title" type="text" placeholder="Sõna või sõna osa">
+                            <div class="radio-group">
+                                <label><input type="radio" name="titleMatchMode" value="partial" checked> Osaline vaste</label>
+                                <label><input type="radio" name="titleMatchMode" value="word"> Sõna</label>
+                                <label><input type="radio" name="titleMatchMode" value="exact"> Täpne vaste</label>
+                            </div>
                         </div>
                         <div class="field third">
                             <label for="textAuthor">Teksti autor</label>
@@ -98,6 +106,11 @@
                         <div class="field full">
                             <label for="keyword">Otsingusõna</label>
                             <input id="keyword" name="keyword" type="text" placeholder="Vaba teksti otsing">
+                            <div class="radio-group">
+                                <label><input type="radio" name="keywordMatchMode" value="partial" checked> Osaline vaste</label>
+                                <label><input type="radio" name="keywordMatchMode" value="word"> Sõna</label>
+                                <label><input type="radio" name="keywordMatchMode" value="exact"> Täpne vaste</label>
+                            </div>
                         </div>
                     </div>
                 </div>
