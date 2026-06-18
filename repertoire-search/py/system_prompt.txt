@@ -6,7 +6,7 @@ Return ONLY valid JSON. No comments, no extra text.
 {
   "total_player_count": 0, // keep 0 if orchestra or choir or other otherwise unknown
   "electronics": {
-    "type": "phonogram|live|fixed_media|electronics",
+    "type": "live|fixed_media|other",
     "details": "optional description"
   }
   "has_vocal": false,
