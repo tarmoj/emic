@@ -12,3 +12,6 @@ emic_local.sql
 repertoire-search/search/start_php.sh
 emic_local_old.sql
 repertoire-search/input/api-key.txt
+query_teosed_annotatsioonid.json
+teosed_annotatsioonid_clean.csv
+teosed_annotatsioonid_clean.json
