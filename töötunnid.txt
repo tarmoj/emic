@@ -5,7 +5,7 @@
 Prototüübi loomine | 3
 Andmebaasi ülesseadmine, struktuuriga tutvumine | 2
 Esmaste päringute (SQL) koostamine, testandmed, andameaasi puhastamine | 2
-Instrumentatsioonimudeli välja töötamine, instr. ja ansamblite listid | 2
+Instrumentatsioonimudeli välja töötamine, instr. ja ansamblite listid | 3
 AI skripti täiustamine, katusetused, test 200 kirjega | 4  
 
 Instrumentatsiooni strukuuri testimine, täiustused | 2 
@@ -17,7 +17,16 @@ Töö SQL otsigukirjetega | 2
 Otsingusüsteemi kirjledamine (prompt) | 1
 Töö otsingusüsteemi parandamise/täiustamisega | 6
 
-Otsinugüsteemi parendamine, tesimine (koosseisud, teksti autor, sõnavaste) | 3
+Otsinugüsteemi parendamine, tesimine (koosseisud, teksti autor, sõnavaste) | 4
 
 
-Altenratiivse sisestussüteemini loomine (ilma AI-ta, kuid struktuur) | 1
+Altenratiivse sisestussüteemini loomine (ilma AI-ta, kuid struktuur) | 5
+
+
+TODO:
+
+
+
+
+
+

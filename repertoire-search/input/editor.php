@@ -169,9 +169,48 @@ dialog h3 { margin: 0 0 14px 0; }
   </div>
   <div id="electronics-section" class="sub-section" style="display:none">
     <div class="field-row">
-      <label>Tüüp: <input type="text" id="electronics-type" value="electronics" style="width:160px"></label>
+      <label>Tüüp:
+        <select id="electronics-type" style="width:160px">
+          <option value="live">live</option>
+          <option value="fixed_media">fixed_media</option>
+          <option value="other">other</option>
+        </select>
+      </label>
       <label style="margin-left:10px">Täpsustus: <input type="text" id="electronics-details" style="width:280px"></label>
     </div>
+  </div>
+</section>
+
+<!-- ===== VOKAALDETAILID ===== -->
+<section class="section" id="s-vocal" style="display:none">
+  <h2>Vokaaldetailid</h2>
+  <div class="field-row">
+    <label><input type="checkbox" id="vocal-is-choir"> Koor</label>
+    <label style="margin-left:20px">Koori tüüp:
+      <select id="vocal-choir-type">
+        <option value="none">ei ole koor</option>
+        <option value="mixed">segakoor</option>
+        <option value="male">meeskoor</option>
+        <option value="female">naiskoor</option>
+        <option value="boys">poistekoor</option>
+        <option value="children">lastekoor</option>
+        <option value="youth">noortekoor</option>
+      </select>
+    </label>
+    <label style="margin-left:20px">Häälte arv:
+      <input type="number" id="vocal-voices" value="0" min="0" style="width:60px">
+    </label>
+  </div>
+  <div class="field-row" style="align-items:center">
+    <label>Häälte jaotus:</label>
+    <div class="tag-container" id="voice-dist-tags"></div>
+  </div>
+  <div class="field-row" style="align-items:center">
+    <label>Solistid:</label>
+    <div class="tag-container" id="soloists-tags"></div>
+  </div>
+  <div class="field-row">
+    <label>Muu: <input type="text" id="vocal-other" style="width:320px"></label>
   </div>
 </section>
 
@@ -231,39 +270,6 @@ dialog h3 { margin: 0 0 14px 0; }
   </div>
 </section>
 
-<!-- ===== VOKAALDETAILID ===== -->
-<section class="section" id="s-vocal" style="display:none">
-  <h2>Vokaaldetailid</h2>
-  <div class="field-row">
-    <label><input type="checkbox" id="vocal-is-choir"> Koor</label>
-    <label style="margin-left:20px">Koori tüüp:
-      <select id="vocal-choir-type">
-        <option value="none">ei ole koor</option>
-        <option value="mixed">segakoor</option>
-        <option value="male">meeskoor</option>
-        <option value="female">naiskoor</option>
-        <option value="boys">poistekoor</option>
-        <option value="children">lastekoor</option>
-        <option value="youth">noortekoor</option>
-      </select>
-    </label>
-    <label style="margin-left:20px">Häälte arv:
-      <input type="number" id="vocal-voices" value="0" min="0" style="width:60px">
-    </label>
-  </div>
-  <div class="field-row" style="align-items:center">
-    <label>Häälte jaotus:</label>
-    <div class="tag-container" id="voice-dist-tags"></div>
-  </div>
-  <div class="field-row" style="align-items:center">
-    <label>Solistid:</label>
-    <div class="tag-container" id="soloists-tags"></div>
-  </div>
-  <div class="field-row">
-    <label>Muu: <input type="text" id="vocal-other" style="width:320px"></label>
-  </div>
-</section>
-
 <!-- ===== KOOR ===== -->
 <section class="section" id="s-choir">
   <h2><label><input type="checkbox" id="has-choir"> Koor</label></h2>
@@ -290,10 +296,6 @@ dialog h3 { margin: 0 0 14px 0; }
     <div class="field-row" style="align-items:center">
       <label>Solistid:</label>
       <div class="tag-container" id="choir-soloists-tags"></div>
-    </div>
-    <div class="field-row">
-      <label>Märkus (eng): <input type="text" id="choir-note" style="width:340px" placeholder="nt. divisi"></label>
-      <label style="margin-left:12px">Märkus (est): <input type="text" id="choir-note-est" style="width:260px"></label>
     </div>
     <div class="field-row">
       <label>Lisainfo: <input type="text" id="choir-other" style="width:560px"></label>
@@ -873,8 +875,8 @@ function buildJSON() {
             ensemble_id:  choirType + '_choir',
             player_count: obj.total_player_count,
             standard:     true,
-            note:         document.getElementById('choir-note').value.trim(),
-            note_est:     document.getElementById('choir-note-est').value.trim(),
+            note:         '',
+            note_est:     '',
         });
         obj.vocal_details = {
             is_choir:           true,
@@ -985,10 +987,6 @@ function parseFromJSON(json) {
         rebuildTagContainer(document.getElementById('choir-voice-dist-tags'), vd.voice_distribution || []);
         rebuildTagContainer(document.getElementById('choir-soloists-tags'), vd.soloists || []);
         document.getElementById('choir-other').value  = vd.other || '';
-        // Restore choir ensemble note fields
-        const choirEns = (json.ensembles || []).find(e => e.ensemble_id === choirEnsId);
-        document.getElementById('choir-note').value     = choirEns ? (choirEns.note     || '') : '';
-        document.getElementById('choir-note-est').value = choirEns ? (choirEns.note_est || '') : '';
     }
 
     // Vocal details (generic — only when not choir)
@@ -1028,7 +1026,13 @@ function createVariantEditor(initialData) {
         </div>
         <div class="ve-electronics sub-section" style="display:none">
             <div class="field-row">
-                <label>Tüüp: <input type="text" class="ve-elec-type" value="electronics" style="width:140px"></label>
+                <label>Tüüp:
+                    <select class="ve-elec-type" style="width:140px">
+                        <option value="live">live</option>
+                        <option value="fixed_media">fixed_media</option>
+                        <option value="other">other</option>
+                    </select>
+                </label>
                 <label style="margin-left:10px">Täpsustus: <input type="text" class="ve-elec-details" style="width:240px"></label>
             </div>
         </div>
@@ -1093,10 +1097,6 @@ function createVariantEditor(initialData) {
             <div class="field-row" style="align-items:center">
                 <label>Solistid:</label>
                 <div class="tag-container ve-choir-sol-tags"></div>
-            </div>
-            <div class="field-row">
-                <label>Märkus (eng): <input type="text" class="ve-choir-note" style="width:260px"></label>
-                <label style="margin-left:10px">Märkus (est): <input type="text" class="ve-choir-note-est" style="width:200px"></label>
             </div>
             <div class="field-row">
                 <label>Lisainfo: <input type="text" class="ve-choir-other" style="width:440px"></label>
@@ -1197,8 +1197,8 @@ function createVariantEditor(initialData) {
                 ensemble_id:  choirType + '_choir',
                 player_count: obj.total_player_count,
                 standard:     true,
-                note:         q('.ve-choir-note').value.trim(),
-                note_est:     q('.ve-choir-note-est').value.trim(),
+                note:         '',
+                note_est:     '',
             });
             obj.vocal_details = {
                 is_choir:           true,
@@ -1263,9 +1263,6 @@ function createVariantEditor(initialData) {
             rebuildTagContainer(q('.ve-choir-vd-tags'),  vd.voice_distribution || []);
             rebuildTagContainer(q('.ve-choir-sol-tags'), vd.soloists || []);
             q('.ve-choir-other').value  = vd.other || '';
-            const choirEns = (json.ensembles || []).find(e => e.ensemble_id === choirEnsId);
-            q('.ve-choir-note').value     = choirEns ? (choirEns.note     || '') : '';
-            q('.ve-choir-note-est').value = choirEns ? (choirEns.note_est || '') : '';
         }
     };
 
@@ -1602,7 +1599,7 @@ function init() {
      'vocal-is-choir','vocal-choir-type','vocal-voices','vocal-other',
      'ww-fl','ww-ob','ww-cl','ww-bn',
      'br-hn','br-tp','br-tbn','br-tuba',
-     'choir-type','choir-voices','choir-note','choir-note-est','choir-other',
+     'choir-type','choir-voices','choir-other',
     ].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.addEventListener('input', updateOutput);
