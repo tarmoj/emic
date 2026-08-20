@@ -76,6 +76,14 @@ button:hover { background: #ddd; }
 .part-sub-block { display: flex; flex-direction: column; gap: 4px; }
 .part-sub-label { font-size: 11px; color: #666; font-weight: bold; }
 
+/* --- Instrument+count rows (orchestral "other" / percussion "extra") --- */
+.other-instr-row {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+    padding: 4px 8px; margin-bottom: 6px;
+    background: #f8fff8; border: 1px solid #cec; border-radius: 3px;
+}
+.other-instr-count { width: 55px; text-align: center; }
+
 /* --- Instrument autocomplete --- */
 .instr-combo { position: relative; display: inline-block; }
 .instr-combo .instr-input { width: 220px; }
@@ -181,6 +189,15 @@ dialog h3 { margin: 0 0 14px 0; }
   </div>
 </section>
 
+<!-- ===== MÄRKUSED ===== -->
+<section class="section" id="s-notes">
+  <h2>Märkused</h2>
+  <div class="field-row">
+    <label>Märkus (est): <input type="text" id="note-est" style="width:320px"></label>
+    <label style="margin-left:12px">Märkus (eng): <input type="text" id="note-eng" style="width:320px"></label>
+  </div>
+</section>
+
 <!-- ===== VOKAALDETAILID ===== -->
 <section class="section" id="s-vocal" style="display:none">
   <h2>Vokaaldetailid</h2>
@@ -253,19 +270,35 @@ dialog h3 { margin: 0 0 14px 0; }
       <label title="Tromboonid">tbn <input type="number" id="br-tbn" value="0" min="0" class="orch-num"></label>
       <label title="Tuubad">tuba <input type="number" id="br-tuba" value="0" min="0" class="orch-num"></label>
     </div>
-    <div class="field-row" style="align-items:center">
-      <label>Löökpillid:</label>
-      <label><input type="checkbox" id="perc-timpani"> Timpanid</label>
-      <label style="margin-left:10px">Teised mängijad: <input type="number" id="perc-other" value="0" min="0" style="width:55px"></label>
-      <label style="margin-left:10px">Lisad:</label>
-      <div class="tag-container" id="perc-extra-tags"></div>
+    <div class="field-row" style="align-items:flex-start">
+      <label style="margin-top:3px">Muud pillid:</label>
+      <div style="display:flex; flex-direction:column; gap:6px">
+        <div id="orch-other-list"></div>
+        <div class="btn-row" style="margin-top:0">
+          <button type="button" id="btn-add-orch-other">+ Lisa pill</button>
+          <button type="button" id="btn-new-instr-orch-other" class="btn-secondary">Lisa uus pill/hääl tabelisse…</button>
+        </div>
+      </div>
+    </div>
+    <div class="field-row" style="align-items:flex-start">
+      <label style="margin-top:3px">Löökpillid:</label>
+      <div style="display:flex; flex-direction:column; gap:6px">
+        <div class="field-row" style="margin-bottom:0">
+          <label><input type="checkbox" id="perc-timpani"> Timpanid</label>
+          <label style="margin-left:10px">Teised mängijad: <input type="number" id="perc-other" value="0" min="0" style="width:55px"></label>
+        </div>
+        <div>
+          <span style="color:#666; font-size:11px; font-weight:bold">Lisad:</span>
+          <div id="perc-extra-list" style="margin-top:4px"></div>
+          <div class="btn-row" style="margin-top:0">
+            <button type="button" id="btn-add-perc-extra">+ Lisa pill</button>
+            <button type="button" id="btn-new-instr-perc-extra" class="btn-secondary">Lisa uus pill/hääl tabelisse…</button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="field-row">
       <label><input type="checkbox" id="orch-strings"> Keelpillid</label>
-    </div>
-    <div class="field-row" style="align-items:center">
-      <label>Muud:</label>
-      <div class="tag-container" id="orch-other-tags"></div>
     </div>
   </div>
 </section>
@@ -796,6 +829,58 @@ function makeFieldLabel(text) {
 }
 
 // ---------------------------------------------------------------------------
+// INSTRUMENT + COUNT ROW (orchestral_layout.other / percussion.extra)
+// ---------------------------------------------------------------------------
+
+/**
+ * A single {instrument_id, count} row: instrument combo + count input + remove button.
+ */
+function createOtherInstrumentRow(data) {
+    data = data || {};
+    const row = document.createElement('div');
+    row.className = 'other-instr-row';
+
+    const combo = createInstrCombo(data.instrument_id || '', null);
+
+    const cntIn = document.createElement('input');
+    cntIn.type      = 'number';
+    cntIn.className = 'other-instr-count';
+    cntIn.value     = data.count ?? 1;
+    cntIn.min       = 1;
+    cntIn.title     = 'Arv';
+    cntIn.addEventListener('input', updateOutput);
+    cntIn.addEventListener('change', updateOutput);
+
+    const rm = document.createElement('button');
+    rm.type = 'button'; rm.className = 'btn-remove'; rm.textContent = 'Eemalda';
+    rm.addEventListener('click', () => { row.remove(); updateOutput(); });
+
+    [combo, makeFieldLabel('arv'), cntIn, rm].forEach(el => row.appendChild(el));
+    return row;
+}
+
+/** Reads {instrument_id, count} rows out of a container of .other-instr-row elements. */
+function getOtherInstrumentList(container) {
+    if (!container) return [];
+    return Array.from(container.querySelectorAll('.other-instr-row'))
+        .map(row => {
+            const combo = row.querySelector('.instr-combo');
+            return {
+                instrument_id: combo ? combo.dataset.value : '',
+                count:         parseInt(row.querySelector('.other-instr-count').value, 10) || 1,
+            };
+        })
+        .filter(item => item.instrument_id);
+}
+
+/** Rebuilds a container's .other-instr-row children from an array of {instrument_id, count}. */
+function rebuildOtherInstrumentList(container, items) {
+    if (!container) return;
+    container.innerHTML = '';
+    (items || []).forEach(item => container.appendChild(createOtherInstrumentRow(item)));
+}
+
+// ---------------------------------------------------------------------------
 // JSON BUILD
 // ---------------------------------------------------------------------------
 
@@ -857,14 +942,17 @@ function buildJSON() {
             percussion: {
                 timpani:      document.getElementById('perc-timpani').checked,
                 other_players: parseInt(document.getElementById('perc-other').value, 10) || 0,
-                extra:        getTagValues(document.getElementById('perc-extra-tags')),
+                extra:        getOtherInstrumentList(document.getElementById('perc-extra-list')),
             },
             strings: document.getElementById('orch-strings').checked,
-            other:   getTagValues(document.getElementById('orch-other-tags')),
+            other:   getOtherInstrumentList(document.getElementById('orch-other-list')),
         };
     } else {
         obj.orchestral_layout = null;
     }
+
+    obj.note     = document.getElementById('note-eng').value.trim();
+    obj.note_est = document.getElementById('note-est').value.trim();
 
     // vocal_details — choir section overrides generic vocal section
     const hasChoir = document.getElementById('has-choir').checked;
@@ -972,10 +1060,16 @@ function parseFromJSON(json) {
         const perc = ol.percussion || {};
         document.getElementById('perc-timpani').checked = perc.timpani ?? false;
         document.getElementById('perc-other').value     = perc.other_players ?? 0;
-        rebuildTagContainer(document.getElementById('perc-extra-tags'), perc.extra || []);
+        rebuildOtherInstrumentList(document.getElementById('perc-extra-list'), perc.extra || []);
         document.getElementById('orch-strings').checked  = ol.strings ?? false;
-        rebuildTagContainer(document.getElementById('orch-other-tags'), ol.other || []);
+        rebuildOtherInstrumentList(document.getElementById('orch-other-list'), ol.other || []);
+    } else {
+        rebuildOtherInstrumentList(document.getElementById('perc-extra-list'), []);
+        rebuildOtherInstrumentList(document.getElementById('orch-other-list'), []);
     }
+
+    document.getElementById('note-eng').value = json.note     || '';
+    document.getElementById('note-est').value = json.note_est || '';
 
     // Choir section
     document.getElementById('has-choir').checked = isChoir;
@@ -1036,6 +1130,10 @@ function createVariantEditor(initialData) {
                 <label style="margin-left:10px">Täpsustus: <input type="text" class="ve-elec-details" style="width:240px"></label>
             </div>
         </div>
+        <div class="field-row">
+            <label>Märkus (est): <input type="text" class="ve-note-est" style="width:220px"></label>
+            <label style="margin-left:12px">Märkus (eng): <input type="text" class="ve-note-eng" style="width:220px"></label>
+        </div>
         <div style="font-size:12px;font-weight:bold;color:#669;margin:8px 0 4px">Ansamblid (kooslused)</div>
         <div class="ve-ensemble-list"></div>
         <div class="btn-row" style="margin-bottom:8px"><button type="button" class="ve-btn-add-ensemble">+ Lisa ansambel</button></div>
@@ -1060,17 +1158,35 @@ function createVariantEditor(initialData) {
                 <label title="Tromboonid">tbn <input type="number" class="ve-br-tbn orch-num" value="0" min="0"></label>
                 <label title="Tuubad">tuba <input type="number" class="ve-br-tuba orch-num" value="0" min="0"></label>
             </div>
-            <div class="field-row" style="align-items:center">
-                <label>Löökpillid:</label>
-                <label><input type="checkbox" class="ve-perc-timpani"> Timpanid</label>
-                <label style="margin-left:10px">Teised: <input type="number" class="ve-perc-other" value="0" min="0" style="width:50px"></label>
-                <label style="margin-left:6px">Lisad:</label>
-                <div class="tag-container ve-perc-extra-tags"></div>
+            <div class="field-row" style="align-items:flex-start">
+                <label style="margin-top:3px">Muud pillid:</label>
+                <div style="display:flex; flex-direction:column; gap:6px">
+                    <div class="ve-orch-other-list"></div>
+                    <div class="btn-row" style="margin-top:0">
+                        <button type="button" class="ve-btn-add-orch-other">+ Lisa pill</button>
+                        <button type="button" class="ve-btn-new-instr-orch-other btn-secondary">Lisa uus pill/hääl tabelisse…</button>
+                    </div>
+                </div>
             </div>
-            <div class="field-row" style="align-items:center">
+            <div class="field-row" style="align-items:flex-start">
+                <label style="margin-top:3px">Löökpillid:</label>
+                <div style="display:flex; flex-direction:column; gap:6px">
+                    <div class="field-row" style="margin-bottom:0">
+                        <label><input type="checkbox" class="ve-perc-timpani"> Timpanid</label>
+                        <label style="margin-left:10px">Teised: <input type="number" class="ve-perc-other" value="0" min="0" style="width:50px"></label>
+                    </div>
+                    <div>
+                        <span style="color:#666; font-size:11px; font-weight:bold">Lisad:</span>
+                        <div class="ve-perc-extra-list" style="margin-top:4px"></div>
+                        <div class="btn-row" style="margin-top:0">
+                            <button type="button" class="ve-btn-add-perc-extra">+ Lisa pill</button>
+                            <button type="button" class="ve-btn-new-instr-perc-extra btn-secondary">Lisa uus pill/hääl tabelisse…</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field-row">
                 <label><input type="checkbox" class="ve-orch-strings"> Keelpillid</label>
-                <span style="margin-left:14px;color:#666">Muud:</span>
-                <div class="tag-container ve-orch-other-tags"></div>
             </div>
         </div>
         <div class="field-row" style="margin-top:4px">
@@ -1106,10 +1222,22 @@ function createVariantEditor(initialData) {
     const q = sel => wrap.querySelector(sel);
 
     // Init tag containers
-    initTagContainer(q('.ve-perc-extra-tags'), false, false);
-    initTagContainer(q('.ve-orch-other-tags'), false, false);
     initTagContainer(q('.ve-choir-vd-tags'),   true,  true);
     initTagContainer(q('.ve-choir-sol-tags'),  true,  false);
+
+    // Instrument+count rows
+    q('.ve-btn-add-orch-other').addEventListener('click', () => {
+        q('.ve-orch-other-list').appendChild(createOtherInstrumentRow());
+        updateOutput();
+    });
+    q('.ve-btn-add-perc-extra').addEventListener('click', () => {
+        q('.ve-perc-extra-list').appendChild(createOtherInstrumentRow());
+        updateOutput();
+    });
+    q('.ve-btn-new-instr-orch-other').addEventListener('click', () =>
+        document.getElementById('modal-new-instr').showModal());
+    q('.ve-btn-new-instr-perc-extra').addEventListener('click', () =>
+        document.getElementById('modal-new-instr').showModal());
 
     // Wire toggles
     q('.ve-has-electronics').addEventListener('change', () => {
@@ -1181,14 +1309,16 @@ function createVariantEditor(initialData) {
                 percussion: {
                     timpani:       q('.ve-perc-timpani').checked,
                     other_players: parseInt(q('.ve-perc-other').value,10)||0,
-                    extra:         getTagValues(q('.ve-perc-extra-tags')),
+                    extra:         getOtherInstrumentList(q('.ve-perc-extra-list')),
                 },
                 strings: q('.ve-orch-strings').checked,
-                other:   getTagValues(q('.ve-orch-other-tags')),
+                other:   getOtherInstrumentList(q('.ve-orch-other-list')),
             };
         } else {
             obj.orchestral_layout = null;
         }
+        obj.note     = q('.ve-note-eng').value.trim();
+        obj.note_est = q('.ve-note-est').value.trim();
         const hasChoir = q('.ve-has-choir').checked;
         if (hasChoir) {
             obj.has_vocal = true;
@@ -1250,10 +1380,15 @@ function createVariantEditor(initialData) {
             const perc = ol.percussion || {};
             q('.ve-perc-timpani').checked = perc.timpani ?? false;
             q('.ve-perc-other').value     = perc.other_players ?? 0;
-            rebuildTagContainer(q('.ve-perc-extra-tags'), perc.extra || []);
+            rebuildOtherInstrumentList(q('.ve-perc-extra-list'), perc.extra || []);
             q('.ve-orch-strings').checked  = ol.strings ?? false;
-            rebuildTagContainer(q('.ve-orch-other-tags'), ol.other || []);
+            rebuildOtherInstrumentList(q('.ve-orch-other-list'), ol.other || []);
+        } else {
+            rebuildOtherInstrumentList(q('.ve-perc-extra-list'), []);
+            rebuildOtherInstrumentList(q('.ve-orch-other-list'), []);
         }
+        q('.ve-note-eng').value = json.note     || '';
+        q('.ve-note-est').value = json.note_est || '';
         q('.ve-has-choir').checked           = isChoir;
         q('.ve-choir-section').style.display = isChoir ? 'block' : 'none';
         if (isChoir && json.vocal_details) {
@@ -1544,6 +1679,8 @@ function resetForm() {
         parts: [],
         orchestral_layout: null,
         vocal_details: null,
+        note: '',
+        note_est: '',
     });
     setStatus('load-status', '', '');
     setStatus('save-status', '', '');
@@ -1555,8 +1692,6 @@ function resetForm() {
 
 function init() {
     // Wire static tag containers
-    initTagContainer(document.getElementById('perc-extra-tags'), false, false);
-    initTagContainer(document.getElementById('orch-other-tags'), false, false);
     initTagContainer(document.getElementById('voice-dist-tags'), true,  true);  // allow duplicates
     initTagContainer(document.getElementById('soloists-tags'),   true,  false);
     initTagContainer(document.getElementById('choir-voice-dist-tags'), true, true);  // allow duplicates
@@ -1585,6 +1720,19 @@ function init() {
     document.getElementById('btn-new-instr').addEventListener('click', () =>
         document.getElementById('modal-new-instr').showModal());
 
+    document.getElementById('btn-add-orch-other').addEventListener('click', () => {
+        document.getElementById('orch-other-list').appendChild(createOtherInstrumentRow());
+        updateOutput();
+    });
+    document.getElementById('btn-add-perc-extra').addEventListener('click', () => {
+        document.getElementById('perc-extra-list').appendChild(createOtherInstrumentRow());
+        updateOutput();
+    });
+    document.getElementById('btn-new-instr-orch-other').addEventListener('click', () =>
+        document.getElementById('modal-new-instr').showModal());
+    document.getElementById('btn-new-instr-perc-extra').addEventListener('click', () =>
+        document.getElementById('modal-new-instr').showModal());
+
     document.getElementById('btn-new-instr-save').addEventListener('click', addNewInstrument);
     document.getElementById('btn-new-ens-save').addEventListener('click', addNewEnsemble);
 
@@ -1600,6 +1748,7 @@ function init() {
      'ww-fl','ww-ob','ww-cl','ww-bn',
      'br-hn','br-tp','br-tbn','br-tuba',
      'choir-type','choir-voices','choir-other',
+     'note-est','note-eng',
     ].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.addEventListener('input', updateOutput);
