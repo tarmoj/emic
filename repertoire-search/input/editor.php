@@ -152,7 +152,7 @@ dialog h3 { margin: 0 0 14px 0; }
     <input type="text" id="work-title" style="width:440px">
   </div>
   <div class="field-row" id="koosseis-tekst-row">
-    <label>Koosseis tekst:</label>
+    <label>Koosseis tekstina:</label>
     <textarea id="koosseis-tekst" rows="2" style="width:560px"></textarea>
   </div>
 </section>
@@ -216,7 +216,7 @@ dialog h3 { margin: 0 0 14px 0; }
 
 <!-- ===== ANSAMBLID ===== -->
 <section class="section" id="s-ansamblid">
-  <h2>Ansamblid</h2>
+  <h2>Ansamblid (kooslused)</h2>
   <div id="ensemble-list"></div>
   <div class="btn-row">
     <button type="button" id="btn-add-ensemble">+ Lisa ansambel</button>
@@ -247,7 +247,7 @@ dialog h3 { margin: 0 0 14px 0; }
       <label title="Fagotid">bn <input type="number" id="ww-bn" value="0" min="0" class="orch-num"></label>
     </div>
     <div class="field-row">
-      <label>Vasepillid:</label>
+      <label>Vaskpillid:</label>
       <label title="Metsasarved">hn <input type="number" id="br-hn" value="0" min="0" class="orch-num"></label>
       <label title="Trompetid">tp <input type="number" id="br-tp" value="0" min="0" class="orch-num"></label>
       <label title="Tromboonid">tbn <input type="number" id="br-tbn" value="0" min="0" class="orch-num"></label>
@@ -771,7 +771,7 @@ function createPartRow(data) {
     const dblBlock = document.createElement('div');
     dblBlock.className = 'part-sub-block';
     const dblLbl = document.createElement('div');
-    dblLbl.className = 'part-sub-label'; dblLbl.textContent = 'Topeltpillid:';
+    dblLbl.className = 'part-sub-label'; dblLbl.textContent = 'Dubleerivad pillid:';
     const dblTags = document.createElement('div');
     dblTags.className = 'tag-container doubles-tags';
     initTagContainer(dblTags, true, false);
@@ -1036,7 +1036,7 @@ function createVariantEditor(initialData) {
                 <label style="margin-left:10px">Täpsustus: <input type="text" class="ve-elec-details" style="width:240px"></label>
             </div>
         </div>
-        <div style="font-size:12px;font-weight:bold;color:#669;margin:8px 0 4px">Ansamblid</div>
+        <div style="font-size:12px;font-weight:bold;color:#669;margin:8px 0 4px">Ansamblid (kooslused)</div>
         <div class="ve-ensemble-list"></div>
         <div class="btn-row" style="margin-bottom:8px"><button type="button" class="ve-btn-add-ensemble">+ Lisa ansambel</button></div>
         <div style="font-size:12px;font-weight:bold;color:#669;margin:8px 0 4px">Partiid</div>
@@ -1054,7 +1054,7 @@ function createVariantEditor(initialData) {
                 <label title="Fagotid">bn <input type="number" class="ve-ww-bn orch-num" value="0" min="0"></label>
             </div>
             <div class="field-row">
-                <label>Vasepillid:</label>
+                <label>Vaskpillid:</label>
                 <label title="Metsasarved">hn <input type="number" class="ve-br-hn orch-num" value="0" min="0"></label>
                 <label title="Trompetid">tp <input type="number" class="ve-br-tp orch-num" value="0" min="0"></label>
                 <label title="Tromboonid">tbn <input type="number" class="ve-br-tbn orch-num" value="0" min="0"></label>
