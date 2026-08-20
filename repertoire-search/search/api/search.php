@@ -129,6 +129,7 @@ $perPage = min(100, max(1, (int) ($input['perPage'] ?? 50)));
 $filters = [
     'genreId' => (int) ($input['genreId'] ?? 0),
     'composerId' => (int) ($input['composerId'] ?? 0),
+    'sugu' => trim((string) ($input['sugu'] ?? '')),
     'title' => trim((string) ($input['title'] ?? '')),
     'textAuthor' => trim((string) ($input['textAuthor'] ?? '')),
     'keyword' => trim((string) ($input['keyword'] ?? '')),
@@ -196,6 +197,12 @@ try {
     if ($filters['composerId'] > 0) {
         $sql .= " AND h.id = :composerId";
         $params[':composerId'] = $filters['composerId'];
+    }
+
+    $validGenders = ['m', 'n', 'x'];
+    if (in_array(strtolower($filters['sugu']), $validGenders, true)) {
+        $sql .= " AND h.sugu = :sugu";
+        $params[':sugu'] = strtolower($filters['sugu']);
     }
 
     $validModes = ['partial', 'word', 'exact'];

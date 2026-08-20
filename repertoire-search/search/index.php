@@ -91,6 +91,15 @@
                             <select id="composerId" name="composerId"><option value="">Kõik heliloojad</option></select>
                         </div>
                         <div class="field third">
+                            <label for="sugu">Sugu</label>
+                            <select id="sugu" name="sugu">
+                                <option value="">Kõik</option>
+                                <option value="m">M</option>
+                                <option value="n">N</option>
+                                <option value="x">X</option>
+                            </select>
+                        </div>
+                        <div class="field third">
                             <label for="title">Pealkiri</label>
                             <input id="title" name="title" type="text" placeholder="Sõna või sõna osa">
                             <div class="radio-group">
